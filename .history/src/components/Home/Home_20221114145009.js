@@ -1,8 +1,5 @@
 import { useHistory } from 'react-router-dom';
-<<<<<<< HEAD
 import { Navbar } from '../Navbar/Navbar';
-=======
->>>>>>> 9bf535f720aac59c10240345771db1304945032f
 import styles from './styles.module.css';
 
 
@@ -16,13 +13,8 @@ export const Home = () => {
 
 
 
-            <div className={styles.tOne}>
-            Home Tile One
-            <div className={styles.title}>Title</div>
-
-
-
-
+            <div>
+            Home
             </div>
 
            
