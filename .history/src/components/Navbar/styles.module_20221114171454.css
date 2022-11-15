@@ -1,0 +1,17 @@
+.main{
+    width: 100%;
+    height: 64px;
+    background-color: rgba(0, 0, 0, 0.302);
+    color: white;
+    position: fixed;
+   
+   
+}
+
+
+.search{
+    position: relative;
+    right: 0;
+    align-self: flex-end;
+    just
+}

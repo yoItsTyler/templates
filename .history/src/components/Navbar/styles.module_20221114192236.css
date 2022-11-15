@@ -1,0 +1,65 @@
+.main{
+    width: 100vw;
+    max-width: 100vw;
+    height: 64px;
+  
+    color: white;
+    position: fixed;
+    display: flex;
+  
+   
+   
+}
+.row{
+    width: 100%;
+   
+    align-self: center;
+    align-items: center;
+    height: 34px;
+    max-width: 100vw;
+    color: #FFFFFF;
+
+    display: flex;
+    justify-content: safe;
+ 
+
+    
+}
+.pages{
+    display: flex;
+   height: 32px;
+    width: 70%;
+   
+    max-width: 560px;
+    justify-content: space-evenly;
+    justify-self: center;
+    
+
+}
+
+.page{
+    margin-top: -1px;
+    font-weight: 700;
+    font-size: 16px;
+   
+ 
+
+}
+
+.logo{
+    padding-left: min(16px, 1.5%);
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+   
+}
+
+
+.search{
+   padding-right: min(16px, 1.5%);
+ 
+    
+    
+}

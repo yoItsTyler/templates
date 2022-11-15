@@ -1,0 +1,49 @@
+.main{
+    width: 100vw;
+    max-width: 100vw;
+    height: 64px;
+    background-color: rgba(0, 0, 0, 0.302);
+    color: white;
+    position: fixed;
+    display: flex;
+  
+   
+   
+}
+.row{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    align-items: center;
+    
+    max-width: 100vw;
+    
+}
+.pages{
+    display: flex;
+   
+    width: 70%;
+   
+    max-width: 560px;
+    justify-content: space-evenly;
+
+}
+
+.page{
+ 
+
+}
+
+.logo{
+    padding-left: 16px;
+   
+}
+
+
+.search{
+   padding-right: max(16px, 2%);
+ 
+    
+    
+}
