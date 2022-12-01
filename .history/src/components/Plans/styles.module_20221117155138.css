@@ -1,0 +1,14 @@
+.main{
+    
+}
+.page{
+    position: absolute;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.title{
+    font-size: 33px;
+    font-weight: 700;
+}

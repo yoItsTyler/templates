@@ -1,0 +1,107 @@
+.main{
+    
+}
+.page{
+    width: 100%;
+    position: absolute;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    align-items: center;
+}
+.title{
+    font-size: 33px;
+    font-weight: 700;
+    margin-top: 80px;
+   
+}
+.chat{
+    margin-top: 23px;
+    margin-bottom: -12px;
+   
+
+}
+.txtCont{
+    margin-top: 16px;
+
+}
+
+.txt{
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 12px;
+}
+.txtP{
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 12px;
+    margin-bottom: 6px;
+}
+.subTxt{
+    font-size: 12px;
+    font-weight: 400;
+    color: #0062CC;
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+    cursor: pointer;
+}
+
+.planT{
+    font-weight: 700;
+    font-size: 27px;
+    
+}
+.rows{
+   
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 920px;
+    columns: 3;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    max-width: 98%;
+}
+@media only screen and (max-width: 840px) {
+    .rows{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+.column{
+    margin-top: 60px;
+    max-width: 280px;
+
+}
+.start{
+    font-size: 12px;
+    font-weight: 400;
+}
+.price{
+    font-weight: 700;
+    font-size: 24px;
+}
+.rBtn{
+    font-weight: 400;
+    font-size: 16px;
+    color: white;
+    height: 27px;
+    border-radius: 6px;
+    background-color: #0062CC;
+    display: flex;
+    justify-content: center;
+    
+
+}
+.lBtn{
+    font-weight: 400;
+    font-size: 16px;
+    color: white;
+    height: 27px;
+    border-radius: 6px;
+    background-color: #636363;
+    
+}

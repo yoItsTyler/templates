@@ -1,0 +1,35 @@
+.main{
+    width: 100vw;
+    height: 50px;
+    position: fixed;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+.row{
+    display: flex;
+    width: 100%;
+    max-width: 730px;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+.btnRow{
+    display: flex;
+    width: 200px;
+    justify-content: space-evenly;
+}
+.title{
+    font-size: 18px;
+    font-weight: 700;
+}
+.btnTxt{
+    font-size: 12px;
+    font-weight: 400;
+    margin-right: 30px;
+}
+.requestBtn{
+    font-size: 12px;
+    font-weight: 400;
+}

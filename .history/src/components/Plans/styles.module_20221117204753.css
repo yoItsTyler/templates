@@ -1,0 +1,266 @@
+.main{
+   
+}
+.page{
+    width: 100%;
+    position: absolute;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    align-items: center;
+   
+}
+.title{
+    font-size: 33px;
+    font-weight: 700;
+    margin-top: 80px;
+   text-align: center;
+
+}
+@media only screen and (max-width: 690px) {
+    .title{
+        font-size: 22px;
+        margin-top: 50px;
+    }
+}
+
+.chat{
+    margin-top: 23px;
+    margin-bottom: -12px;
+   
+
+}
+.txtCont{
+    margin-top: 16px;
+
+}
+
+.txt{
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 12px;
+}
+.txtP{
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 12px;
+    margin-bottom: 6px;
+}
+.subTxt{
+    font-size: 12px;
+    font-weight: 400;
+    color: #0062CC;
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+    cursor: pointer;
+}
+
+.planT{
+    font-weight: 700;
+    font-size: 27px;
+    
+}
+.rows{
+   
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 920px;
+    columns: 3;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    max-width: 98%;
+}
+@media only screen and (max-width: 840px) {
+    .rows{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+.column{
+    margin-top: 60px;
+    max-width: 280px;
+    height: 620px;
+    display: flex;
+    flex-direction: column;
+
+}
+.start{
+  
+    
+    font-size: 12px;
+    font-weight: 400;
+}
+.price{
+    font-weight: 700;
+    font-size: 24px;
+}
+.rBtn{
+    font-weight: 400;
+    font-size: 16px;
+    color: white;
+    height: 27px;
+    border-radius: 6px;
+    background-color: #0062CC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 9px;
+    line-height: 27px;
+    cursor: pointer;
+    
+
+}
+.lBtn{
+    font-weight: 400;
+    font-size: 16px;
+    color: white;
+    height: 27px;
+    border-radius: 6px;
+    background-color: #636363;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 9px;
+    line-height: 27px;
+    cursor: pointer;
+    
+}
+.subCont{
+   
+   margin-top: auto;
+}
+.mediaContainer{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    width: 920px;
+    max-width: 100%;
+
+}
+.splitRow{
+    width: 100%;
+    display: flex;
+    height: 300px;
+    justify-content: space-between;
+}
+.twoThirdBox{
+    height: 100%;
+    background-color: #Fbfbfb;
+    border-radius: 23px;
+   
+    min-width: 66%;
+    width: 66.6%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: space-evenly;
+    
+   
+    
+    
+}
+.oneThirdBox{
+    height: 100%;
+    background-color: #Fbfbfb;
+    border-radius: 23px;
+    
+    display: flex;
+    flex-direction: column;
+    
+    overflow: hidden;
+    justify-content: space-evenly;
+    margin-left: 12px;
+   
+
+}
+.fullCont{
+    
+   height: 320px;
+
+    width: 100%;
+    background-color: #Fbfbfb;
+    border-radius: 23px;
+  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 12px;
+    margin-top: 12px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+}
+
+.boldTxt{
+    font-size: 18px;
+    font-weight: 700;
+    
+    justify-self: center;
+
+}
+@media only screen and (max-width: 690px) {
+    .boldTxt{
+        font-size: 12px;
+    }
+}
+
+.lightTxt{
+    font-size: 18px;
+    font-weight: 700;
+    color: #636363;
+    width: 100%;
+}
+.imgC{
+   max-height: 66%;
+   width: 90%;
+  
+   display: flex;
+   flex-direction: column;
+   justify-self: center;
+   align-self: center;
+   align-items: center;
+
+
+}
+.imgC2{
+    max-height: 90%;
+    width: 100%;
+   
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-self: center;
+    align-items: center;
+ 
+ 
+ }
+.img{
+    max-width: 100%;
+    height: 100%;
+  
+  
+  
+}
+
+.boldTxt{
+   
+}
+.txtRow{
+    display: flex;
+    flex-direction: column;
+  
+  
+   padding-left: 6px;
+   padding-right: 6px;
+   align-self: center;
+  
+   text-align: center;
+   max-width: 330px;
+  
+}

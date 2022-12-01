@@ -1,0 +1,12 @@
+.main{
+    width: 100vw;
+    height: 50px;
+    position: fixed;
+    margin-top: 50px;
+}
+.row{
+    display: flex;
+}
+.btnRow{
+    display: flex;
+}

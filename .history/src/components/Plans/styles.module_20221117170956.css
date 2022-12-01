@@ -1,0 +1,57 @@
+.main{
+    
+}
+.page{
+    width: 100%;
+    position: absolute;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    align-items: center;
+}
+.title{
+    font-size: 33px;
+    font-weight: 700;
+    margin-top: 80px;
+   
+}
+.chat{
+    margin-top: 23px;
+   
+
+}
+.txtCont{
+    margin-top: 16px;
+
+}
+
+.txt{
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 12px;
+}
+.subTxt{
+    font-size: 12px;
+    font-weight: 400;
+    color: #0062CC;
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+    cursor: pointer;
+}
+
+.planT{
+    font-weight: 700;
+    font-size: 27px;
+    
+}
+.rows{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.column{
+    max-width: 280px;
+
+}

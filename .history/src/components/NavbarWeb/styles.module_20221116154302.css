@@ -1,0 +1,105 @@
+.main{
+    width: 100vw;
+    max-width: 100vw;
+    height: 50px;
+  
+    background-color: #111111;
+   
+    display: flex;
+    z-index: 1;
+    justify-content: center;
+  
+   
+   
+}
+.row{
+    width: 100%;
+   
+    align-self: center;
+   
+    height: 50px;
+    max-width: 730px;
+   
+    color: #FFFFFF;
+ display: flex;
+ align-items: center;
+
+justify-content: space-between;
+
+
+    
+}
+.logo{   
+ 
+    padding-left: min(16px, 1.0%);
+    height: 32px; 
+    cursor: pointer; 
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+      justify-self: left;
+    max-width: 134px;
+  
+ 
+   
+  
+}
+.falseDiv{
+    padding-right: min(16px, 1.0%);
+    width: 134px;
+  
+  
+
+}
+.rightSide{
+   align-self: center;
+  justify-self: center;
+    
+
+}
+.pages{
+    flex-basis: 1;
+    display: flex;
+   height: 32px;
+      
+   
+    width: 80%;
+    max-width: 536px;
+    align-items: center;
+    justify-content: space-between;
+    justify-self: center;
+   
+   
+    
+
+}
+
+.page{
+   
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+   cursor: pointer;
+  
+   height: 24px;
+   align-content: center;
+   align-items: center;
+   
+   padding-left: 0px;
+   padding-right: 0px;
+
+}
+.page:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+   border-radius: 3px;
+}
+
+
+
+.search{
+   padding-right: min(16px, 1.5%);
+margin-left: auto;
+    
+    
+}
