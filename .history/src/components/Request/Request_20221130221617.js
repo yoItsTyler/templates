@@ -84,10 +84,9 @@ export const Request = () => {
 
     return (
         <div className={styles.main}>
-            <NavbarWeb/>
+            <div>
+                <NavbarWeb/>
                 <NavBarWebSub/>
-                <div className={styles.box}>
-
                 <div className={styles.rNow}>
                     Request Free Consultation
                 </div>
@@ -95,14 +94,7 @@ export const Request = () => {
 
 
                 <Calendy/>
-
-
-
-                </div>
-           
-                
-                
-            
+            </div>
         </div>
     )
 }

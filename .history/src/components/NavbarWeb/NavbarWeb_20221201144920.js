@@ -64,14 +64,10 @@ export const NavbarWeb = () => {
                             <div className={styles.page}
                                  onClick={() => history.push('/web')}
                                 >Website</div>
-                                <div className={styles.page} onClick={() => history.push('/branding')}
-                                >Branding</div>
-                                <div className={styles.page} onClick={() => history.push('/marketing')}
-                                >Marketing</div>
-                                <div className={styles.page} onClick={() => history.push('/about')}
-                                >About</div>
-                                <div className={styles.page} onClick={() => history.push('/contact')}
-                                >Contact</div>
+                                <div className={styles.page}>Branding</div>
+                                <div className={styles.page}>Marketing</div>
+                                <div className={styles.page}>About</div>
+                                <div className={styles.page}>Contact</div>
                             </div>
 
                         )}

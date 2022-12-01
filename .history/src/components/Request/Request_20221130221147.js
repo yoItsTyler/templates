@@ -4,8 +4,6 @@ import styles from './styles.module.css';
 import proPlan from '../../images/proPlan.png';
 import bixPlan from '../../images/bizPlan.png';
 import enterprisePlan from '../../images/enterprisePlan.png';
-import { NavbarWeb } from '../NavbarWeb/NavbarWeb';
-import { NavBarWebSub } from '../NavBarWebSub/NavBarWebSub';
 
 
 export const Request = () => {
@@ -84,10 +82,7 @@ export const Request = () => {
 
     return (
         <div className={styles.main}>
-            <NavbarWeb/>
-                <NavBarWebSub/>
-                <div className={styles.box}>
-
+            <div>
                 <div className={styles.rNow}>
                     Request Free Consultation
                 </div>
@@ -95,14 +90,7 @@ export const Request = () => {
 
 
                 <Calendy/>
-
-
-
-                </div>
-           
-                
-                
-            
+            </div>
         </div>
     )
 }

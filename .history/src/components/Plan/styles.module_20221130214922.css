@@ -30,7 +30,7 @@
     flex-direction: column;
 }
 .splitRow2{
-    margin-top: 230px;
+    margin-top: 150px;
     width: 98%;
     max-width: 1200px;
     min-height: 380px;
@@ -43,7 +43,7 @@
 }
 @media only screen and (max-width: 757px) {
     .splitRow2{
-        margin-top: 170px;
+        margin-top: 112px;
     }
 }
 
@@ -261,7 +261,6 @@
 .txt2{
     font-weight: 400;
     font-size: 42px;
-    text-align: center;
 }
 .subTxt2{
     font-size: 12px;
@@ -270,5 +269,4 @@
     display: flex;
     justify-content: center;
     margin-top: 23px;
-    cursor: pointer;
 }
