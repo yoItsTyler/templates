@@ -147,7 +147,7 @@ export const Plan = () => {
 
                 <div className={styles.subCont}>
 
-                    <div className={styles.rBtn} onClick={() => {history.push(`/request/${id}`)}}>Request Free Consultation Now</div>
+                    <div className={styles.rBtn} onClick={() => {history.push(`request/${id}`)}}>Request Free Consultation Now</div>
 
                 </div>
             </div>
@@ -190,7 +190,7 @@ export const Plan = () => {
 
                 <div className={styles.subCont}>
 
-                    <div className={styles.rBtn} onClick={()=> {history.push(`/request/${id}`)}} >Request Free Consultation Now</div>
+                    <div className={styles.rBtn} onClick={()=> {history.push(`request/${id}`)}} >Request Free Consultation Now</div>
 
                 </div>
             </div>
@@ -232,7 +232,7 @@ export const Plan = () => {
 
                 <div className={styles.subCont}>
 
-                    <div className={styles.rBtn} onClick={()=> {history.push(`/request/${id}`)}}>Request Free Consultation Now</div>
+                    <div className={styles.rBtn} onClick={()=> {history.push(`request/${id}`)}}>Request Free Consultation Now</div>
 
                 </div>
             </div>

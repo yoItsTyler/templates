@@ -21,8 +21,8 @@ export const Plan = () => {
 
     const [windowDW, setWindowDW] = useState(null);
     const [windowDH, setWindowDH] = useState(null);
-
-
+  
+  
   
     useEffect(() => {
       setWindowDW(window.innerWidth);
@@ -110,8 +110,6 @@ export const Plan = () => {
 
     }, [id]);
 
- 
-
 
 
 
@@ -147,7 +145,7 @@ export const Plan = () => {
 
                 <div className={styles.subCont}>
 
-                    <div className={styles.rBtn} onClick={() => {history.push(`/request/${id}`)}}>Request Free Consultation Now</div>
+                    <div className={styles.rBtn}>Request Free Consultation Now</div>
 
                 </div>
             </div>
@@ -190,7 +188,7 @@ export const Plan = () => {
 
                 <div className={styles.subCont}>
 
-                    <div className={styles.rBtn} onClick={()=> {history.push(`/request/${id}`)}} >Request Free Consultation Now</div>
+                    <div className={styles.rBtn}>Request Free Consultation Now</div>
 
                 </div>
             </div>
@@ -232,7 +230,7 @@ export const Plan = () => {
 
                 <div className={styles.subCont}>
 
-                    <div className={styles.rBtn} onClick={()=> {history.push(`/request/${id}`)}}>Request Free Consultation Now</div>
+                    <div className={styles.rBtn}>Request Free Consultation Now</div>
 
                 </div>
             </div>
@@ -313,28 +311,13 @@ export const Plan = () => {
         if (id) {
             // setPlanType(capitalizeFirst(id));
             if (id == 'professional') {
-                return(
-                    <div className={styles.splitRow3}>
-                        <BCard/>
-                        <ECard/>
-                    </div>
-                );
+                return <Pro />;
             }
             if (id == 'business') {
-                return(
-                    <div className={styles.splitRow3}>
-                        <PCard/>
-                        <ECard/>
-                    </div>
-                );
+                return <Biz />;
             }
             if (id == 'enterprise') {
-                return(
-                    <div className={styles.splitRow3}>
-                        <PCard/>
-                        <BCard/>
-                    </div>
-                );
+                return <PCard /> + <BCard/>;
             }
         }
     }
@@ -368,21 +351,14 @@ export const Plan = () => {
 
                     <div className={styles.planT2}>Compare Website Plans</div>
                     <div className={styles.splitRow3}>
+
+
                         <Compare/>
+
                     </div>
 
                 </div>
                 <div className={styles.tOne}>
-                <div className={styles.txtCont}>
-                <div className={styles.txt2}>
-                    Find out where we can help.
-
-                </div>
-                <div className={styles.subTxt2}>
-                    Request Free Consultation Now
-                    
-                </div>
-            </div>
 
                 </div>
 
@@ -396,7 +372,7 @@ export const Plan = () => {
                                 <div className={styles.price}>{curPrice}</div>
                             </div>
 
-                            <div className={styles.rBtn2} onClick={() => {history.push(`/request/${id}`)}}>Request Free Consultation Now</div>
+                            <div className={styles.rBtn2}>Request Free Consultation Now</div>
                         </div>
 
                     </div>

@@ -242,7 +242,7 @@ export const Plans = () => {
                     Find out where we can help.
 
                 </div>
-                <div className={styles.subTxt2} onClick={() => {history.push('/request/')}}>
+                <div className={styles.subTxt2}> onClick={() => {history.push('/request')}}
                     Request Free Consultation Now
                     
                 </div>

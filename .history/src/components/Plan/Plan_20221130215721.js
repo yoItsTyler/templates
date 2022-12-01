@@ -110,7 +110,11 @@ export const Plan = () => {
 
     }, [id]);
 
- 
+    const request = () => {
+        history.push/(`request/${id}`);
+
+
+    }
 
 
 
@@ -147,7 +151,7 @@ export const Plan = () => {
 
                 <div className={styles.subCont}>
 
-                    <div className={styles.rBtn} onClick={() => {history.push(`/request/${id}`)}}>Request Free Consultation Now</div>
+                    <div className={styles.rBtn}>Request Free Consultation Now</div>
 
                 </div>
             </div>
@@ -190,7 +194,7 @@ export const Plan = () => {
 
                 <div className={styles.subCont}>
 
-                    <div className={styles.rBtn} onClick={()=> {history.push(`/request/${id}`)}} >Request Free Consultation Now</div>
+                    <div className={styles.rBtn}>Request Free Consultation Now</div>
 
                 </div>
             </div>
@@ -232,7 +236,7 @@ export const Plan = () => {
 
                 <div className={styles.subCont}>
 
-                    <div className={styles.rBtn} onClick={()=> {history.push(`/request/${id}`)}}>Request Free Consultation Now</div>
+                    <div className={styles.rBtn}>Request Free Consultation Now</div>
 
                 </div>
             </div>
@@ -396,7 +400,7 @@ export const Plan = () => {
                                 <div className={styles.price}>{curPrice}</div>
                             </div>
 
-                            <div className={styles.rBtn2} onClick={() => {history.push(`/request/${id}`)}}>Request Free Consultation Now</div>
+                            <div className={styles.rBtn2}>Request Free Consultation Now</div>
                         </div>
 
                     </div>

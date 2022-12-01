@@ -21,8 +21,8 @@ export const Plan = () => {
 
     const [windowDW, setWindowDW] = useState(null);
     const [windowDH, setWindowDH] = useState(null);
-
-
+  
+  
   
     useEffect(() => {
       setWindowDW(window.innerWidth);
@@ -110,8 +110,6 @@ export const Plan = () => {
 
     }, [id]);
 
- 
-
 
 
 
@@ -147,7 +145,7 @@ export const Plan = () => {
 
                 <div className={styles.subCont}>
 
-                    <div className={styles.rBtn} onClick={() => {history.push(`/request/${id}`)}}>Request Free Consultation Now</div>
+                    <div className={styles.rBtn}>Request Free Consultation Now</div>
 
                 </div>
             </div>
@@ -190,7 +188,7 @@ export const Plan = () => {
 
                 <div className={styles.subCont}>
 
-                    <div className={styles.rBtn} onClick={()=> {history.push(`/request/${id}`)}} >Request Free Consultation Now</div>
+                    <div className={styles.rBtn}>Request Free Consultation Now</div>
 
                 </div>
             </div>
@@ -232,7 +230,7 @@ export const Plan = () => {
 
                 <div className={styles.subCont}>
 
-                    <div className={styles.rBtn} onClick={()=> {history.push(`/request/${id}`)}}>Request Free Consultation Now</div>
+                    <div className={styles.rBtn}>Request Free Consultation Now</div>
 
                 </div>
             </div>
@@ -374,11 +372,11 @@ export const Plan = () => {
                 </div>
                 <div className={styles.tOne}>
                 <div className={styles.txtCont}>
-                <div className={styles.txt2}>
+                <div className={styles.txt}>
                     Find out where we can help.
 
                 </div>
-                <div className={styles.subTxt2}>
+                <div className={styles.subTxt}>
                     Request Free Consultation Now
                     
                 </div>
@@ -396,7 +394,7 @@ export const Plan = () => {
                                 <div className={styles.price}>{curPrice}</div>
                             </div>
 
-                            <div className={styles.rBtn2} onClick={() => {history.push(`/request/${id}`)}}>Request Free Consultation Now</div>
+                            <div className={styles.rBtn2}>Request Free Consultation Now</div>
                         </div>
 
                     </div>
