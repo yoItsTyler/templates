@@ -6,6 +6,7 @@ import logo from '../../images/luneVista.png';
 import cDesign from '../../images/coehesiveDesign.png';
 import upTime from '../../images/uptime.png';
 import responsiveDesign from '../../images/responsive.png';
+import unlimitedBandwidth from '../../images/unlimitedBandwidth.png';
 import { NavBarWebSub } from '../NavBarWebSub/NavBarWebSub';
 
 
@@ -23,7 +24,7 @@ export const Web = () => {
             <NavBarWebSub/>
 
 
-            <div className={styles.tile}>
+            <div className={styles.tile1}>
 
                 <div className={styles.container}>
 
@@ -44,24 +45,13 @@ export const Web = () => {
             </div>
 
 
-            <div className={styles.tile}>
-                <div className={styles.container}>
-
-                    <div className={styles.frame24}>
-                        <div className={styles.proTitile}>
+            <div className={styles.tile2}>
+                        <div className={styles.proWebTitile}>
                             Professional Website Design and Developement
                         </div>
-                        <div className={styles.group20}>
-                            <div className={styles.by}>by</div>
-                            <img src={logo} />
+                    <img src={cDesign} className={styles.cDesignPic} />
 
-                        </div>
-
-
-                    </div>
-                    <img src={cDesign} className={styles.cDesign} />
-
-                    <div className={styles.rainbowContainer}>
+                    <div className={styles.cdContainer}>
                         <div className={styles.rainbowTitle}
                         >Cohesive Design</div>
                         <div className={styles.rainbow}
@@ -69,15 +59,10 @@ export const Web = () => {
                         <div className={styles.rainbowSubTxt}
                         >We focus on creating unique websites that are designed to integrate with and display your brand's vibe and feel. It’s very important for us to design a website that compliments and reflects the identity of the business or professional we are working with.</div>
                     </div>
-
-
-                </div>
-
             </div>
 
+            <div className={styles.tile1}>
 
-            <div className={styles.tile}>
-                <div className={styles.container}>
 
                     <div className={styles.rainbowContainerTL}>
                         <div className={styles.rainbowTitle}
@@ -85,23 +70,23 @@ export const Web = () => {
                         <div className={styles.rainbow2}
                         >Ready for Your Audience</div>
                         <div className={styles.rainbowSubTxt}
-                        >Your website is always up and running thanks to our secure and reliable hosting</div>
+                        >Your website is always up and running thanks to our secure and reliable hosting.</div>
                     </div>
 
                     <img src={upTime} className={styles.upTime}/>
 
 
-                </div>
 
             </div>
 
-            <div className={styles.tile}>
-                <div className={styles.container}>
-                <div className={styles.responsiveContainer}>
+
+            <div className={styles.tile2}>
+
+                <div>
 
                     <div className={styles.rainbowContainerTR}>
                         <div className={styles.rightBox}>
-                        <div className={styles.rainbowTitleB}
+                        <div className={styles.rainbowTitle}
                         >Responsive CSS</div>
                         <div className={styles.rainbow2}
                         >Perfection on each Page</div>
@@ -109,28 +94,36 @@ export const Web = () => {
                         >Functionally designed on all platforms to reach everyone, on any device.</div>
                     </div>
                     </div>
-                    <div className={styles.rCont}>
-                    <img src={responsiveDesign} style={{width: '100%'}} />
-                    </div>
+                   
+                    <img src={responsiveDesign} className={styles.cssPic}/>
+                   
                     
 
                     </div>
                     
 
+            
+
+            </div>
+
+            <div className={styles.tile1}>
+                <div className={styles.unlBandContainer}>
+                    <div className={styles.unlBand}>
+                    Unlimited Bandwidth</div>
+                    <div className={styles.unlBandTxt}>
+                    Handel high site traffic as needed with unlimited bandwidth. Yes, that's right we said unlimited.</div> 
+                    <div className={styles.techSpecTxt}>
+                    See all the <span className={styles.techSpecLink}>tech specifications</span> we offer.</div> 
+                    <div className={styles.learnMoreTxt}>
+                    Learn more</div>
                 </div>
+
+                <img src={unlimitedBandwidth} className={styles.unlBandPic}/>
 
             </div>
 
             <div className={styles.tile}>
-                <div className={styles.container}>
-
-
-                </div>
-
-            </div>
-
-            <div className={styles.tile}>
-                <div className={styles.container}>
+                <div>
 
 
                 </div>
