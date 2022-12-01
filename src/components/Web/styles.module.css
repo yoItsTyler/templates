@@ -636,15 +636,26 @@
 }
 .wTxt{
     color: white;
-    font-size: 27px;
+    font-size: 24px;
     font-weight: 400;
     margin-bottom: 9px;
 }
+@media only screen and (max-width: 460px) {
+    .wTxt{
+        font-size: 21px;
+}
+}
 .sTxt{
     font-weight: 700;
-    font-size: 45px;
+    font-size: 42px;
     color: white;
     margin-bottom: 21px;
+}
+@media only screen and (max-width: 460px) {
+    .sTxt{
+        font-size: 33px;
+        width: 80%;
+}
 }
 .lTxt{
     font-size: 18px;
@@ -691,18 +702,30 @@
     font-family: 'Helvetica';
     font-style: normal;
     font-weight: 400;
-    font-size: 4vw;
+    font-size: 5vw;
     color: white;
     text-align: center;
     top: 260px;
+}
+@media only screen and (max-width: 460px) {
+    .askPlan{
+        font-size: 30px;
+        margin-left: 6px;
+        margin-right: 6px;
+}
 }
 .compareTxt{
     position: relative;
     font-family: 'Helvetica';
     font-style: normal;
     font-weight: 400;
-    font-size: 1vw;
+    font-size: 15px;
     color: #0062CC;
     text-align: center;
     top: 280px;
+}
+@media only screen and (max-width: 460px) {
+    .compareTxt{
+        font-size: 12px;
+}
 }
