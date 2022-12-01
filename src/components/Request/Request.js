@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
-<<<<<<< HEAD
 import { useHistory, useParams } from 'react-router-dom';
-=======
-import { useParams } from 'react-router-dom';
->>>>>>> 0b5f1c197e259055c81715e5ae319e11f9e9e909
+
+
+
 import styles from './styles.module.css';
 import proPlan from '../../images/proPlan.png';
 import bixPlan from '../../images/bizPlan.png';
@@ -23,13 +22,13 @@ export const Request = () => {
         return id?.toString().charAt(0).toUpperCase() + id?.toString().slice(1);
     }
 
-    const history = useState();
+  
 
     const [planType, setPlanType] = useState();
 
     useEffect(() => {
         if (id) {
-         //   setPlanType(capitalizeFirst(id));
+            setPlanType(capitalizeFirst(id));
             if (id == 'professional') {
                 setImg(imgArray.proPlan);
                 setCurPrice(prices.pro);
