@@ -29,7 +29,7 @@ export const App = () => {
            
             <Switch>
             <Route exact path = {['/request/:id', '/request']} component={Request}/>
-            <Route exact path='/marketing' component={Marketing}/>
+            <Route exact path='/marketing', component={Marketing}/>
             <Route exact path = '/branding' component={Branding}/>
             <Route exact path = '/logo-design' component={LogoDesign}/>
                 <Route exact path = '/plan/:id' component={Plan}/>
