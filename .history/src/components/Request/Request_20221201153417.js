@@ -59,7 +59,7 @@ export const Request = () => {
         return(
             <div className='calendly-inline-widget'
             data-url='https://calendly.com/lunevista/consultation?primary_color=006add'
-            style ={{ minWidth: '320px', height:'1100px', minHeight:'maxContent', overflowY:'visible', marginTop:'20px'}}/>
+            style ={{ minWidth: '320px', height:'100vh', minHeight:'minContent'}}/>
         );
     };
 
@@ -91,7 +91,7 @@ export const Request = () => {
 
 
                 <div className={styles.title}>Website Development</div>
-                <img src={bPlan} className={styles.img}/>
+                <img src={bPlan}/>
 
                 <div className={styles.rNow}>
                     Request Free Consultation
@@ -99,7 +99,7 @@ export const Request = () => {
 
 
                 <div className={styles.calendy}>
-                <Calendy />
+                <Calendy/>
                 </div>
                 
 

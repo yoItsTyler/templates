@@ -6,7 +6,6 @@ import bixPlan from '../../images/bizPlan.png';
 import enterprisePlan from '../../images/enterprisePlan.png';
 import { NavbarWeb } from '../NavbarWeb/NavbarWeb';
 import { NavBarWebSub } from '../NavBarWebSub/NavBarWebSub';
-import bPlan from '../../images/bizPlan.png';
 
 
 export const Request = () => {
@@ -59,7 +58,7 @@ export const Request = () => {
         return(
             <div className='calendly-inline-widget'
             data-url='https://calendly.com/lunevista/consultation?primary_color=006add'
-            style ={{ minWidth: '320px', height:'1100px', minHeight:'maxContent', overflowY:'visible', marginTop:'20px'}}/>
+            style ={{ minWidth: '320px', height:'100vh', minHeight:'minContent'}}/>
         );
     };
 
@@ -91,7 +90,6 @@ export const Request = () => {
 
 
                 <div className={styles.title}>Website Development</div>
-                <img src={bPlan} className={styles.img}/>
 
                 <div className={styles.rNow}>
                     Request Free Consultation
@@ -99,7 +97,7 @@ export const Request = () => {
 
 
                 <div className={styles.calendy}>
-                <Calendy />
+                <Calendy/>
                 </div>
                 
 

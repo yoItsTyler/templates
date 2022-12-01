@@ -2,9 +2,11 @@
     margin-top: 0;
    top: 0;
   overflow-y: visible;
-  max-width: 100vw;
+  max-width: 100%;
   overflow-x: hidden;
+  
 }
+
 .box{
     position: absolute;
     margin-top: 160px;
@@ -13,19 +15,23 @@
     flex-direction: column;
 }
 .img{
+   
     align-self: center;
    height: 225px;
    margin-top: 20px;
    margin-bottom: 10px;
+ 
 }
 .title{
     text-align: center;
     font-weight: 700;
     font-size: 30px;
+
 }
 .rNow{
     text-align: center;
     font-weight: 700;
     font-size: 30px;
     margin-bottom: -20px;
+    
 }
