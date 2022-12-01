@@ -353,9 +353,10 @@
     color: white;
     font-size: 27px;
     font-weight: 400;
+    margin-bottom: 9px;
 }
 .sTxt{
-    margin-top: 12px;
+    margin-bottom: 21px;
     font-weight: 700;
     font-size: 45px;
     color: white;

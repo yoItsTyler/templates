@@ -360,3 +360,349 @@
         top: 130px;
     }
 }
+
+.whtTitle{  
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 42px;
+    color: #F0F0F0;
+}
+@media only screen and (max-width: 660px) {
+    .whtTitle{
+        font-size: 33px;
+}
+}
+.colTitleBuy{
+    width: max-content;
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 45px;
+    background: linear-gradient(91.05deg, #3083FF -2.52%, #34FF79 102.83%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+@media only screen and (max-width: 660px) {
+    .colTitleBuy{
+        font-size: 24px;
+        max-width: 90%;
+}
+}
+.colTitleJam{
+    width: max-content;
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 45px;
+    background: linear-gradient(91.05deg, #FF6E30 -2.52%, #FBFF4B 32.6%, #39FFB8 67.71%, #0057FF 102.83%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+@media only screen and (max-width: 660px) {
+    .colTitleJam{
+        font-size: 24px;
+        max-width: 90%;
+}
+}
+.bodyTxt{
+    max-width: 400px;
+    margin-top: 3px;    
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #F0F0F0;
+}
+@media only screen and (max-width: 660px) {
+    .bodyTxt{
+        font-size: 12px;
+}
+}
+.infoContainer{ 
+    position: relative;
+    top: 100px;
+    width: max-content;
+    left: 10%;
+    width: 80%;
+    max-width: 500px;
+    margin-right: 10px;
+}
+
+.secPic{ 
+    position: relative;
+    width: 900px;
+    left: calc(50% - 900px/2);
+    top: 150px;
+}
+@media only screen and (max-width: 960px) {
+    .secPic{
+        width: 90%;
+        height: auto;
+        left: 5%;
+        top: 130px;
+    }
+}
+.pricingPlans{ 
+    height: 900px;
+}
+@media only screen and (max-width: 930px) {
+    .pricingPlans{
+        height: 2300px;
+    }
+}
+.txt{
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 12px;
+    color: #F0F0F0;
+
+}
+.txtP{
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 12px;
+    margin-bottom: 6px;
+    color: #F0F0F0;
+}
+.rows{
+    top: 120px;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    columns: 3;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    max-width: 98%;
+    margin-left: 10px;
+}
+@media only screen and (max-width: 930px) {
+    .rows{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+.column{
+    margin-top: 60px;
+    max-width: 280px;
+    height: 620px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+    margin-right: 5px;
+
+}
+.planT{
+    font-weight: 700;
+    font-size: 27px;
+    color: white;
+    
+}
+.subCont{
+   
+    margin-top: auto;
+ }
+ .start{
+  
+    color: #F0F0F0;
+    font-size: 12px;
+    font-weight: 400;
+}
+.price{
+    font-weight: 700;
+    font-size: 24px;
+    color: white;
+}
+.rBtn{
+    font-weight: 400;
+    font-size: 16px;
+    color: white;
+    height: 27px;
+    border-radius: 6px;
+    background-color: #0062CC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 9px;
+    line-height: 27px;
+    cursor: pointer;
+    
+
+}
+.lBtn{
+    font-weight: 400;
+    font-size: 16px;
+    color: white;
+    height: 27px;
+    border-radius: 6px;
+    background-color: #636363;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 9px;
+    line-height: 27px;
+    cursor: pointer;
+    
+}
+
+.largeBoxSection{
+    height: 600px;
+}
+
+.largeBox{ 
+    position: relative;
+    width: 90%;
+    height: 550px;
+    left: 5%;
+}
+.centerApps{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.appCont{
+    width: 96%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    min-height: max-content;
+    height: auto;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    justify-self: center;
+}
+
+.purpleBox{
+    width: 100%;
+    height: 550px;
+    border-radius: 50px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+
+}
+.promoteBox{
+    border-radius: 50px;
+    height: 550px;
+    width: 100%;
+   
+    display: flex;
+    flex-direction: column;
+
+    min-width: 380px;
+    margin-top: 50px;
+    padding-top: 30px;
+    max-width: 580px;
+   
+  
+
+}
+.identityBox{
+    border-radius: 50px;
+    height: 550px;
+    width: 100%;
+  
+    display: flex;
+    flex-direction: column;
+
+    
+    min-width: 380px;
+    margin-top: 50px;
+    padding-top: 30px;
+    max-width: 580px;
+
+}
+.lTxtCont{
+    width: 400px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+.wTxt{
+    color: white;
+    font-size: 27px;
+    font-weight: 400;
+    margin-bottom: 9px;
+}
+.sTxt{
+    font-weight: 700;
+    font-size: 45px;
+    color: white;
+    margin-bottom: 21px;
+}
+.lTxt{
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+}
+
+.fContainer{
+   align-self: center;
+  margin-top: 60px;
+    width: 100%;
+    max-width: 98%;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+.footer{
+    justify-self: center;
+    align-self: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 15px;
+    color: white;
+    display: flex;
+    width: 100%;
+    max-width: 380px;
+    justify-content: space-evenly;
+    margin-bottom: 23px;
+}
+.splitRow2{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+   
+    justify-content: space-evenly;
+ 
+}
+
+.askPlanSection{ 
+    height: 600px;
+}
+.askPlan{
+    position: relative;
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4vw;
+    color: white;
+    text-align: center;
+    top: 260px;
+}
+.compareTxt{
+    position: relative;
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1vw;
+    color: #0062CC;
+    text-align: center;
+    top: 280px;
+}
