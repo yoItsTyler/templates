@@ -300,8 +300,8 @@ export const Web = () => {
 
                 <div className={styles.identityBox} style={{backgroundImage: 'url(' + identity  + ')', backgroundSize: 'cover', backgroundPosition: 'center'}}>
                     <div className={styles.lTxtCont}>
-                        <div className={styles.wTxt}>Website Developement</div>
-                        <div className={styles.sTxt}>See what's behind Luna Vista</div>
+                        <div className={styles.wTxt}>Identity</div>
+                        <div className={styles.sTxt}>Explore Your Branding Image</div>
                         <div className={styles.lTxt}>Learn More</div>
                     </div>                
 
@@ -310,8 +310,8 @@ export const Web = () => {
 
                 <div className={styles.promoteBox} style={{backgroundImage: 'url(' + promote  + ')', backgroundSize: 'cover', backgroundPosition: 'center'}}>
                     <div className={styles.lTxtCont}>
-                        <div className={styles.wTxt}>Website Developement</div>
-                        <div className={styles.sTxt}>See what's behind Luna Vista</div>
+                        <div className={styles.wTxt}>Promote</div>
+                        <div className={styles.sTxt}>Boost Your Traffic</div>
                         <div className={styles.lTxt}>Learn More</div>
                     </div>               
 

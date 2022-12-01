@@ -271,7 +271,8 @@
  }
 .img{
     max-width: 100%;
-    height: 100%;
+    height: auto;
+    max-height: 100%;
 }
 
 
@@ -351,15 +352,26 @@
 }
 .wTxt{
     color: white;
-    font-size: 27px;
+    font-size: 24px;
     font-weight: 400;
     margin-bottom: 9px;
 }
+@media only screen and (max-width: 460px) {
+    .wTxt{
+        font-size: 21px;
+}
+}
 .sTxt{
-    margin-bottom: 21px;
     font-weight: 700;
-    font-size: 45px;
+    font-size: 42px;
     color: white;
+    margin-bottom: 21px;
+}
+@media only screen and (max-width: 460px) {
+    .sTxt{
+        font-size: 33px;
+        width: 80%;
+}
 }
 .lTxt{
     font-size: 18px;
