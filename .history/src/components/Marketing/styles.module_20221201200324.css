@@ -1,0 +1,16 @@
+.main{
+
+}
+.title{
+    font-weight: 700;
+    font-size: 50px;
+    text-align: center;
+
+}
+.centerItem{
+    display: flex;
+    flex-direction: column;
+  
+    justify-content: center;
+    justify-items: center;
+}

@@ -27,17 +27,13 @@ export const Marketing = () => {
                     <img src={graph} className={styles.graph} />
                 </div>
                 <div className={styles.subTxt}>
-                    Grow by <span className={styles.blueGrad}>promoting</span> yourself to a bigger audience
+                    Grow by <span className={styles.blueGrad}>promoting</span> yourselft to a bigger audience
                 </div>
 
                 <div className={styles.centerItem}>
                     <img src={arrow} className={styles.arrow} />
                 </div>
 
-
-                <div className={styles.colCont}>
-
-                
                 <div className={styles.leftCol}
                 >
                     <div className={styles.bT1}>
@@ -51,10 +47,13 @@ export const Marketing = () => {
                     </div>
 
                 </div>
-                </div>
 
                 <div className={styles.centerItem}>
-                    <img src={graph2} className={styles.graph2}/>
+                    <img src={graph2} className={styles.graph2} />
+
+
+
+
                 </div>
 
                 <div className={styles.txtCont}>
@@ -73,9 +72,9 @@ export const Marketing = () => {
                     <div className={styles.appCont}>
                         <div className={styles.purpleBox} style={{ backgroundImage: 'url(' + marketingBD + ')', backgroundSize: 'cover', backgroundPosition: 'center' }}>
                             <div className={styles.lTxtCont}>
-                          
-                                <div className={styles.sTxt}>More comming to Lune Vista Marketing soon this March</div>
-                            
+                                <div className={styles.wTxt}>Website Developement</div>
+                                <div className={styles.sTxt}>See what's behind Luna Vista</div>
+                                <div className={styles.lTxt}>Learn More</div>
                             </div>
 
 
@@ -95,8 +94,8 @@ export const Marketing = () => {
 
                             <div className={styles.promoteBox} style={{ backgroundImage: 'url(' + macDev + ')', backgroundSize: 'cover', backgroundPosition: 'center' }}>
                                 <div className={styles.lTxtCont}>
-                                    <div className={styles.wTxt}>Online</div>
-                                    <div className={styles.sTxt}>Put Yourself on the Web</div>
+                                    <div className={styles.wTxt}>Promote</div>
+                                    <div className={styles.sTxt}>Boost Your Traffic</div>
                                     <div className={styles.lTxt}>Learn More</div>
                                 </div>
 

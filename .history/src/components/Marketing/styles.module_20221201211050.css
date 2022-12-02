@@ -1,0 +1,63 @@
+.main{
+
+}
+.title{
+    margin-top: 80px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 50px;
+    text-align: center;
+
+}
+.centerItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    justify-content: center;
+ 
+}
+.subTxt{
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px;
+}
+.blueGrad{
+    background: 
+linear-gradient(90.35deg, #28D0D0 15.73%, #2A8BE4 41.95%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.graph{
+   height: 720px;
+}
+
+
+.leftCol{
+    width: 564px;
+    max-width: 80%;
+    
+    margin-left: 20%;
+}
+.blueTitle{
+    background: 
+linear-gradient(90.35deg, #28D0D0 15.73%, #2A8BE4 41.95%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  font-size: 60px;
+}
+
+.bT1{
+    font-weight: 700;
+    font-size: 36px;
+
+}
+.bT2{
+    font-weight: 700;
+    font-size: 21px;
+
+}
+.arrow{
+    margin-top: 90px;
+    margin-bottom: 200px;
+}

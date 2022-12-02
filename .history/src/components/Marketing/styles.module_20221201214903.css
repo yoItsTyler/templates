@@ -39,22 +39,13 @@ linear-gradient(90.35deg, #28D0D0 15.73%, #2A8BE4 41.95%);
   
  }
 
- .colCont{
-    margin-left: auto;
-     width: 80%;
-   
-    
-    
-
- }
-
 
 .leftCol{
     width: 564px;
     max-width: 80%;    
-   
+    margin-left: 20%;
     z-index: 1;
-       
+    margin-right: 200px;    
 }
 .blueTitle{
     background: 

@@ -34,27 +34,17 @@ linear-gradient(90.35deg, #28D0D0 15.73%, #2A8BE4 41.95%);
 .graph2{
     max-height: 400px;
     max-width: 105vw; 
-    z-index: -1;
+    z-index: 2;
     background-color: rgba(255, 0, 0, 0); 
   
- }
-
- .colCont{
-    margin-left: auto;
-     width: 80%;
-   
-    
-    
-
  }
 
 
 .leftCol{
     width: 564px;
     max-width: 80%;    
-   
-    z-index: 1;
-       
+    margin-left: 20%;
+    z-index: 1;    
 }
 .blueTitle{
     background: 

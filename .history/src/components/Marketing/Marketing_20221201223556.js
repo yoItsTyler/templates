@@ -27,7 +27,7 @@ export const Marketing = () => {
                     <img src={graph} className={styles.graph} />
                 </div>
                 <div className={styles.subTxt}>
-                    Grow by <span className={styles.blueGrad}>promoting</span> yourself to a bigger audience
+                    Grow by <span className={styles.blueGrad}>promoting</span> yourselft to a bigger audience
                 </div>
 
                 <div className={styles.centerItem}>

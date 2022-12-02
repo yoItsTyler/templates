@@ -41,10 +41,8 @@ linear-gradient(90.35deg, #28D0D0 15.73%, #2A8BE4 41.95%);
 
  .colCont{
     margin-left: auto;
-     width: 80%;
-   
-    
-    
+     min-width: 80%;
+     max-width: 100%;
 
  }
 

@@ -27,7 +27,7 @@ export const Marketing = () => {
                     <img src={graph} className={styles.graph} />
                 </div>
                 <div className={styles.subTxt}>
-                    Grow by <span className={styles.blueGrad}>promoting</span> yourself to a bigger audience
+                    Grow by <span className={styles.blueGrad}>promoting</span> yourselft to a bigger audience
                 </div>
 
                 <div className={styles.centerItem}>
@@ -73,9 +73,9 @@ export const Marketing = () => {
                     <div className={styles.appCont}>
                         <div className={styles.purpleBox} style={{ backgroundImage: 'url(' + marketingBD + ')', backgroundSize: 'cover', backgroundPosition: 'center' }}>
                             <div className={styles.lTxtCont}>
-                          
-                                <div className={styles.sTxt}>More comming to Lune Vista Marketing soon this March</div>
-                            
+                                <div className={styles.wTxt}>Website Developement</div>
+                                <div className={styles.sTxt}>See what's behind Luna Vista</div>
+                                <div className={styles.lTxt}>Learn More</div>
                             </div>
 
 
@@ -86,7 +86,7 @@ export const Marketing = () => {
                             <div className={styles.identityBox} style={{ backgroundImage: 'url(' + identity + ')', backgroundSize: 'cover', backgroundPosition: 'center' }}>
                                 <div className={styles.lTxtCont}>
                                     <div className={styles.wTxt}>Identity</div>
-                                    <div className={styles.sTxt}>Explore Your Branding Image</div>
+                                    <div className={styles.sTxt}>More comming to Lune Vista Marketing soon this March</div>
                                     <div className={styles.lTxt}>Learn More</div>
                                 </div>
 
