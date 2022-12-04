@@ -4,7 +4,8 @@
     height: 50px;
     margin-top: 0;
    overflow-x: hidden;
-    background-color: hsl(0, 0%, 7%);
+   background: rgba(0, 0, 0 , 0.9);
+   backdrop-filter: blur(4.5px);
     position: fixed;
     display: flex;
     z-index: 2;
@@ -15,7 +16,9 @@
 }
 .row{
     width: 100%;
-   
+    
+    padding-left: 6px;
+    padding-right: 6px;
     align-self: center;
    
     height: 50px;
