@@ -296,7 +296,25 @@ export const Home = (props) => {
 
             </div>
 
-           
+            <div className={styles.tOne} style={{ backgroundImage: 'url(' + products + ')', backgroundSize: 'cover', backgroundPosition: 'center', width: '100vw' }}>
+
+                <div className={styles.container}>
+                    <div className={styles.title} style={{ fontSize: txtSize?.titleSize }}>Logos & Branding</div>
+                    <div className={styles.subTxt} style={{ fontSize: txtSize?.subSize }}>Timeless coehesive designs</div>
+
+                    <div className={styles.btnRow}>
+                        <div className={styles.whiteBtn} onClick={() => history.push('/branding')}
+                        >Request Now</div>
+                        <div className={styles.blackBtn} onClick={() => history.push('/branding')}
+                        >Learn More</div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
 
             <div className={styles.tOne} style={{ backgroundImage: 'url(' + canC + ')', backgroundSize: 'cover', backgroundPosition: 'center', width: '100vw' }}>
 
@@ -314,26 +332,6 @@ export const Home = (props) => {
 
 
             </div>
-
-            <div className={styles.tOne} style={{ backgroundImage: 'url(' + products + ')', backgroundSize: 'cover', backgroundPosition: 'center', width: '100vw' }}>
-
-<div className={styles.container}>
-    <div className={styles.title} style={{ fontSize: txtSize?.titleSize }}>Logos & Branding</div>
-    <div className={styles.subTxt} style={{ fontSize: txtSize?.subSize }}>Timeless coehesive designs</div>
-
-    <div className={styles.btnRow}>
-        <div className={styles.whiteBtn} onClick={() => history.push('/branding')}
-        >Request Now</div>
-        <div className={styles.blackBtn} onClick={() => history.push('/branding')}
-        >Learn More</div>
-
-
-    </div>
-
-
-</div>
-
-</div>
 
             <div className={styles.tOne} style={{ backgroundImage: 'url(' + colorSwirl + ')', backgroundSize: 'cover', backgroundPosition: 'center', width: '100vw' }}>
 
