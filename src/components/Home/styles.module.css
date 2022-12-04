@@ -99,20 +99,27 @@
     min-width: 180px;
     max-width: 180px;
     border-radius: 6px;
-   
-
+    height: 30px;
+    line-height: 30px;
    
     color: #000000;
 
-    height: 30px;
-    line-height: 30px;    
+      
     justify-content: center;       
-    background-color: rgba(255, 255, 255, .9);
+    background-color: rgba(255, 255, 255, .8);
     z-index: 1;
    backdrop-filter:  blur(1.5px);
    cursor: pointer;
    align-items: center;
+
+   transition: ease-out;
+    transition-duration: .3s;
   }
+.whiteBtn:hover{ 
+    background-color: #FFFFFF;
+    transition: ease-out;
+    transition-duration: .3s;
+}
 .blackBtn{
     
     font-size: 16px;
@@ -120,7 +127,7 @@
     min-width: 180px;
     max-width: 180px;
     border-radius: 6px;  
-    background-color: #000000;
+    background-color: rgba(0, 0, 0, .8);
     color: #FFFFFF;
     height: 30px;
     line-height: 30px;
@@ -129,8 +136,14 @@
     cursor: pointer;
     align-items: center;
 
+    transition: ease-out;
+    transition-duration: .3s;
 }
-
+.blackBtn:hover{ 
+    background-color: #000000;
+    transition: ease-out;
+    transition-duration: .3s;
+}
 .container2{
     height: 100vh;
     display: flex;
