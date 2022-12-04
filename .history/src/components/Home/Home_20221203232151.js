@@ -283,10 +283,9 @@ export const Home = (props) => {
                     <div className={styles.subTxt} style={{ fontSize: txtSize?.subSize }}>Timeless coehesive designs</div>
 
                     <div className={styles.btnRow}>
-                        <div className={styles.whiteBtn} onClick={() => history.push('/branding')}
+                        <div className={styles.whiteBtn}  onClick={() => history.push('/branding')}
                         >Request Now</div>
-                        <div className={styles.blackBtn} onClick={() => history.push('/branding')}
-                        >Learn More</div>
+                        <div className={styles.blackBtn}>Learn More</div>
 
 
                     </div>
@@ -304,10 +303,9 @@ export const Home = (props) => {
                     <div className={styles.subTxt}  style={{ fontSize: txtSize?.subSize }}>Where you live online</div>
 
                     <div className={styles.btnRow}>
-                        <div className={styles.whiteBtn} onClick={() => history.push('/request')}
+                        <div className={styles.whiteBtn} onClick={() => history.push('/web-plans')}
                         >Request Now</div>
-                        <div className={styles.blackBtn} onClick={() => history.push('/web-plans')}
-                        >Learn More</div>
+                        <div className={styles.blackBtn}>Learn More</div>
                     </div>
                 </div>
 
@@ -321,10 +319,8 @@ export const Home = (props) => {
                     <div className={styles.subTxtB}  style={{ fontSize: txtSize?.subSize }}>Attract more customers</div>
 
                     <div className={styles.btnRow}>
-                        <div className={styles.whiteBtn} onClick={() => history.push('/request')}
-                        >Request Now</div>
-                        <div className={styles.blackBtn} onClick={() => history.push('/marketing')}
-                        >Learn More</div>
+                        <div className={styles.whiteBtn}>Request Now</div>
+                        <div className={styles.blackBtn}>Learn More</div>
                     </div>
                 </div>
 
@@ -338,8 +334,7 @@ export const Home = (props) => {
                     <div className={styles.subTxt}  style={{ fontSize: txtSize?.subSize }}>Talk to Us Today</div>
 
                     <div className={styles.btnRow2}>
-                        <div className={styles.whiteBtn} onClick={() => history.push('/request')}
-                        >Free Consultation </div>
+                        <div className={styles.whiteBtn}>Free Consultation </div>
 
                     </div>
 

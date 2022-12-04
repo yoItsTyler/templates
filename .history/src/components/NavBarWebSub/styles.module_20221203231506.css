@@ -39,8 +39,8 @@
 }
 .btnRow{
     display: flex;
-    min-width: 160px;
-    width: 30vw;
+    min-width: 170px;
+    width: 50vw;
     max-width: 200px;
     justify-content: space-between;
     padding-left: 6px;

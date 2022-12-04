@@ -338,8 +338,7 @@ export const Home = (props) => {
                     <div className={styles.subTxt}  style={{ fontSize: txtSize?.subSize }}>Talk to Us Today</div>
 
                     <div className={styles.btnRow2}>
-                        <div className={styles.whiteBtn} onClick={() => history.push('/request')}
-                        >Free Consultation </div>
+                        <div className={styles.whiteBtn}>Free Consultation </div>
 
                     </div>
 
