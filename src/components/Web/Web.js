@@ -18,7 +18,7 @@ import identity from '../../images/identity.png';
 import { NavBarWebSub } from '../NavBarWebSub/NavBarWebSub';
 import { useHistory } from 'react-router-dom';
 
-
+<title>Website Devlopment | Lune Vista</title>
 
 
 /*<div className={styles.centerX}>
