@@ -41,7 +41,7 @@ export const Marketing = () => {
 
                 
 
-                <div className={styles.section2}> 
+
                 <div className={styles.colCont}>
 
                 
@@ -56,15 +56,13 @@ export const Marketing = () => {
                     <div className={styles.bT2}>
                         Find a bigger audience for your products or services to increase alses. Find out exactly who your target audience is and capitalize on the opportunity.
                     </div>
-                   
 
                 </div>
+                </div>
+
                 <div className={styles.centerItem}>
                     <img src={graph2} className={styles.graph2}/>
                 </div>
-                </div>
-                </div>
-               
 
                 <div className={styles.txtCont}>
                     <div className={styles.txt}>

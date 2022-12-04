@@ -69,17 +69,12 @@ linear-gradient(90.35deg, #28D0D0 15.73%, #2A8BE4 41.95%);
  }
 
  .colCont{
-     height: 100%;
    
-    align-self: center;
-    justify-self: center;
+    
      width: 100%;
-    display: flex;
-    flex-direction: column;
+   
     justify-content: center;
     justify-items: center;
-    align-items: center;
-    align-content: center;
     
 
  }
@@ -87,7 +82,7 @@ linear-gradient(90.35deg, #28D0D0 15.73%, #2A8BE4 41.95%);
 
 .leftCol{
     width: 564px;
-    max-width: 90%;    
+    max-width: 80%;    
    
     z-index: 1;
        
@@ -100,44 +95,13 @@ linear-gradient(90.35deg, #28D0D0 15.73%, #2A8BE4 41.95%);
   font-weight: 700;
   font-size: 60px;
 }
-@media only screen and (max-width: 640px) {
-    .blueTitle{
-        font-size: 48px;
-}
-}
-@media only screen and (max-width: 460px) {
-    .blueTitle{
-        font-size: 36px;
-}
-}
 .bT1{
     font-weight: 700;
     font-size: 36px;
 }
-@media only screen and (max-width: 557px) {
-    .bT1{
-        font-size: 32px;
-}
-}
-@media only screen and (max-width: 460px) {
-    .bT1{
-        font-size: 30px;
-}
-}
-
 .bT2{
     font-weight: 700;
     font-size: 21px;
-}
-@media only screen and (max-width: 557px) {
-    .bT2{
-        font-size: 18px;
-}
-}
-@media only screen and (max-width: 460px) {
-    .bT2{
-        font-size: 16px;
-}
 }
 .arrow{
     margin-top: auto;
@@ -152,7 +116,6 @@ linear-gradient(90.35deg, #28D0D0 15.73%, #2A8BE4 41.95%);
     font-size: 42px;
     display: flex;
     justify-content: center;
-    text-align: center;
 }
 .subTxt2{
     font-size: 12px;

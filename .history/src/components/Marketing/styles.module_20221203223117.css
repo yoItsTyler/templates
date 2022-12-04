@@ -100,14 +100,14 @@ linear-gradient(90.35deg, #28D0D0 15.73%, #2A8BE4 41.95%);
   font-weight: 700;
   font-size: 60px;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 557px) {
     .blueTitle{
-        font-size: 48px;
+        font-size: 50px;
 }
 }
 @media only screen and (max-width: 460px) {
     .blueTitle{
-        font-size: 36px;
+        font-size: 40px;
 }
 }
 .bT1{
@@ -152,7 +152,6 @@ linear-gradient(90.35deg, #28D0D0 15.73%, #2A8BE4 41.95%);
     font-size: 42px;
     display: flex;
     justify-content: center;
-    text-align: center;
 }
 .subTxt2{
     font-size: 12px;
