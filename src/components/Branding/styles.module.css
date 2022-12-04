@@ -3,7 +3,234 @@
     margin-top: 0;
 
 }
-.branding{
+.brandingHero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    position: relative;
+    height: auto;
+}
+.logo{ 
+    position: relative;
+    max-width: 550px;
+    width: 80%;
+    height: auto;
+    margin-bottom: 60px;
+    margin-top: 60px;
+}
+.heroTitle{ 
+    position: relative;
+    font-weight: 600;
+    font-size: 4vw;
+    text-align: center;
+    position: relative;
+    color: #2C2C2E;
+}
+.fuIdTxt{ 
+    background: linear-gradient(92.54deg, #0067D8 9.9%, #5D22DA 52.19%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+
+}
+.arrow{ 
+    position: relative;
+    width: 6vw;
+    max-width: 40px;
+    margin-top: 40px;
+    margin-bottom: 9px;
+}
+.yourTile{ 
+    height: 36vw;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    
+}
+.yourContents{ 
+    position: relative;
+    width: 76%;
+    left: 11%;
+    min-height: 120px;
+    height: fit-content;
+    top: 0;
+}
+.yourTxt{
     position: absolute;
+    font-weight: 800;
+    font-size: 6vw;
+
+    background: linear-gradient(94.39deg, #2AA2E6 -0.85%, #CD00B9 87.44%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.aApic{ 
+    position: absolute;
+    width: 46%;
+    right: 0;
+    top: 0;
+}
+.perspectiveTile{ 
+    height: 50vw;
+    position: relative;
+    margin-top: 130px;
+    margin-bottom: 90px;
+}
+@media only screen and (max-width: 580px) {
+    .perspectiveTile{
+    height: 60vh;
+    }
+}
+.persCont{ 
+    position: relative;
+    max-width: 600px;
+    margin-left: 40%;
+    margin-right: 30px;
+    z-index: 1;
+}
+@media only screen and (max-width: 580px) {
+    .persCont{
+    margin-left: 40px;
+    margin-top: 60px;
+    }
+}
+.persTitle{
+    font-size: 27px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: #2C2C2E;
+}
+.perspective{ 
+    background: linear-gradient(90.57deg, #E02424 31.59%, #FF7E07 61.01%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    width: auto;
+}
+.persTxt{ 
+    line-height: 24px;
+    font-size: 15px;
+    color: #2C2C2E;
+}
+.linePic{ 
+    position: relative;
+    left: 0;
+    top: -200px;
+    z-index: -1;
+    min-width: 608px;
+    min-height: auto;
+    width: 80%;
+}
+@media only screen and (max-width: 580px) {
+    .linePic{
+     top: 0px;
+    }
+}
+.checkTile{ 
+    
+    min-height: 320px;
+    height: 170vh;
+    max-height: 900px;
+}
+.checkCont{ 
+    max-width: 490px;
+    margin-left: 15%;
     margin-top: 100px;
+}
+@media only screen and (max-width: 1200px) {
+    .checkCont{
+    margin-top: 0px;
+    margin-left: 10%;
+    }
+}
+@media only screen and (max-width: 550px) {
+    .checkCont{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    }
+}
+.compTitle{ 
+    font-weight: 700;
+    font-size: 36px;
+    color: #2C2C2E;
+}
+@media only screen and (max-width: 550px) {
+    .compTitle{
+    font-size: 6vw;
+    }
+}
+.bsTitle{ 
+    font-weight: 700;
+    font-size: 66px;
+
+    background: linear-gradient(90.71deg, #02A626 -1.16%, #1A9DC6 102.42%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+
+    margin-bottom: 12px;
+}
+@media only screen and (max-width: 550px) {
+    .bsTitle{
+    font-size: 12vw;
+    }
+}
+.checkTxt{ 
+    line-height: 24px;
+    font-size: 21px;
+}
+@media only screen and (max-width: 550px) {
+    .checkTxt{
+    font-size: 15px;
+    }
+}
+.roadmapPic{
+    position: relative;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 60px;
+}
+@media only screen and (max-width: 1200px) {
+    .roadmapPic{
+   
+    }
+}
+.checklistPic{ 
+    position: relative;
+    top: -330px;
+    margin-left: 55%;
+    margin-right: 10%;
+    margin-bottom: 150px;
+}
+@media only screen and (max-width: 1200px) {
+    .checklistPic{
+    width: 30%;
+    margin-right: 20px;
+    margin-left: 65%;
+    }
+}
+@media only screen and (max-width: 880px) {
+    .checklistPic{
+    width: 70%;
+    margin-left: 15%;
+    top: 40px;
+    }
+}
+.cdTile{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: auto;
 }
