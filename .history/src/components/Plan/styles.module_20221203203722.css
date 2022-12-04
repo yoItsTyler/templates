@@ -24,13 +24,13 @@
     max-width: 100vw;
  
 
-   
+    scroll-snap-align: center;
     position: relative; 
     display: flex;
     flex-direction: column;
 }
 .splitRow2{
-    margin-top: 120px;
+    margin-top: 100px;
     width: 98%;
     max-width: 1200px;
     min-height: 380px;
@@ -43,7 +43,7 @@
 }
 @media only screen and (max-width: 757px) {
     .splitRow2{
-        margin-top: 60px;
+        margin-top: 170px;
     }
 }
 
@@ -53,7 +53,6 @@
     width: 98%;
     max-width: 1200px;
     min-height: 380px;
-    height: 800px;
     display: flex;
     flex-wrap: wrap;
     align-self: center;
@@ -70,12 +69,11 @@
     flex-direction: column;
 }
 .planT{
-    margin-top: 16px;
     font-weight: 700;
     font-size: 27px;    
 }
 .planT2{
-    margin-top: 30px;
+    margin-top: 150px;
     font-weight: 700;
     font-size: 27px; 
     text-align: center;   
@@ -202,7 +200,7 @@
     position: absolute;
     width: 100%;
    
-    height: 100px;
+    height: 150px;
     align-self: center;
     border-top: .5px solid rgba(29, 29, 29, 0.255);
     display: flex;
@@ -256,7 +254,7 @@
 
 
 .txtCont{
-    margin-top: 100px;
+    margin-top: 200px;
 
 }
 

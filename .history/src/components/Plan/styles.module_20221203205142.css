@@ -30,7 +30,7 @@
     flex-direction: column;
 }
 .splitRow2{
-    margin-top: 120px;
+    margin-top: 60px;
     width: 98%;
     max-width: 1200px;
     min-height: 380px;
@@ -43,7 +43,7 @@
 }
 @media only screen and (max-width: 757px) {
     .splitRow2{
-        margin-top: 60px;
+        margin-top: 170px;
     }
 }
 
@@ -53,7 +53,7 @@
     width: 98%;
     max-width: 1200px;
     min-height: 380px;
-    height: 800px;
+    height: 700px;
     display: flex;
     flex-wrap: wrap;
     align-self: center;
@@ -70,7 +70,6 @@
     flex-direction: column;
 }
 .planT{
-    margin-top: 16px;
     font-weight: 700;
     font-size: 27px;    
 }
@@ -256,7 +255,7 @@
 
 
 .txtCont{
-    margin-top: 100px;
+    margin-top: 200px;
 
 }
 

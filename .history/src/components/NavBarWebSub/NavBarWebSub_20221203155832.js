@@ -38,7 +38,7 @@ export const NavBarWebSub = () => {
                         >Overview</div>
                         <div className={styles.btnTxt} onClick={() => history.push('/specs')}
                         >Specs</div>
-                        <div className={styles.requestBtn} onClick={() => history.push('/request')}
+                        <div className={styles.requestBtn} onClick={() => history.push('/web-plans')}
                         >Request</div>
                     </div>
 
