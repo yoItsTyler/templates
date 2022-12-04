@@ -33,28 +33,22 @@ linear-gradient(90.35deg, #28D0D0 15.73%, #2A8BE4 41.95%);
 }
 .graph2{
     max-height: 400px;
-    max-width: 105vw; 
-    z-index: -1;
-    background-color: rgba(255, 0, 0, 0); 
-  
- }
-
- .colCont{
-    margin-left: auto;
-     width: 80%;
+    max-width: 105vw;
+ 
+    z-index: 2;
+    background-color: rgba(255, 0, 0, 0);
    
-    
-    
-
+  
  }
 
 
 .leftCol{
     width: 564px;
-    max-width: 80%;    
-   
+    max-width: 80%;
+    
+    margin-left: 20%;
     z-index: 1;
-       
+    
 }
 .blueTitle{
     background: 
@@ -64,22 +58,29 @@ linear-gradient(90.35deg, #28D0D0 15.73%, #2A8BE4 41.95%);
   font-weight: 700;
   font-size: 60px;
 }
+
 .bT1{
     font-weight: 700;
     font-size: 36px;
+
 }
 .bT2{
     font-weight: 700;
     font-size: 21px;
+
 }
 .arrow{
     margin-top: 90px;
     margin-bottom: 200px;
 }
+
+
 .txtCont{
     margin-top: 200px;
     margin-bottom: 200px;
+
 }
+
 .txt{
     font-weight: 400;
     font-size: 42px;
@@ -125,28 +126,39 @@ linear-gradient(90.35deg, #28D0D0 15.73%, #2A8BE4 41.95%);
     flex-direction: column;
     justify-content: center;
     align-content: center;
+
+
 }
 .promoteBox{
     border-radius: 50px;
     height: 550px;
-    width: 100%;   
+    width: 100%;
+   
     display: flex;
     flex-direction: column;
+
     min-width: 380px;
     margin-top: 50px;
     padding-top: 30px;
     max-width: 580px;
+   
+  
+
 }
 .identityBox{
     border-radius: 50px;
     height: 550px;
-    width: 100%;  
+    width: 100%;
+  
     display: flex;
     flex-direction: column;
+
+    
     min-width: 380px;
     margin-top: 50px;
     padding-top: 30px;
     max-width: 580px;
+
 }
 .lTxtCont{
     width: 400px;
@@ -190,8 +202,10 @@ linear-gradient(90.35deg, #28D0D0 15.73%, #2A8BE4 41.95%);
 .splitRow2{
     width: 100%;
     display: flex;
-    flex-wrap: wrap;   
-    justify-content: space-evenly; 
+    flex-wrap: wrap;
+   
+    justify-content: space-evenly;
+ 
 }
 .fContainer{
     align-self: center;
@@ -208,7 +222,7 @@ linear-gradient(90.35deg, #28D0D0 15.73%, #2A8BE4 41.95%);
      font-size: 16px;
      font-weight: 400;
      line-height: 15px;
-     color: black;
+     color: white;
      display: flex;
      width: 100%;
      max-width: 380px;

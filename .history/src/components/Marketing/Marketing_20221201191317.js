@@ -1,21 +1,26 @@
 import { NavbarWeb } from '../NavbarWeb/NavbarWeb';
 import { NavBarWebSub } from '../NavBarWebSub/NavBarWebSub';
 import styles from './styles.module.css';
-import logo from '../../images/luneVista.png';
-import logoB from '../../images/logoB.png';
 
-export const Branding = () => {
+
+export const Marketing = () => {
 
     return(
         <div className={styles.main}>
             <NavbarWeb/>
             <NavBarWebSub/>
 
-            <div className={styles.branding}>
-            <img src={logoB} className={styles.logo}/>
+
+            <div className={styles.tile}>
+
+                <div className={styles.title}>
+                    
+                </div>
+
+            
+
 
             </div>
-           
 
         </div>
     );
