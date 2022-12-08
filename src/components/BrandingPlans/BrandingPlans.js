@@ -4,9 +4,9 @@ import styles from './styles.module.css';
 import chat from '../../images/chat.png';
 import { useHistory } from 'react-router-dom';
 //import chat from '../../images/.png';
-import pPlan from '../../images/proPlan.png';
-import bPlan from '../../images/bizPlan.png';
-import ePlan from '../../images/enterprisePlan.png';
+import aA from '../../images/aA.png';
+import aA2 from '../../images/aA2.png';
+import aA3 from '../../images/aA3.png';
 import aAglance from '../../images/aAglance.png';
 import lineGlance from '../../images/lineGlance.png';
 import checklist from '../../images/checklist.png';
@@ -43,7 +43,7 @@ export const BrandingPlans = () => {
                 <div className={styles.rows}>
 
                     <div className={styles.column}>
-                        <img src={pPlan} />
+                        <img src={aA} className={styles.planPic} />
                         <div className={styles.planT}>
                             Logo Design
                         </div>
@@ -74,7 +74,7 @@ export const BrandingPlans = () => {
                     </div>
 
                     <div className={styles.column}>
-                        <img src={bPlan} />
+                        <img src={aA2} className={styles.planPic} />
                         <div className={styles.planT}>
                             Identity Package
                         </div>
@@ -110,7 +110,7 @@ export const BrandingPlans = () => {
                     </div>
 
                     <div className={styles.column}>
-                        <img src={ePlan} />
+                        <img src={aA3} className={styles.planPic} />
                         <div className={styles.planT}>
                             Brand Strategy
                         </div>
@@ -197,12 +197,12 @@ export const BrandingPlans = () => {
                         
                         <div className={styles.twoThirdBox}>
                         
-                            <div className = {styles.txtRow}>
-                                <div className={styles.boldTxtLeft}><span className={styles.darkBoldTxt}>Influence perspective.</span><br></br>Promote instant recognition. Timeless designs that grow with your business.</div>
+                            <div className = {styles.txtRow4}>
+                                <div className={styles.boldTxtLeft}><span className={styles.darkBoldTxt}>Influence perspective.</span><br></br>Promote instant recognition. <br></br>Timeless designs that grow <br></br>with your business.</div>
                                 <div className={styles.lightTxt}></div>
                             </div>
                             <div className={styles.imgC}>
-                            <img src ={lineGlance}  className ={styles.img}/>
+                            <img src ={lineGlance}  className ={styles.img4}/>
                             </div>
                         </div>
                         
