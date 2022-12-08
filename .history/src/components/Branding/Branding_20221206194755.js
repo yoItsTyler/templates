@@ -49,11 +49,10 @@ export const Branding = () => {
                         Promote instant recognition of your business’s identity creating modern, elegant, and timeless designs that grow with you. We focus on strategic and artistic designs that ensure you're capturing the attention of your potential audience and do not blend in with your competition.
                     </div>
                 </div>
-                <img src={drawnLine} className={styles.linePic}/>
+                <img src={drawnLine} className={styles.linePic} />
             </div>
 
             <div className={styles.checkTile}>
-            <div className={styles.splitRow}>
                 <div className={styles.checkCont}>
                     <div className={styles.compTitle}>
                         Complete your checklist
@@ -67,11 +66,10 @@ export const Branding = () => {
                     <img src={roadmap} className={styles.roadmapPic} />
                 </div>
                 <img src={checklist} className={styles.checklistPic} />
-                </div>
             </div>
 
             <div className={styles.cdTile}>
-                
+                <div className={styles.splitRow}>
                     <div className={styles.cdCont}>
                         <div className={styles.cdTitle}>
                             Cohesive Design
@@ -84,7 +82,7 @@ export const Branding = () => {
                         <img src={spectivFull} className={styles.spectivFullPic} />
                     </div>
                 </div>
-            
+            </div>
         </div>
     );
 };

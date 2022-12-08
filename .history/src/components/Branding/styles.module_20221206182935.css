@@ -136,12 +136,28 @@
 }
 .checkTile{ 
     
-    
-    display: flex; 
-    flex-direction: column;
-    justify-content: center;
+    min-height: 320px;
+    height: 170vh;
+    max-height: 900px;
 }
-
+.checkCont{ 
+    max-width: 490px;
+    margin-left: 15%;
+    margin-top: 100px;
+}
+@media only screen and (max-width: 1200px) {
+    .checkCont{
+    margin-top: 0px;
+    margin-left: 10%;
+    }
+}
+@media only screen and (max-width: 550px) {
+    .checkCont{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    }
+}
 .compTitle{ 
     font-weight: 700;
     font-size: 36px;
@@ -189,61 +205,25 @@
    
     }
 }
-.splitRow{
-    align-self: center;
-    justify-self: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    max-width: 1000px;
-    height: fit-content;
-    margin-top: 1px;
-    margin-bottom: 100px;
-}
-@media only screen and (max-width: 1200px) {
-    .splitRow{
-     height: 800px;
-    }
-}
-.checkCont{ 
-    max-width: 490px;
-  
-}
-@media only screen and (max-width: 1200px) {
-    .checkCont{
-    margin-top: 0px;
-    margin-left: 10%;
-    }
-}
-@media only screen and (max-width: 550px) {
-    .checkCont{
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-    }
-}
 .checklistPic{ 
-    justify-self: center;
-    align-self: center;
-    height: 100%;
-   
- 
+    position: relative;
+    top: -330px;
+    margin-left: 55%;
+    margin-right: 10%;
+    margin-bottom: 150px;
 }
 @media only screen and (max-width: 1200px) {
     .checklistPic{
-  /*  width: 30%;
+    width: 30%;
     margin-right: 20px;
-    margin-left: 65%;*/
-   
-    max-height: 450px;
+    margin-left: 65%;
     }
 }
 @media only screen and (max-width: 880px) {
-    .checklistPic{/*
+    .checklistPic{
     width: 70%;
     margin-left: 15%;
-    top: 40px;*/
+    top: 40px;
     }
 }
 .cdTile{ 
@@ -251,12 +231,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  
+    position: relative;
     height: auto;
 }
 .cdTitle{
     width: 550px;
-    max-width: 97vw;
+    max-width: 97%;
     font-weight: 700;
     font-size: 66px;
     background: linear-gradient(90.71deg, #F25077 -1.16%, #F28016 102.42%);
@@ -267,7 +247,6 @@ background-clip: text;
 }
 @media only screen and (max-width: 572px) {
     .cdTitle{
-        font-size: 36px;
    
     }
 }
@@ -279,7 +258,7 @@ background-clip: text;
     justify-self: center;
     
     width: 550px;
-    max-width: 97vw;
+    max-width: 97%;
 }
 @media only screen and (max-width: 572px) {
     .cdTxt{

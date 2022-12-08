@@ -13,9 +13,6 @@
     flex-direction: column;
     justify-content: space-between;
 }
-.Calendy{
-    margin-top: auto;
-}
 .img{
     align-self: center;
    height: 225px;
@@ -31,12 +28,6 @@
 .rNow{
     text-align: center;
     font-weight: 700;
-    font-size: 28px;
+    font-size: 30px;
     margin-bottom: -20px;
-}
-@media only screen and (max-width: 360px) {
-    .rNow{
-        font-size: 26px;
-        
-    }
 }

@@ -12,22 +12,22 @@ import spectivFull from '../../images/spectivFull.png';
 
 export const Branding = () => {
 
-    return (
+    return(
         <div className={styles.main}>
-            <NavbarWeb />
-            <NavBarWebSub />
+            <NavbarWeb/>
+            <NavBarWebSub/>
 
             <div className={styles.brandingHero}>
-                <img src={logoB} className={styles.logo} />
+                <img src={logoB} className={styles.logo}/>
 
                 <div className={styles.heroTitle}>
                     Your <span className={styles.fuIdTxt}>future identity</span> is waiting to be found.
                 </div>
 
-                <img src={arrowLong} className={styles.arrow} />
+                <img src={arrowLong} className={styles.arrow}/>
             </div>
-
-            <div className={styles.yourTile}>
+           
+           <div className={styles.yourTile}>
                 <div className={styles.yourContents}>
                     <div className={styles.yourTxt}>
                         Your brand.<br></br>
@@ -36,24 +36,23 @@ export const Branding = () => {
                         Your design.<br></br>
                         Your identity.
                     </div>
-                    <img src={aA} className={styles.aApic} />
+                    <img src={aA} className={styles.aApic}/>
                 </div>
-            </div>
+           </div>
 
-            <div className={styles.perspectiveTile}>
+           <div className={styles.perspectiveTile}>
                 <div className={styles.persCont}>
                     <div className={styles.persTitle}>
                         Influence the <span className={styles.perspective}>perspective</span> of your business.
                     </div>
                     <div className={styles.persTxt}>
-                        Promote instant recognition of your business’s identity creating modern, elegant, and timeless designs that grow with you. We focus on strategic and artistic designs that ensure you're capturing the attention of your potential audience and do not blend in with your competition.
+                    Promote instant recognition of your business’s identity creating modern, elegant, and timeless designs that grow with you. We focus on strategic and artistic designs that ensure you're capturing the attention of your potential audience and do not blend in with your competition.
                     </div>
                 </div>
                 <img src={drawnLine} className={styles.linePic}/>
-            </div>
+           </div>
 
-            <div className={styles.checkTile}>
-            <div className={styles.splitRow}>
+           <div className={styles.checkTile}>
                 <div className={styles.checkCont}>
                     <div className={styles.compTitle}>
                         Complete your checklist
@@ -62,29 +61,29 @@ export const Branding = () => {
                         Brand Strategy
                     </div>
                     <div className={styles.checkTxt}>
-                        Overcome your challenges and meet your goals. Find out where you and your business can grow through your brand’s image.
+                        Overcome your challenges and meet your goals. Find out where you and your business can grow through your brand’s image. 
                     </div>
-                    <img src={roadmap} className={styles.roadmapPic} />
+                    <img src={roadmap} className={styles.roadmapPic}/>
                 </div>
-                <img src={checklist} className={styles.checklistPic} />
-                </div>
-            </div>
+                <img src={checklist} className={styles.checklistPic}/>
+           </div>
 
-            <div className={styles.cdTile}>
-                
-                    <div className={styles.cdCont}>
-                        <div className={styles.cdTitle}>
-                            Cohesive Design
-                        </div>
-                        <div className={styles.cdTxt}>
-                            We focus on creating unique designs that integrate your style. Complimenting and reflecting the identity of the business or professional we are working with.
-                        </div>
+           <div className={styles.cdTile}>
+                <div className={styles.cdCont}>
+                    <div className={styles.cdTitle}>
+                        Cohesive Design
                     </div>
-                    <div className={styles.spectImg}>
-                        <img src={spectivFull} className={styles.spectivFullPic} />
+                    <div className={styles.cdTxt}>
+                    We focus on creating unique designs that integrate your style. Complimenting and reflecting the identity of the business or professional we are working with.
                     </div>
+                </div> 
+                <div className={styles.spectImg}>
+                <img src={spectivFull} className={styles.spectivFullPic}/>
+
                 </div>
-            
+                
+           </div>
+
         </div>
     );
 };

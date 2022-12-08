@@ -201,11 +201,6 @@
     margin-top: 1px;
     margin-bottom: 100px;
 }
-@media only screen and (max-width: 1200px) {
-    .splitRow{
-     height: 800px;
-    }
-}
 .checkCont{ 
     max-width: 490px;
   
@@ -227,7 +222,7 @@
     justify-self: center;
     align-self: center;
     height: 100%;
-   
+  
  
 }
 @media only screen and (max-width: 1200px) {
@@ -235,8 +230,6 @@
   /*  width: 30%;
     margin-right: 20px;
     margin-left: 65%;*/
-   
-    max-height: 450px;
     }
 }
 @media only screen and (max-width: 880px) {
