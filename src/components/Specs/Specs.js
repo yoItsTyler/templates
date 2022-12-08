@@ -1,5 +1,5 @@
 import { NavbarWeb } from '../NavbarWeb/NavbarWeb';
-import { NavBarWebSub } from '../NavBarWebSub/NavBarWebSub';
+import { NavBarWebSubWht } from '../NavBarWebSubWht/NavBarWebSubWht';
 import styles from './styles.module.css';
 import deskT from '../../images/Group 13spec.png';
 import f57 from '../../images/Frame 57.png';
@@ -26,7 +26,7 @@ export const Specs = () => {
     return(
         <div className={styles.main}>
             <NavbarWeb/>
-            <NavBarWebSub/>
+            <NavBarWebSubWht/>
 
             <div className={styles.page}>
                 <div className={styles.specCont}>
@@ -56,7 +56,7 @@ export const Specs = () => {
 
             <div className={styles.txtCont}>
                 <div className={styles.txt}>
-                    Which Website pan is right for you?
+                    Which Website plan is right for you?
 
                 </div>
                 <div className={styles.subTxt} onClick={() => history.push('/web-plans')}>

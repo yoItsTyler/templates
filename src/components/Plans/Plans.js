@@ -1,5 +1,5 @@
 import { NavbarWeb } from '../NavbarWeb/NavbarWeb';
-import { NavBarWebSub } from '../NavBarWebSub/NavBarWebSub';
+import { NavBarWebSubWht } from '../NavBarWebSubWht/NavBarWebSubWht';
 import styles from './styles.module.css';
 import chat from '../../images/chat.png';
 import { useHistory } from 'react-router-dom';
@@ -22,7 +22,7 @@ export const Plans = () => {
     return (
         <div className={styles.main}>
             <NavbarWeb />
-            <NavBarWebSub />
+            <NavBarWebSubWht />
             <div className={styles.page}>
 
                 <div className={styles.title}>
@@ -32,9 +32,9 @@ export const Plans = () => {
 
                 <div className={styles.txtCont}>
                     <div className={styles.txt}>
-                        Have questions about requesting Web Solutions?
+                        Have questions about requesting Web solutions?
                     </div>
-                    <div className={styles.subTxt} onClick={() => history.push('/web-plans')}>
+                    <div className={styles.subTxt} onClick={() => {history.push('/request/')}}>
                         Chat with us Now
                     </div>
                 </div>
@@ -253,7 +253,7 @@ export const Plans = () => {
                     <div className={styles.lTxtCont}>
                         <div className={styles.wTxt}>Website Developement</div>
                         <div className={styles.sTxt}>See what's behind Luna Vista</div>
-                        <div className={styles.lTxt}>Learn More</div>
+                        <div className={styles.lTxt} onClick={() => history.push('/specs')}>Learn More</div>
                     </div>
                  
 
@@ -265,7 +265,7 @@ export const Plans = () => {
                     <div className={styles.lTxtCont}>
                         <div className={styles.wTxt}>Identity</div>
                         <div className={styles.sTxt}>Explore Your Branding Image</div>
-                        <div className={styles.lTxt}>Learn More</div>
+                        <div className={styles.lTxt} onClick={() => history.push('/brandind')}>Learn More</div>
                     </div>                
 
                 </div>
@@ -275,7 +275,7 @@ export const Plans = () => {
                     <div className={styles.lTxtCont}>
                         <div className={styles.wTxt}>Promote</div>
                         <div className={styles.sTxt}>Boost Your Traffic</div>
-                        <div className={styles.lTxt}>Learn More</div>
+                        <div className={styles.lTxt} onClick={() => history.push('/marketing')}>Learn More</div>
                     </div>               
 
                 </div>

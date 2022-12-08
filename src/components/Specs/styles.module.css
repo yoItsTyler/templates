@@ -4,7 +4,7 @@
 }
 .page{
     position: absolute;
-    margin-top: 60px;
+    margin-top: 150px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -94,6 +94,7 @@ background-clip: text;
     display: flex;
     justify-content: center;
     margin-top: 23px;
+    cursor: pointer;
 }
 .fContainer{
     margin-top: 200px;

@@ -122,8 +122,8 @@ export const Web = () => {
                     <div className={styles.unlBandTxt}>
                     Handel high site traffic as needed with unlimited bandwidth. Yes, that's right we said unlimited.</div> 
                     <div className={styles.techSpecTxt}>
-                    See all the <span className={styles.techSpecLink}>tech specifications</span> we offer.</div> 
-                    <div className={styles.learnMoreTxt}>
+                    See all the <span className={styles.techSpecLink} onClick={() => history.push('/specs')}>tech specifications</span> we offer.</div> 
+                    <div className={styles.learnMoreTxt} onClick={() => history.push('/specs')}>
                     Learn more</div>
                 </div>
 
@@ -139,7 +139,7 @@ export const Web = () => {
                     Let visitors Shop and Buy</div>
                     <div className={styles.bodyTxt}>
                     Support and process payments online with a live eCommerce website. Allow users to purchase physical and digital products from you.</div>
-                    <div className={styles.learnMoreTxt}>
+                    <div className={styles.learnMoreTxt} onClick={() => history.push('/specs')}>
                     Learn more</div>
                 </div>
 
@@ -155,7 +155,7 @@ export const Web = () => {
                     Jam Music & Binge Video</div>
                     <div className={styles.bodyTxt}>
                     Support, embed, and upload music and video on your website for your audience to consume.</div>
-                    <div className={styles.learnMoreTxt}>
+                    <div className={styles.learnMoreTxt} onClick={() => history.push('/specs')}>
                     Learn more</div>
                 </div>
 
@@ -290,7 +290,7 @@ export const Web = () => {
                     <div className={styles.lTxtCont}>
                         <div className={styles.wTxt}>Website Developement</div>
                         <div className={styles.sTxt}>See what's behind Luna Vista</div>
-                        <div className={styles.lTxt}>Learn More</div>
+                        <div className={styles.lTxt} onClick={() => history.push('/specs')}>Learn More</div>
                     </div>
                  
 
@@ -302,7 +302,7 @@ export const Web = () => {
                     <div className={styles.lTxtCont}>
                         <div className={styles.wTxt}>Identity</div>
                         <div className={styles.sTxt}>Explore Your Branding Image</div>
-                        <div className={styles.lTxt}>Learn More</div>
+                        <div className={styles.lTxt} onClick={() => history.push('/branding')}>Learn More</div>
                     </div>                
 
                 </div>
@@ -312,7 +312,7 @@ export const Web = () => {
                     <div className={styles.lTxtCont}>
                         <div className={styles.wTxt}>Promote</div>
                         <div className={styles.sTxt}>Boost Your Traffic</div>
-                        <div className={styles.lTxt}>Learn More</div>
+                        <div className={styles.lTxt} onClick={() => history.push('/marketing')}>Learn More</div>
                     </div>               
 
                 </div>
@@ -327,7 +327,7 @@ export const Web = () => {
                 <div className={styles.askPlan}>
                     Which Website plan is right for you?
                 </div>
-                <div className={styles.compareTxt}>
+                <div className={styles.compareTxt} onClick={() => history.push('/web-plans')}>
                     Compare all Website pricing plans
                 </div>
             </div>
@@ -335,14 +335,14 @@ export const Web = () => {
 
             <div className={styles.fContainer}>
                         <div className={styles.footer}>
-                            <div>Lune © Vista 2022</div>
+                            <div>Lune Vista © 2022</div>
 
                             <div>About</div>
                             <div>Privacy</div>
                             <div>Contact</div>
 
                         </div>
-                </div>
+            </div>
 
         </div>
     )

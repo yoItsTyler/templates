@@ -5,7 +5,7 @@ import proPlan from '../../images/proPlan.png';
 import bixPlan from '../../images/bizPlan.png';
 import enterprisePlan from '../../images/enterprisePlan.png';
 import { NavbarWeb } from '../NavbarWeb/NavbarWeb';
-import { NavBarWebSub } from '../NavBarWebSub/NavBarWebSub';
+import { NavBarWebSubWht } from '../NavBarWebSubWht/NavBarWebSubWht';
 import bPlan from '../../images/bizPlan.png';
 
 
@@ -86,7 +86,7 @@ export const Request = () => {
     return (
         <div className={styles.main}>
             <NavbarWeb/>
-                <NavBarWebSub/>
+                <NavBarWebSubWht/>
                 <div className={styles.box}>
 
 

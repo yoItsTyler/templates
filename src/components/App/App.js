@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { Branding } from '../Branding/Branding';
+import { BrandingPlans } from '../BrandingPlans/BrandingPlans';
 import { Home } from '../Home';
 import { LogoDesign } from '../LogoDesign';
 import { Marketing } from '../Marketing/Marketing';
@@ -28,6 +29,7 @@ export const App = () => {
             
            
             <Switch>
+            <Route exact path='/branding-plans' component={BrandingPlans}/>
             <Route exact path = {['/request/:id', '/request']} component={Request}/>
             <Route exact path='/marketing' component={Marketing}/>
             <Route exact path = '/branding' component={Branding}/>

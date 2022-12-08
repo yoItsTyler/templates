@@ -2,7 +2,7 @@ import { useHistory } from 'react-router-dom';
 import styles from './styles.module.css';
 
 
-export const NavBarWebSub = () => {
+export const NavBarBrandingSub = () => {
     const history = useHistory();
 
     /*  
@@ -31,14 +31,12 @@ export const NavBarWebSub = () => {
                 <div className={styles.topSpace}></div>
                 <div className={styles.row}>
                     <div className={styles.title}>
-                        Website Development
+                        Logo & Branding
                     </div>
                     <div className={styles.btnRow}>
-                        <div className={styles.btnTxt} onClick={() => history.push('./web')}
+                        <div className={styles.btnTxt} onClick={() => history.push('./branding')}
                         >Overview</div>
-                        <div className={styles.btnTxt} onClick={() => history.push('/specs')}
-                        >Specs</div>
-                        <div className={styles.requestBtn} onClick={() => history.push('/web-plans')}
+                        <div className={styles.requestBtn} onClick={() => history.push('/branding-plans')}
                         >Request</div>
                     </div>
 
@@ -53,5 +51,5 @@ export const NavBarWebSub = () => {
 
           
         </div>
-    )
-}
+    );
+};

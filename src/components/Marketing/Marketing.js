@@ -1,5 +1,5 @@
 import { NavbarWeb } from '../NavbarWeb/NavbarWeb';
-import { NavBarWebSub } from '../NavBarWebSub/NavBarWebSub';
+import { NavBarMarketingSub } from '../NavBarMarketingSub/NavBarMarketingSub';
 import styles from './styles.module.css';
 import graph from '../../images/Group 55.png';
 import graph2 from '../../images/Group 56.png';
@@ -13,7 +13,7 @@ export const Marketing = () => {
     return (
         <div className={styles.main}>
             <NavbarWeb />
-            <NavBarWebSub />
+            <NavBarMarketingSub />
 
 
             <div className={styles.tile}>
@@ -95,7 +95,7 @@ export const Marketing = () => {
                             <div className={styles.identityBox} style={{ backgroundImage: 'url(' + identity + ')', backgroundSize: 'cover', backgroundPosition: 'center' }}>
                                 <div className={styles.lTxtCont}>
                                     <div className={styles.wTxt}>Identity</div>
-                                    <div className={styles.sTxt}>Explore Your Branding Image</div>
+                                    <div className={styles.sTxt}>Explore Your<br></br> Branding Image</div>
                                     <div className={styles.lTxt}>Learn More</div>
                                 </div>
 
@@ -105,7 +105,7 @@ export const Marketing = () => {
                             <div className={styles.promoteBox} style={{ backgroundImage: 'url(' + macDev + ')', backgroundSize: 'cover', backgroundPosition: 'center' }}>
                                 <div className={styles.lTxtCont}>
                                     <div className={styles.wTxt}>Online</div>
-                                    <div className={styles.sTxt}>Put Yourself on the Web</div>
+                                    <div className={styles.sTxt}>Put Yourself <br></br>on the Web</div>
                                     <div className={styles.lTxt}>Learn More</div>
                                 </div>
 

@@ -21,11 +21,9 @@ export const Navbar = () => {
 
 
                     <div className={styles.pages}>
-                        <div className={styles.page}
-                        onClick={() => history.push('/web')}
-                        >Website</div>
-                        <div className={styles.page}>Branding</div>
-                        <div className={styles.page}>Marketing</div>
+                        <div className={styles.page}onClick={() => history.push('/web')}>Website</div>
+                        <div className={styles.page}onClick={() => history.push('/branding')}>Branding</div>
+                        <div className={styles.page}onClick={() => history.push('/marketing')}>Marketing</div>
                         <div className={styles.page}>About</div>
                         <div className={styles.page}>Contact</div>
                     </div>

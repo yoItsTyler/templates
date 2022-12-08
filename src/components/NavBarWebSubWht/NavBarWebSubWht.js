@@ -2,7 +2,7 @@ import { useHistory } from 'react-router-dom';
 import styles from './styles.module.css';
 
 
-export const NavBarWebSub = () => {
+export const NavBarWebSubWht = () => {
     const history = useHistory();
 
     /*  
