@@ -1,0 +1,85 @@
+.main{
+    top: 0;
+    margin-top: 0;
+
+}
+
+.page{
+    width: 100%;
+    position: absolute;
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: max-content;
+   
+    align-items: center;
+   
+}
+
+.tile1{ 
+    height: fit-content;
+    align-items: center;
+    margin-bottom: 60px;
+}
+.container{ 
+    margin-left: 5%;
+    margin-right: 5%;
+    max-width: 800px;
+}
+.title{ 
+    font-weight: 700;
+    font-size: 60px;
+    margin-bottom: 9px;
+}
+.subTitle{ 
+    font-weight: 600;
+    font-size: 21px;
+    margin-bottom: 12px;
+    max-width: 360px;
+    line-height: 27px;
+}
+.body{
+    font-weight: 500;
+    font-size: 15px;
+    margin-bottom: 30px;
+    line-height: 20px;
+}
+.btn{ 
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+
+    background: #0062CC;
+    border-radius: 6px;
+    width: max-content;
+    padding-top: 6px;
+    padding-left: 21px;
+    padding-right: 21px;
+    padding-bottom: 3px;
+}
+.tile2{ 
+    max-height: 430px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+}
+.mapPic{ 
+    min-width: 1250px;
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+}
+.socialContainer{ 
+    position: relative;
+    top: 0px;
+    margin-left: -6px;
+    margin-top: 42px;
+}
+.social{
+    width: 42px;
+    margin-left: 6px;
+    margin-right: 6px;
+}

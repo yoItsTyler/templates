@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
+import { About } from '../About';
 import { Branding } from '../Branding/Branding';
 import { BrandingPlans } from '../BrandingPlans/BrandingPlans';
+import { Contact } from '../Contact';
 import { Home } from '../Home';
 import { LogoDesign } from '../LogoDesign';
 import { Marketing } from '../Marketing/Marketing';
@@ -38,6 +40,8 @@ export const App = () => {
                 <Route exact path = '/web-plans' component={Plans}/>
                  <Route exact path = '/web' component={Web}/>
                  <Route exact path = '/specs' component={Specs}/>
+                 <Route exact path = '/about' component={About}/>
+                 <Route exact path = '/contact' component={Contact}/>
                 <Route path={['/']} component={Home}/>
                 
             </Switch>
