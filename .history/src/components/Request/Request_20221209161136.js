@@ -7,10 +7,6 @@ import enterprisePlan from '../../images/enterprisePlan.png';
 import { NavbarWeb } from '../NavbarWeb/NavbarWeb';
 import { NavBarWebSubWht } from '../NavBarWebSubWht/NavBarWebSubWht';
 import bPlan from '../../images/bizPlan.png';
-import aA from '../../images/aA.png';
-import aA2 from '../../images/aA2.png';
-import aA3 from '../../images/aA3.png';
-import graph from '../../images/Group 56.png';
 
 
 export const Request = () => {
@@ -30,10 +26,6 @@ export const Request = () => {
   
 
     const [planType, setPlanType] = useState();
-
-    useEffect(() => {
-        window.scrollTo(0, 0)
-      }, []);
 
     useEffect(() => {
         if (id) {
@@ -56,26 +48,9 @@ export const Request = () => {
             if(id == 'branding') {
                 if(s == 'logo-design'){
                     setTitle('Logo Design')
-                    setImg(aA);
-                }
-                if(s == 'identity-package'){
-                    setTitle('Identity Package')
-                    setImg(aA2);
-                }
-                if(s == 'brand-strategy'){
-                    setTitle('Brand Strategy')
-                    setImg(aA3);
-                }
-                
-                if(s == ''){
-                    setTitle('')
                 }
 
 
-            }
-            if(id == 'marketing'){
-                setTitle('Marketing');
-                setImg(graph)
             }
         }
 

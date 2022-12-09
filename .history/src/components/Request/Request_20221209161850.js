@@ -10,7 +10,7 @@ import bPlan from '../../images/bizPlan.png';
 import aA from '../../images/aA.png';
 import aA2 from '../../images/aA2.png';
 import aA3 from '../../images/aA3.png';
-import graph from '../../images/Group 56.png';
+import graph from '../../images/Group 55.png';
 
 
 export const Request = () => {
@@ -30,10 +30,6 @@ export const Request = () => {
   
 
     const [planType, setPlanType] = useState();
-
-    useEffect(() => {
-        window.scrollTo(0, 0)
-      }, []);
 
     useEffect(() => {
         if (id) {
@@ -66,16 +62,15 @@ export const Request = () => {
                     setTitle('Brand Strategy')
                     setImg(aA3);
                 }
-                
+                if(id == 'marketing'){
+                    setTitle('Marketing');
+                    setImg(graph)
+                }
                 if(s == ''){
                     setTitle('')
                 }
 
 
-            }
-            if(id == 'marketing'){
-                setTitle('Marketing');
-                setImg(graph)
             }
         }
 

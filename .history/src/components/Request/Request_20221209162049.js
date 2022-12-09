@@ -32,10 +32,6 @@ export const Request = () => {
     const [planType, setPlanType] = useState();
 
     useEffect(() => {
-        window.scrollTo(0, 0)
-      }, []);
-
-    useEffect(() => {
         if (id) {
             setPlanType(capitalizeFirst(id));
             if (id == 'professional') {

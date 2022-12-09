@@ -32,10 +32,6 @@ export const Request = () => {
     const [planType, setPlanType] = useState();
 
     useEffect(() => {
-        window.scrollTo(0, 0)
-      }, []);
-
-    useEffect(() => {
         if (id) {
             setPlanType(capitalizeFirst(id));
             if (id == 'professional') {
@@ -132,7 +128,7 @@ export const Request = () => {
                 <img src={img} className={styles.img}/>
 
                 <div className={styles.rNow}>
-                    Request Free Consultation
+                    Request A Free Consultation
                 </div>
 
 
