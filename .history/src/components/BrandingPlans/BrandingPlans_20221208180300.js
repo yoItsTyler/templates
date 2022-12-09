@@ -67,7 +67,7 @@ export const BrandingPlans = () => {
                         <div className ={styles.subCont}>
                         <div className={styles.start}>Starting at</div>
                         <div className={styles.price}>$50.00 - $300.00</div>
-                        <div className={styles.rBtn} onClick={() => {history.push('/request/logo-design/branding')}}>Request Now</div>
+                        <div className={styles.rBtn} onClick={() => {history.push('/request/professional/branding')}}>Request Now</div>
                         <div className={styles.lBtn} onClick={() => {history.push('/plan/professional')}}
                         >Learn More</div>
                         </div>
@@ -103,7 +103,7 @@ export const BrandingPlans = () => {
                         <div className ={styles.subCont}>
                         <div className={styles.start}>Starting at</div>
                         <div className={styles.price}>$600.00</div>
-                        <div className={styles.rBtn} onClick={() => {history.push('/request/identity-package/branding')}}>Request Now</div>
+                        <div className={styles.rBtn} onClick={() => {history.push('/request/business/branding')}}>Request Now</div>
                         <div className={styles.lBtn} onClick={() => {history.push('/plan/business')}}
                         >Learn More</div>
                         </div>
@@ -142,7 +142,7 @@ export const BrandingPlans = () => {
                         <div className ={styles.subCont}>
                         <div className={styles.start}>Starting at</div>
                         <div className={styles.price}>$900.00</div>
-                        <div className={styles.rBtn} onClick={() => {history.push('/request/brand-strategy/branding')}}>Request Now</div>
+                        <div className={styles.rBtn} onClick={() => {history.push('/request/enterprise/branding')}}>Request Now</div>
                         <div className={styles.lBtn} onClick={() => {history.push('/plan/enterprise')}}
                         >Learn More</div>
                         </div>

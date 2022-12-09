@@ -46,9 +46,7 @@ export const Request = () => {
                 setCurPrice(prices.ent);
             }
             if(id == 'branding') {
-                if(s == 'logo-design'){
-                    
-                }
+                if(s == 'logo-design')
 
 
             }

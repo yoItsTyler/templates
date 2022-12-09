@@ -36,7 +36,7 @@ export const NavBarMarketingSub = () => {
                     <div className={styles.btnRow}>
                         <div className={styles.btnTxt} onClick={() => history.push('./marketing')}
                         >Overview</div>
-                        <div className={styles.requestBtn} onClick={() => history.push('/request/marketing')}
+                        <div className={styles.requestBtn} onClick={() => history.push('/request')}
                         >Request</div>
                     </div>
 

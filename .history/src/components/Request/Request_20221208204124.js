@@ -10,7 +10,7 @@ import bPlan from '../../images/bizPlan.png';
 
 
 export const Request = () => {
-    const { id, s } = useParams();
+    const { id } = useParams();
     const imgArray = { proPlan, bixPlan, enterprisePlan };
     const prices = { pro: '$800.00', biz: '$1,500.00', ent: '$3,000.00' };
     const [curPrice, setCurPrice] = useState();
@@ -31,26 +31,16 @@ export const Request = () => {
         if (id) {
             setPlanType(capitalizeFirst(id));
             if (id == 'professional') {
-                setTitle('Professional Website Plan');
                 setImg(imgArray.proPlan);
                 setCurPrice(prices.pro);
             }
             if (id == 'business') {
-                setTitle('Business Website Plan');
                 setImg(imgArray.bixPlan);
                 setCurPrice(prices.biz);
             }
             if (id == 'enterprise') {
-                setTitle('Enterprise Website Plan');
                 setImg(imgArray.enterprisePlan);
                 setCurPrice(prices.ent);
-            }
-            if(id == 'branding') {
-                if(s == 'logo-design'){
-                    
-                }
-
-
             }
         }
 
@@ -104,7 +94,7 @@ export const Request = () => {
 
 
                 <div className={styles.title}>{title}</div>
-                <img src={img} className={styles.img}/>
+                <img src={image} className={styles.img}/>
 
                 <div className={styles.rNow}>
                     Request Free Consultation

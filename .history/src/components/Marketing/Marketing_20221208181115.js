@@ -10,7 +10,7 @@ import identity from '../../images/identity.png';
 import { useHistory, useParams } from 'react-router-dom';
 
 export const Marketing = () => {
-const history = useHistory();
+const history = useHistory;
     return (
         <div className={styles.main}>
             <NavbarWeb />
@@ -123,7 +123,7 @@ const history = useHistory();
                     <div className={styles.txt}>
                         Find out where we can help.
                     </div>
-                    <div className={styles.subTxt2} onClick={() => {history.push('/request/marketing/lv')}}>
+                    <div className={styles.subTxt2} onClick={() => {history.push('/request')}}>
                         
                         Request Free Consultation Now
                     </div>

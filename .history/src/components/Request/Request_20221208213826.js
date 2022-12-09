@@ -10,7 +10,7 @@ import bPlan from '../../images/bizPlan.png';
 
 
 export const Request = () => {
-    const { id, s } = useParams();
+    const { id } = useParams();
     const imgArray = { proPlan, bixPlan, enterprisePlan };
     const prices = { pro: '$800.00', biz: '$1,500.00', ent: '$3,000.00' };
     const [curPrice, setCurPrice] = useState();
@@ -44,13 +44,6 @@ export const Request = () => {
                 setTitle('Enterprise Website Plan');
                 setImg(imgArray.enterprisePlan);
                 setCurPrice(prices.ent);
-            }
-            if(id == 'branding') {
-                if(s == 'logo-design'){
-                    
-                }
-
-
             }
         }
 
