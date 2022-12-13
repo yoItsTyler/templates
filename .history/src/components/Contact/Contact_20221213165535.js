@@ -9,9 +9,6 @@ import { useEffect } from 'react';
 
 export const Contact = () => { 
     const history = useHistory();
-    useEffect(() => {
-        window.scrollTo(0, 0)
-      }, []);
     const Calendy = ({ minWidth, minHeight, url}) => {
         useEffect(() => {
             window.scrollTo(0, 0)

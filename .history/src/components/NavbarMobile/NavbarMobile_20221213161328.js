@@ -7,76 +7,17 @@ import React, { Component } from 'react'
 import Icon from '@mdi/react'
 import { mdiClose } from '@mdi/js';
 import logo from '../../images/luneVista.png';
-import { useEffect } from 'react';
 
 
 
 
 export const NavbarMobile = () => {
-    const history = useHistory();
 
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
-
-    const [windowDH, setWindowDH] = useState(null);
-
-
-
-  useEffect(() => {
-   // setWindowDW(window.innerWidth);
-    setWindowDH(window.innerHeight);
-  }, []);
-
-  let vh = windowDH * 0.01;
-
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
-
-  const getHeight = () => window.innerHeight
-    || document.documentElement.clientHeight
-    || document.body.clientHeight;
-
-  function useCurrentHeight() {
-    let [height, setHeight] = useState(getHeight());
-
-    useEffect(() => {
-      let timeoutId = null;
-      const resizeListener = () => {
-
-        clearTimeout(timeoutId);
-
-        timeoutId = setTimeout(() => setHeight(getHeight(), 50));
-      };
-
-      window.addEventListener('resize', resizeListener, false);
-      //  window.addEventListener('scroll', resizeListener, false);
-
-      return () => {
-        window.removeEventListener('resize', resizeListener, false);
-        //  window.removeEventListener('scroll', resizeListener, false);
-
-      }
-    }, [])
-   // console.log('resize function ran');
-    return height;
-  }
-
-  let h = useCurrentHeight();
-  //console.log(h);
-
-
-
-  useEffect(() => {
-    let vh = h * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-   // console.log('vh', vh, 'h:', h);
-    setWindowDH(h);
-   // console.log('*after resize Listener VH was set in css as::', vh);
-
-  }, [h]);
-
 
 
 

@@ -27,8 +27,7 @@ export const About = () => {
                                                     <br></br>
                                                     <br></br>
                                                     If you want to overcome challenges and meet your goals contact us for a free business audit and learn where we can help you improve.</div>
-                        <div className={styles.btn} onClick={() => history.push('/contact')}
-                        >Contact Us</div>
+                        <div className={styles.btn}>Contact Us</div>
                         <div className={styles.socialContainer}>
                             <img src={twitter} className={styles.social} />
                             <img src={instagram} className={styles.social} />
