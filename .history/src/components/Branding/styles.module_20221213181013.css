@@ -402,7 +402,6 @@ background-clip: text;
 }
 .planPic { 
     height: 180px;
-    max-height: 180px;
     margin-right: 50px;
     margin-left: 50px;
 }
