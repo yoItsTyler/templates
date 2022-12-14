@@ -34,7 +34,48 @@ export const Home = () => {
 
     const [txtSize, setTxtSize] = useState(deskTxtSize);
 
-    
+    /// const [titleSize, setTitleSize] = useState(deskTitleSize);
+
+    /*
+
+    useEffect(() => {
+        
+           if(propBool !== undefined || null){
+            setIsMobile(propBool);
+
+           }
+        
+
+        
+    }, [propBool]);
+
+
+    useEffect(() => { 
+
+        if(isMobile !== null || undefined){
+            if(isMobile !== mobile){
+                if(isMobile === true){
+
+                    setMobile(true);
+                    
+        
+        
+                } else if (isMobile === false){
+                    setMobile(false);
+        
+                }
+
+
+            }
+            
+
+
+        }
+     
+        
+    }, [isMobile]);
+
+    */
 
     const [mobileBool, setMobileBool] = useState(false);
     //const prevMobileBool = usePre
@@ -95,7 +136,127 @@ export const Home = () => {
 
     }, [mobileBool]);
 
-   
+    /*useEffect(() => {  
+        console.log(txtSize);
+    }, [txtSize]);*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*
+       <div className={styles.tOne} >
+                
+                <div className={styles.brImage} style={{ backgroundImage: 'url(' + products + ')', backgroundSize: 'cover', minWidth: '100%', minHeight: '100%' }}>
+                    <div className={styles.title}>Logos & Branding</div>
+
+
+
+
+                </div>
+            </div>
+    
+    
+    
+    
+    
+   function useVisibility<T>(
+        offset = 0,
+        throttleMilliseconds = 100
+    ) : [Boolean, MutableRefObject<T>] {
+        const [isVisible, setIsVisible] = useState(false);
+        const currentT = useRef<Element>();
+
+        const onScroll = throttle(() => {
+            if (!currentT.current) {
+                setIsVisible(false);
+                return;
+            }const top = currentT.current.getBoundingClientRect().top;
+            setIsVisible(top + offset >= 0 && top - offset <= window.innerHeight);
+            },throttleMilliseconds);
+
+            useEffect(() => {
+                document.addEventListener('scroll', onScroll, true);
+                return ()=> document.removeEventListener('scroll', onScroll, true);
+            });
+            return [isVisible, currentT];
+    } 
+ 
+    function useWasSeen(offset = 0) {
+        const[wasSeen, setWasSeen] = useState(
+            typeof IntersectionObserver !== true
+        );
+
+        const ref = useRef();
+        useEffect(() => {
+            if (ref && !wasSeen) {
+              const observer = new IntersectionObserver(
+                ([entry]) => entry.isIntersecting && setWasSeen(true), {rootMargin: offset + 'px'}
+              );
+              observer.observe(ref);
+              return () => {
+                observer.disconnect();
+              };
+            }
+          }, [wasSeen]);
+          return [wasSeen, ref];
+
+
+
+    }
+    
+
+    const [wasSeen, ref] = useWasSeen();*/
+
+
+
+
+
+
+
+
+
+    const ref = useRef();
+
+
+
+
+
+
+
+
+    /*  const handleScroll = () => {
+          let scrollYz = window.scrollY;
+          console.log('scrolling to => ', scrollYz);
+          //console.log('isvisible?', isVisible)
+         
+         
+
+        //  UseIntersection();
+          return scrollYz;
+          
+      };
+      useEffect(() => {
+          window.addEventListener('scroll', handleScroll, true);
+        
+          // Remove the event listener
+          return () => {
+            window.removeEventListener('scroll', handleScroll, true);
+          };
+          
+        }, []);*/
+
+    // const [isVisible, currentT] = useVisibility<HTMLDivElement>(100);
+
+
 
 
 
