@@ -1,49 +1,101 @@
 import { NavbarWeb } from '../NavbarWeb/NavbarWeb';
 import { NavBarBrandingSub } from '../NavBarBrandingSub/NavBarBrandingSub';
 import styles from './styles.module.css';
-import chat from '../../images/chat.png';
-import { useHistory } from 'react-router-dom';
-
-import aA from '../../images/aA.png';
-import aA2 from '../../images/aA2.png';
-import aA3 from '../../images/aA3.png';
-import aAglance from '../../images/aAglance.png';
-import lineGlance from '../../images/lineGlance.png';
-import checklist from '../../images/checklist.png';
+import logo from '../../images/luneVista.png';
 import logoB from '../../images/logoB.png';
+import aA from '../../images/aA.png'
+import aA2 from '../../images/aA2.png'
+import aA3 from '../../images/aA3.png'
+import arrowLong from '../../images/arrowLong.png';
+import drawnLine from '../../images/drawnLine.png';
+import roadmap from '../../images/roadmap.png';
+import checklist from '../../images/checklist.png';
+import spectivFull from '../../images/spectivFull.png';
 import behindBranding from '../../images/behindBranding.png';
-import promote from '../../images/promote.png';
 import onTheWeb from '../../images/onTheWeb.png';
+import promote from '../../images/promote.png';
+import { useHistory } from 'react-router-dom';
 import { useEffect } from 'react';
 
-export const BrandingPlans = () => {
-    const history = useHistory();
-    useEffect(() => {
+export const Branding = () => {
+       const history = useHistory();
+       useEffect(() => {
         window.scrollTo(0, 0)
       }, []);
-
-
     return (
         <div className={styles.main}>
             <NavbarWeb />
-            <NavBarBrandingSub />
-            <div className={styles.page}>
+           <NavBarBrandingSub/>
 
-                <div className={styles.title}>
-                    Request Lune Vista Logo & Branding
-                </div>
-                <img src={chat} className={styles.chat} />
+            <div className={styles.brandingHero}>
+                <img src={logoB} className={styles.logo} />
 
-                <div className={styles.txtCont}>
-                    <div className={styles.txt}>
-                        Have questions about requesting Design solutions?
-                    </div>
-                    <div className={styles.subTxt} onClick={() => {history.push('/contact/')}}>
-                        Chat with us Now
-                    </div>
+                <div className={styles.heroTitle}>
+                    Your <span className={styles.fuIdTxt}>future identity</span> is waiting to be found.
                 </div>
 
+                <img src={arrowLong} className={styles.arrow} />
+            </div>
 
+            <div className={styles.yourTile}>
+                <div className={styles.yourContents}>
+                    <div className={styles.yourTxt}>
+                        Your brand.<br></br>
+                        Your logo.<br></br>
+                        Your font.<br></br>
+                        Your design.<br></br>
+                        Your identity.
+                    </div>
+                    <img src={aA} className={styles.aApic} />
+                </div>
+            </div>
+
+            <div className={styles.perspectiveTile}>
+                <div className={styles.persCont}>
+                    <div className={styles.persTitle}>
+                        Influence the <span className={styles.perspective}>perspective</span> of your business.
+                    </div>
+                    <div className={styles.persTxt}>
+                        Promote instant recognition of your business’s identity creating modern, elegant, and timeless designs that grow with you. We focus on strategic and artistic designs that ensure you're capturing the attention of your potential audience and do not blend in with your competition.
+                    </div>
+                </div>
+                <img src={drawnLine} className={styles.linePic}/>
+            </div>
+
+            <div className={styles.checkTile}>
+            <div className={styles.splitRow}>
+                <div className={styles.checkCont}>
+                    <div className={styles.compTitle}>
+                        Complete your checklist
+                    </div>
+                    <div className={styles.bsTitle}>
+                        Brand Strategy
+                    </div>
+                    <div className={styles.checkTxt}>
+                        Overcome your challenges and meet your goals. Find out where you and your business can grow through your brand’s image.
+                    </div>
+                    <img src={roadmap} className={styles.roadmapPic} />
+                </div>
+                <img src={checklist} className={styles.checklistPic} />
+                </div>
+            </div>
+
+            <div className={styles.cdTile}>
+                
+                    <div className={styles.cdCont}>
+                        <div className={styles.cdTitle}>
+                            Cohesive Design
+                        </div>
+                        <div className={styles.cdTxt}>
+                            We focus on creating unique designs that integrate your style. Complimenting and reflecting the identity of the business or professional we are working with.
+                        </div>
+                    </div>
+                    <div className={styles.spectImg}>
+                        <img src={spectivFull} className={styles.spectivFullPic} />
+                    </div>
+            </div>
+            
+            <div className={styles.pricingPlans}>
                 <div className={styles.rows}>
 
                     <div className={styles.column}>
@@ -66,13 +118,13 @@ export const BrandingPlans = () => {
                         <div className={styles.txt}
                         > Copyright ownership
                         </div>
-                       
+                        
 
                         <div className ={styles.subCont}>
                         <div className={styles.start}>Starting at</div>
                         <div className={styles.price}>$50.00 - $300.00</div>
                         <div className={styles.rBtn} onClick={() => {history.push('/request/branding/logo-design')}}>Request Now</div>
-                        <div className={styles.lBtn} onClick={() => {history.push('/branding-plan/professional')}}
+                        <div className={styles.lBtn} onClick={() => {history.push('/plan/logo-design')}}
                         >Learn More</div>
                         </div>
                     </div>
@@ -86,7 +138,7 @@ export const BrandingPlans = () => {
                         >Create more than just your logo with matching colors and font.
                         </div>
                         <div className={styles.txt}
-                        >  Custom logo
+                        >  Custom logo design
                         </div>
                         <div className={styles.txt}
                         > Color pallet
@@ -103,12 +155,13 @@ export const BrandingPlans = () => {
                         <div className={styles.txt}
                         >  Copyright ownership
                         </div>
+                    
 
                         <div className ={styles.subCont}>
                         <div className={styles.start}>Starting at</div>
                         <div className={styles.price}>$600.00</div>
                         <div className={styles.rBtn} onClick={() => {history.push('/request/branding/identity-package')}}>Request Now</div>
-                        <div className={styles.lBtn} onClick={() => {history.push('/branding-plan/identity-package')}}
+                        <div className={styles.lBtn} onClick={() => {history.push('/plan/identity-package')}}
                         >Learn More</div>
                         </div>
                     </div>
@@ -122,13 +175,13 @@ export const BrandingPlans = () => {
                         >Find out how design can push your business further.
                         </div>
                         <div className={styles.txt}
-                        >  Custom logo desing
+                        >  Custom logo design
                         </div>
                         <div className={styles.txt}
                         > Identity package
                         </div>
                         <div className={styles.txt}
-                        > Brnading use guide
+                        > Branding use guide
                         </div>
                         <div className={styles.txt}
                         > Specific consultation
@@ -147,91 +200,23 @@ export const BrandingPlans = () => {
                         <div className={styles.start}>Starting at</div>
                         <div className={styles.price}>$900.00</div>
                         <div className={styles.rBtn} onClick={() => {history.push('/request/branding/brand-strategy')}}>Request Now</div>
-                        <div className={styles.lBtn} onClick={() => {history.push('/branding-plan/brand-strategy')}}
+                        <div className={styles.lBtn} onClick={() => {history.push('/plan/brand-strategy')}}
                         >Learn More</div>
                         </div>
                     </div>
 
-
-                </div>
-
-
-
-
-                <div className={styles.title}>
-                    A closer look at Lune Vista Design
-                </div>
-
-                <div className={styles.mediaContainer}>
-
-                    <div className={styles.splitRow}>
-                        <div className={styles.twoThirdBox}>
-                        <div className={styles.imgC}>
-                            <img src ={aAglance}  className ={styles.img}/>
-                            </div>
-                            <div className = {styles.txtRow}>
-                                <div className={styles.boldTxt}><span className={styles.darkBoldTxt}>It all starts with You.</span> Lune Vista Design <br></br>has a plan for anyone to get stylish.</div>
-                                <div className={styles.lightTxt}></div>
-                            </div>
-                        </div>
-                        <div className={styles.oneThirdBox}>
-                            <div className = {styles.txtRow}>
-                                <div className={styles.boldTxt}><span className={styles.darkBoldTxt}>Brand Strategy.</span><br></br> Overcome challenges and meet goals with design.</div>
-                                <div className={styles.lightTxt}></div>
-                            </div>
-                            <div className={styles.imgC}>
-                            <img src ={checklist} className={styles.img}/>
-                            </div>
-                        </div>
-
-                    </div>
-
-
-                    <div className={styles.splitRow}>
-
-                    <div className={styles.oneThirdBox}>
-                            <div className={styles.imgC}>
-                            <img src ={logoB} className={styles.img}/>
-                            </div>
-                            <div className = {styles.txtRow}>
-                                <div className={styles.boldTxtLeft}><span className={styles.darkBoldTxt}>Cohesive Design.</span><br></br>Integrate with your <br></br>style, vibe, and vision.</div>
-                                <div className={styles.lightTxt}></div>
-                            </div>
-                        </div>
-                        
-                        <div className={styles.twoThirdBox}>
-                        
-                            <div className = {styles.txtRow4}>
-                                <div className={styles.boldTxtLeft}><span className={styles.darkBoldTxt}>Influence perspective.</span><br></br>Promote instant recognition. <br></br>Timeless designs that grow <br></br>with your business.</div>
-                                <div className={styles.lightTxt}></div>
-                            </div>
-                            <div className={styles.imgC}>
-                            <img src ={lineGlance}  className ={styles.img4}/>
-                            </div>
-                        </div>
-                        
-                    </div>
-
-
-                </div>
-
-                <div className={styles.txtCont2}>
-                <div className={styles.txt2}>
-                    Find out where we can help.
-
-                </div>
-                <div className={styles.subTxt2} onClick={() => {history.push('/contact/')}}>
-                    Request Free Consultation Now
-                    
                 </div>
             </div>
+
+
+            <div className={styles.centerApps}>
 
             <div className={styles.appCont}>
                 <div className={styles.purpleBox} style={{backgroundImage: 'url(' + behindBranding  + ')', backgroundSize: 'cover', backgroundPosition: 'center'}}>
                     <div className={styles.lTxtCont}>
                         <div className={styles.wTxt}>Logo & Branding</div>
-                        <div className={styles.sTxt}>See what's behind Luna Vista Design</div>
-                        <div className={styles.lTxt} onClick={() => history.push('/branding')}>Learn More</div>
+                        <div className={styles.sTxt}>See Luna Vista Design Plans</div>
+                        <div className={styles.lTxt} onClick={() => history.push('/branding-plans')}>Learn More</div>
                     </div>
                  
 
@@ -242,7 +227,7 @@ export const BrandingPlans = () => {
                 <div className={styles.identityBox} style={{backgroundImage: 'url(' + onTheWeb  + ')', backgroundSize: 'cover', backgroundPosition: 'center'}}>
                     <div className={styles.lTxtCont}>
                         <div className={styles.wTxt}>Online</div>
-                        <div className={styles.sTxt}>Put Yourself <br></br>on the Web</div>
+                        <div className={styles.sTxt}>Put Yourself <br></br> on the Web</div>
                         <div className={styles.lTxt} onClick={() => history.push('/web')}>Learn More</div>
                     </div>                
 
@@ -260,8 +245,21 @@ export const BrandingPlans = () => {
 
 
                 </div>
+                
+            </div>
+            </div>
 
-                <div className={styles.fContainer}>
+            <div className={styles.askPlanSection}>
+                <div className={styles.askPlan}>
+                    Which Design plan is right for you?
+                </div>
+                <div className={styles.compareTxt} onClick={() => history.push('/branding-plans')}>
+                    Compare all Design pricing plans
+                </div>
+            </div>
+
+
+            <div className={styles.fContainer}>
                         <div className={styles.footer}>
                             <div>Lune © Vista 2022</div>
 
@@ -270,19 +268,8 @@ export const BrandingPlans = () => {
                             <div>Contact</div>
 
                         </div>
-                    </div>
-                
             </div>
-           
-
-
-            
-
-
-            </div>
-         
-            
 
         </div>
-    )
-}
+    );
+};

@@ -257,7 +257,7 @@ export const Plan = () => {
             if (id == 'identity-package') {
                 return <Ent />;
             }
-            if (id == 'brand-package') {
+            if (id == 'enterprise') {
                 return <Ent />;
             }
         }

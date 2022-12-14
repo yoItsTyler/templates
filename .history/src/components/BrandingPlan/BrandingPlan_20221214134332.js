@@ -7,19 +7,20 @@ import styles from './styles.module.css';
 import proPlan from '../../images/proPlan.png';
 import bixPlan from '../../images/bizPlan.png';
 import enterprisePlan from '../../images/enterprisePlan.png';
+import aA from '../../images/aA.png'
+import aA2 from '../../images/aA2.png'
+import aA3 from '../../images/aA3.png'
 
 
-
-export const Plan = () => {
+export const BrandingPlan = () => {
     const { id } = useParams();
     const [planType, setPlanType] = useState();
     const history = useHistory();
-    const imgArray = { proPlan, bixPlan, enterprisePlan };
-    const prices = { pro: '$800.00', biz: '$1,500.00', ent: '$3,000.00' };
+    const imgArray = { aA, aA2, aA3 };
+    const prices = { pro: '$50.00 - $300.00', biz: '$600.00', ent: '$900.00' };
     const [curPrice, setCurPrice] = useState();
     const [img, setImg] = useState();
 
-    const [windowDW, setWindowDW] = useState(null);
     const [windowDH, setWindowDH] = useState(null);
 
     useEffect(() => {
@@ -29,7 +30,7 @@ export const Plan = () => {
 
   
     useEffect(() => {
-      setWindowDW(window.innerWidth);
+     // setWindowDW(window.innerWidth);
       setWindowDH(window.innerHeight);
     }, []);
     
@@ -55,14 +56,9 @@ export const Plan = () => {
 
         timeoutId = setTimeout(() => setHeight(getHeight(), 50));
       };
-
       window.addEventListener('resize', resizeListener, false);
-      //  window.addEventListener('scroll', resizeListener, false);
-
       return () => {
         window.removeEventListener('resize', resizeListener, false);
-        //  window.removeEventListener('scroll', resizeListener, false);
-
       }
     }, [])
     console.log('resize function ran');
@@ -97,16 +93,16 @@ export const Plan = () => {
     useEffect(() => {
         if (id) {
             setPlanType(capitalizeFirst(id));
-            if (id == 'professional') {
-                setImg(imgArray.proPlan);
+            if (id == 'logo-design') {
+                setImg(aA);
                 setCurPrice(prices.pro);
             }
-            if (id == 'business') {
-                setImg(imgArray.bixPlan);
+            if (id == 'identity-package') {
+                setImg(aA2);
                 setCurPrice(prices.biz);
             }
-            if (id == 'enterprise') {
-                setImg(imgArray.enterprisePlan);
+            if (id == 'branding-strategy') {
+                setImg(aA3);
                 setCurPrice(prices.ent);
             }
         }
@@ -114,47 +110,39 @@ export const Plan = () => {
 
     }, [id]);
 
-    const Pro = () => {
+    const Logo = () => {
 
         return (
             <div className={styles.column}>
 
                 <div className={styles.planT}>
-                    Website {planType} Plan
+                    {planType} Plan
                 </div>
                 <div className={styles.txtP}
                 >Popular for portfolios or basic web pages for personal use and growing your brand getting it off the ground. Get on the internet with your own custom project designed and developed by the Spectiv Web team. After implementation, choose to have your project managed by Spectiv as well. Request now for a free consultation so we can learn more about your needs and create a custom plan just for you.
                 </div>
                 <div className={styles.txt}
-                >  Custom Domain
+                >  Custom Logo
                 </div>
                 <div className={styles.txt}
-                > Simple and basic design
+                > Timeless and minimal design
                 </div>
                 <div className={styles.txt}
-                > Unlimited bandwidth
+                > Revisions
                 </div>
                 <div className={styles.txt}
-                > 99.9% Uptime
-                </div>
-                <div className={styles.txt}
-                >  Responsive CSS
-                </div>
-                <div className={styles.txt}
-                >  SSL certificate
+                > Copyright ownership
                 </div>
 
                 <div className={styles.subCont}>
-
                     <div className={styles.rBtn} onClick={() => {history.push(`/request/${id}/web`)}}>Request Free Consultation Now</div>
-
                 </div>
             </div>
 
         )
     }
 
-    const Biz = () => {
+    const Identity = () => {
 
         return (
             <div className={styles.column}>
@@ -196,7 +184,7 @@ export const Plan = () => {
 
         )
     }
-    const Ent = () => {
+    const Strategy = () => {
 
         return (
             <div className={styles.column}>
@@ -240,33 +228,23 @@ export const Plan = () => {
     }
 
     const Plan = () => {
-        if (id) {
-            // setPlanType(capitalizeFirst(id));
-            if (id == 'professional') {
-                return <Pro />;
-            }
-            if (id == 'business') {
-                return <Biz />;
-            }
-            if (id == 'enterprise') {
-                return <Ent />;
-            }
+        if (id) {       
             if (id == 'logo-design') {
-                return <Ent />;
+                return <Logo />;
             }
             if (id == 'identity-package') {
-                return <Ent />;
+                return <Identity />;
             }
             if (id == 'brand-package') {
-                return <Ent />;
+                return <Strategy />;
             }
         }
 
     }
-    const PCard = () => {
+    const LCard = () => {
         return (
             <div className={styles.column}>
-                <img src={proPlan} />
+                <img src={aA} className={styles.cImg}/>
                 <div className={styles.cardT}>Professional Plan</div>
 
                 <div className={styles.colCont}>
@@ -281,10 +259,10 @@ export const Plan = () => {
         )
     }
 
-    const BCard = () => {
+    const ICard = () => {
         return (
             <div className={styles.column}>
-                <img src={bixPlan} />
+                <img src={aA2} className={styles.cImg}/>
                 <div className={styles.cardT}>Business Plan</div>
 
                 <div className={styles.colCont}>
@@ -298,10 +276,10 @@ export const Plan = () => {
 
         )
     }
-    const ECard = () => {
+    const BCard = () => {
         return (
             <div className={styles.column}>
-                <img src={enterprisePlan} />
+                <img src={aA3} className={styles.cImg}/>
                 <div className={styles.cardT}>Enterprise Plan</div>
 
                 <div className={styles.colCont}>
@@ -320,27 +298,27 @@ export const Plan = () => {
 
         if (id) {
             // setPlanType(capitalizeFirst(id));
-            if (id == 'professional') {
+            if (id == 'logo-design') {
                 return(
                     <div className={styles.splitRow3}>
+                        <ICard/>
                         <BCard/>
-                        <ECard/>
                     </div>
                 );
             }
-            if (id == 'business') {
+            if (id == 'identity-package') {
                 return(
                     <div className={styles.splitRow3}>
-                        <PCard/>
-                        <ECard/>
+                        <LCard/>
+                        <BCard/>
                     </div>
                 );
             }
-            if (id == 'enterprise') {
+            if (id == 'branding-strategy') {
                 return(
                     <div className={styles.splitRow3}>
-                        <PCard/>
-                        <BCard/>
+                        <LCard/>
+                        <ICard/>
                     </div>
                 );
             }
@@ -362,7 +340,7 @@ export const Plan = () => {
                             <div className={styles.subTxt}
                                 onClick={() => { history.push('/web-plans') }}
                             >
-                                Compare all Website pricing plans
+                                Compare all design pricing plans
                             </div>
                         </div>
 
@@ -374,7 +352,7 @@ export const Plan = () => {
 
                 <div className={styles.tOne}>
 
-                    <div className={styles.planT2}>Compare Website Plans</div>
+                    <div className={styles.planT2}>Compare Design Plans</div>
                     <div className={styles.splitRow3}>
                         <Compare/>
                     </div>

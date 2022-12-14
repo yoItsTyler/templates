@@ -10,7 +10,7 @@ import enterprisePlan from '../../images/enterprisePlan.png';
 
 
 
-export const Plan = () => {
+export const BrandingPlan = () => {
     const { id } = useParams();
     const [planType, setPlanType] = useState();
     const history = useHistory();
@@ -114,13 +114,13 @@ export const Plan = () => {
 
     }, [id]);
 
-    const Pro = () => {
+    const Logo = () => {
 
         return (
             <div className={styles.column}>
 
                 <div className={styles.planT}>
-                    Website {planType} Plan
+                    {planType} Plan
                 </div>
                 <div className={styles.txtP}
                 >Popular for portfolios or basic web pages for personal use and growing your brand getting it off the ground. Get on the internet with your own custom project designed and developed by the Spectiv Web team. After implementation, choose to have your project managed by Spectiv as well. Request now for a free consultation so we can learn more about your needs and create a custom plan just for you.
@@ -154,7 +154,7 @@ export const Plan = () => {
         )
     }
 
-    const Biz = () => {
+    const Identity = () => {
 
         return (
             <div className={styles.column}>
@@ -196,7 +196,7 @@ export const Plan = () => {
 
         )
     }
-    const Ent = () => {
+    const Strategy = () => {
 
         return (
             <div className={styles.column}>
@@ -240,30 +240,20 @@ export const Plan = () => {
     }
 
     const Plan = () => {
-        if (id) {
-            // setPlanType(capitalizeFirst(id));
-            if (id == 'professional') {
-                return <Pro />;
-            }
-            if (id == 'business') {
-                return <Biz />;
-            }
-            if (id == 'enterprise') {
-                return <Ent />;
-            }
+        if (id) {       
             if (id == 'logo-design') {
-                return <Ent />;
+                return <Logo />;
             }
             if (id == 'identity-package') {
-                return <Ent />;
+                return <Identity />;
             }
             if (id == 'brand-package') {
-                return <Ent />;
+                return <Strategy />;
             }
         }
 
     }
-    const PCard = () => {
+    const LCard = () => {
         return (
             <div className={styles.column}>
                 <img src={proPlan} />
@@ -281,7 +271,7 @@ export const Plan = () => {
         )
     }
 
-    const BCard = () => {
+    const ICard = () => {
         return (
             <div className={styles.column}>
                 <img src={bixPlan} />
@@ -298,7 +288,7 @@ export const Plan = () => {
 
         )
     }
-    const ECard = () => {
+    const BCard = () => {
         return (
             <div className={styles.column}>
                 <img src={enterprisePlan} />
@@ -320,27 +310,27 @@ export const Plan = () => {
 
         if (id) {
             // setPlanType(capitalizeFirst(id));
-            if (id == 'professional') {
+            if (id == 'logo-design') {
                 return(
                     <div className={styles.splitRow3}>
+                        <ICard/>
                         <BCard/>
-                        <ECard/>
                     </div>
                 );
             }
-            if (id == 'business') {
+            if (id == 'identity-package') {
                 return(
                     <div className={styles.splitRow3}>
-                        <PCard/>
-                        <ECard/>
+                        <LCard/>
+                        <BCard/>
                     </div>
                 );
             }
-            if (id == 'enterprise') {
+            if (id == 'branding-strategy') {
                 return(
                     <div className={styles.splitRow3}>
-                        <PCard/>
-                        <BCard/>
+                        <LCard/>
+                        <ICard/>
                     </div>
                 );
             }
@@ -362,7 +352,7 @@ export const Plan = () => {
                             <div className={styles.subTxt}
                                 onClick={() => { history.push('/web-plans') }}
                             >
-                                Compare all Website pricing plans
+                                Compare all Branding plans
                             </div>
                         </div>
 
@@ -374,7 +364,7 @@ export const Plan = () => {
 
                 <div className={styles.tOne}>
 
-                    <div className={styles.planT2}>Compare Website Plans</div>
+                    <div className={styles.planT2}>Compare Branding Plans</div>
                     <div className={styles.splitRow3}>
                         <Compare/>
                     </div>

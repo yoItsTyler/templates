@@ -10,7 +10,7 @@ import enterprisePlan from '../../images/enterprisePlan.png';
 
 
 
-export const Plan = () => {
+export const BrandingPlan = () => {
     const { id } = useParams();
     const [planType, setPlanType] = useState();
     const history = useHistory();
