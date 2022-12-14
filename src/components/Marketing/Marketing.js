@@ -76,7 +76,7 @@ useEffect(() => {
                         Wondering how we can promote you?
 
                     </div>
-                    <div className={styles.subTxt2}>
+                    <div className={styles.subTxt2} onClick={() => history.push('/request/marketing/lv')}>
                         Learn more about Marketing plans
                     </div>
                 </div>
@@ -101,7 +101,7 @@ useEffect(() => {
                                 <div className={styles.lTxtCont}>
                                     <div className={styles.wTxt}>Identity</div>
                                     <div className={styles.sTxt}>Explore Your<br></br> Branding Image</div>
-                                    <div className={styles.lTxt}>Learn More</div>
+                                    <div className={styles.lTxt} onClick={() => history.push('/branding')}>Learn More</div>
                                 </div>
 
                             </div>
@@ -111,7 +111,7 @@ useEffect(() => {
                                 <div className={styles.lTxtCont}>
                                     <div className={styles.wTxt}>Online</div>
                                     <div className={styles.sTxt}>Put Yourself <br></br>on the Web</div>
-                                    <div className={styles.lTxt}>Learn More</div>
+                                    <div className={styles.lTxt} onClick={() => history.push('/web')}>Learn More</div>
                                 </div>
 
                             </div>
@@ -127,7 +127,7 @@ useEffect(() => {
                     <div className={styles.txt}>
                         Find out where we can help.
                     </div>
-                    <div className={styles.subTxt2} onClick={() => {history.push('/request/marketing/lv')}}>
+                    <div className={styles.subTxt2} onClick={() => {history.push('/contact')}}>
                         
                         Request Free Consultation Now
                     </div>

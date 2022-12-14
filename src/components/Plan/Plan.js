@@ -371,7 +371,7 @@ export const Plan = () => {
                     </div>
 
                 </div>
-                <div className={styles.tOne}>
+                <div className={styles.tFoot}>
                 <div className={styles.txtCont}>
                 <div className={styles.txt2}>
                     Find out where we can help.

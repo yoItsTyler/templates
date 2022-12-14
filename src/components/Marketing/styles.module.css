@@ -90,7 +90,7 @@ linear-gradient(90.35deg, #28D0D0 15.73%, #2A8BE4 41.95%);
     width: 564px;
     max-width: 90%;    
    
-    z-index: 1;
+    z-index: 0;
        
 }
 .blueTitle{
@@ -162,6 +162,7 @@ linear-gradient(90.35deg, #28D0D0 15.73%, #2A8BE4 41.95%);
     display: flex;
     justify-content: center;
     margin-top: 23px;
+    cursor: pointer;
 }
 
 .centerApps{
@@ -256,6 +257,7 @@ linear-gradient(90.35deg, #28D0D0 15.73%, #2A8BE4 41.95%);
     font-size: 18px;
     font-weight: 400;
     color: white;
+    cursor: pointer;
 }
 .splitRow2{
     width: 100%;

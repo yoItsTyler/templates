@@ -38,7 +38,7 @@ export const BrandingPlans = () => {
                     <div className={styles.txt}>
                         Have questions about requesting Design solutions?
                     </div>
-                    <div className={styles.subTxt} onClick={() => {history.push('/request/')}}>
+                    <div className={styles.subTxt} onClick={() => {history.push('/contact/')}}>
                         Chat with us Now
                     </div>
                 </div>
@@ -220,7 +220,7 @@ export const BrandingPlans = () => {
                     Find out where we can help.
 
                 </div>
-                <div className={styles.subTxt2} onClick={() => {history.push('/request/')}}>
+                <div className={styles.subTxt2} onClick={() => {history.push('/contact/')}}>
                     Request Free Consultation Now
                     
                 </div>
