@@ -73,7 +73,7 @@ export const Specs = () => {
                     Find out where we can help.
 
                 </div>
-                <div className={styles.subTxt}>
+                <div className={styles.subTxt} onClick={() => history.push('/contact')}>
                     Request Free Consultation Now
                     
                 </div>

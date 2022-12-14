@@ -176,7 +176,7 @@ export const Home = () => {
                     <div className={styles.subTxt} style={{ fontSize: txtSize?.subSize }}>Talk to Us Today</div>
 
                     <div className={styles.btnRow2}>
-                        <div className={styles.whiteBtn} onClick={() => history.push('/request')}
+                        <div className={styles.whiteBtn} onClick={() => history.push('/contact')}
                         >Free Consultation </div>
                     </div>
 

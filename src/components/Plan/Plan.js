@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { NavbarWeb } from '../NavbarWeb/NavbarWeb';
-import { NavBarWebSub } from '../NavBarWebSub/NavBarWebSub';
+import { NavBarWebSubWht } from '../NavBarWebSubWht/NavBarWebSubWht';
 import styles from './styles.module.css';
 import proPlan from '../../images/proPlan.png';
 import bixPlan from '../../images/bizPlan.png';
@@ -146,7 +146,7 @@ export const Plan = () => {
 
                 <div className={styles.subCont}>
 
-                    <div className={styles.rBtn} onClick={() => {history.push(`/request/${id}`)}}>Request Free Consultation Now</div>
+                    <div className={styles.rBtn} onClick={() => {history.push(`/request/${id}/web`)}}>Request Free Consultation Now</div>
 
                 </div>
             </div>
@@ -189,7 +189,7 @@ export const Plan = () => {
 
                 <div className={styles.subCont}>
 
-                    <div className={styles.rBtn} onClick={()=> {history.push(`/request/${id}`)}} >Request Free Consultation Now</div>
+                    <div className={styles.rBtn} onClick={()=> {history.push(`/request/${id}/web`)}} >Request Free Consultation Now</div>
 
                 </div>
             </div>
@@ -231,7 +231,7 @@ export const Plan = () => {
 
                 <div className={styles.subCont}>
 
-                    <div className={styles.rBtn} onClick={()=> {history.push(`/request/${id}`)}}>Request Free Consultation Now</div>
+                    <div className={styles.rBtn} onClick={()=> {history.push(`/request/${id}/web`)}}>Request Free Consultation Now</div>
 
                 </div>
             </div>
@@ -342,7 +342,7 @@ export const Plan = () => {
     return (
         <div className={styles.main}>
             <NavbarWeb />
-            <NavBarWebSub />
+            <NavBarWebSubWht />
             <div className={styles.page}>
 
                 <div className={styles.tOne}>
@@ -377,7 +377,7 @@ export const Plan = () => {
                     Find out where we can help.
 
                 </div>
-                <div className={styles.subTxt2}>
+                <div className={styles.subTxt2} onClick={() => history.push('/contact')}>
                     Request Free Consultation Now
                     
                 </div>
@@ -395,7 +395,7 @@ export const Plan = () => {
                                 <div className={styles.price}>{curPrice}</div>
                             </div>
 
-                            <div className={styles.rBtn2} onClick={() => {history.push(`/request/${id}`)}}>Request Free Consultation Now</div>
+                            <div className={styles.rBtn2} onClick={() => {history.push(`/request/${id}/web`)}}>Request Free Consultation Now</div>
                         </div>
 
                     </div>

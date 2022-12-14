@@ -216,7 +216,7 @@ export const Branding = () => {
                     <div className={styles.lTxtCont}>
                         <div className={styles.wTxt}>Logo & Branding</div>
                         <div className={styles.sTxt}>See Luna Vista Design Plans</div>
-                        <div className={styles.lTxt}>Learn More</div>
+                        <div className={styles.lTxt} onClick={() => history.push('/branding-plans')}>Learn More</div>
                     </div>
                  
 
@@ -228,7 +228,7 @@ export const Branding = () => {
                     <div className={styles.lTxtCont}>
                         <div className={styles.wTxt}>Online</div>
                         <div className={styles.sTxt}>Put Yourself <br></br> on the Web</div>
-                        <div className={styles.lTxt}>Learn More</div>
+                        <div className={styles.lTxt} onClick={() => history.push('/web')}>Learn More</div>
                     </div>                
 
                 </div>
@@ -238,7 +238,7 @@ export const Branding = () => {
                     <div className={styles.lTxtCont}>
                         <div className={styles.wTxt}>Promote</div>
                         <div className={styles.sTxt}>Boost Your Traffic</div>
-                        <div className={styles.lTxt}>Learn More</div>
+                        <div className={styles.lTxt} onClick={() => history.push('/marketing')}>Learn More</div>
                     </div>               
 
                 </div>
@@ -251,10 +251,10 @@ export const Branding = () => {
 
             <div className={styles.askPlanSection}>
                 <div className={styles.askPlan}>
-                    Which Website plan is right for you?
+                    Which Design plan is right for you?
                 </div>
-                <div className={styles.compareTxt}>
-                    Compare all Website pricing plans
+                <div className={styles.compareTxt} onClick={() => history.push('/branding-plans')}>
+                    Compare all Design pricing plans
                 </div>
             </div>
 

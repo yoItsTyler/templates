@@ -512,6 +512,7 @@ background-clip: text;
     font-size: 18px;
     font-weight: 400;
     color: white;
+    cursor: pointer;
 }
 .splitRow2{
     width: 100%;
@@ -554,6 +555,7 @@ background-clip: text;
     color: #0062CC;
     text-align: center;
     top: 280px;
+    cursor: pointer;
 }
 @media only screen and (max-width: 460px) {
     .compareTxt{
