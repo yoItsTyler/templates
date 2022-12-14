@@ -139,7 +139,7 @@ export const Home = () => {
                     <div className={styles.subTxtB} style={{ fontSize: txtSize?.subSize }}>Attract more customers</div>
 
                     <div className={styles.btnRow}>
-                        <div className={styles.whiteBtn} onClick={() => history.push('/request')}
+                        <div className={styles.whiteBtn} onClick={() => history.push('/request/marketing/lv')}
                         >Request Now</div>
                         <div className={styles.blackBtn} onClick={() => history.push('/marketing')}
                         >Learn More</div>
@@ -156,7 +156,7 @@ export const Home = () => {
     <div className={styles.subTxt} style={{ fontSize: txtSize?.subSize }}>Timeless coehesive designs</div>
 
     <div className={styles.btnRow}>
-        <div className={styles.whiteBtn} onClick={() => history.push('/request')}
+        <div className={styles.whiteBtn} onClick={() => history.push('/branding-plans')}
         >Request Now</div>
         <div className={styles.blackBtn} onClick={() => history.push('/branding')}
         >Learn More</div>
