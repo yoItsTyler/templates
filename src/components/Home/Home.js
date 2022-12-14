@@ -10,7 +10,7 @@ import canC from '../../images/canC.webp';
 import arrows from '../../images/arrows.png'
 
 import React, { useEffect, useRef, useState } from 'react';
-import { Navbar } from '../Navbar/Navbar';
+import { NavBarHome } from '../NavBarHome/NavBarHome';
 import { NavbarMobile } from '../NavbarMobile';
 
 
@@ -106,7 +106,7 @@ export const Home = () => {
             {isMobile ? (
                 <NavbarMobile />
             ) : (
-                <Navbar />
+                <NavBarHome />
 
             )}
 
