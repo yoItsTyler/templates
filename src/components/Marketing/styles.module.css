@@ -15,7 +15,7 @@
 }
 .title{
     margin-top: 80px;
-    margin-bottom: 10vh;
+    margin-bottom: 30px;
     font-weight: 700;
     font-size: 50px;
     text-align: center;
@@ -59,6 +59,7 @@ linear-gradient(90.35deg, #28D0D0 15.73%, #2A8BE4 41.95%);
 .graph{
    max-height: 400px;
    max-width: 105vw;
+   margin-bottom: 60px;
 }
 .graph2{
     max-height: 400px;
