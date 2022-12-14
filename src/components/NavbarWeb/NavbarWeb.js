@@ -112,7 +112,7 @@ export const NavbarWeb = () => {
     const DropDown = () => {
 
         return(
-            <div>
+            <div className={styles.bg} onClick={toggleMenu}>
                   <div className={styles.dropDown}>
                       <div className={styles.iconCont}>
                       <Icon path={mdiClose} className={styles.close}
