@@ -144,11 +144,13 @@
 
 }
 .rBtn2{
-   width: 300px;
+   width: fit-content;
+   padding-left: 21px;
+   padding-right: 21px;
    font-weight: 450;
    font-size: 16px;
    color: white;
-   height: 27px;
+   padding-top: 2px;
    border-radius: 6px;
    background-color: #0062CC;
    display: flex;
@@ -157,7 +159,8 @@
    
    line-height: 27px;
    cursor: pointer;
-   margin-left: 16px;
+   margin-left: 30px;
+   text-align: center;
    
    
 
@@ -166,8 +169,8 @@
     .rBtn2{
 
         width: auto;
-        padding-left: 6px;
-        padding-right: 6px;
+        padding-left: 12px;
+        padding-right: 12px;
     }
 }
 .rBtn3{
@@ -194,13 +197,12 @@
     color: #0062CC;
     display: flex;
     justify-content: center;
-    margin-top: 12px;
+    margin-top: 21px;
     cursor: pointer;
 
 }
 @media only screen and (max-width: 757px) {
     .subTxt{
-        margin-top: -6px;
         margin-bottom: 2px;
     }
 }
@@ -227,7 +229,7 @@
 .footRow{
    
     width: 820px;
-    max-width: 96%;
+    max-width: 90%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -243,6 +245,14 @@
     align-content: center;
     align-items: center;
     text-align: center;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-right: 12px;
+}
+@media only screen and (max-width: 550px) {
+    .footTitle{
+    font-size: 24px;
+    }
 }
 .start{
   
@@ -258,12 +268,14 @@
     display: flex;
     align-items: center;
     align-content: center;
+    margin-top: 3px;
+    margin-bottom: 3px;
 
 }
 
 
 .txtCont{
-    margin-top: 100px;
+    padding-top: 100px;
 
 }
 
@@ -286,4 +298,10 @@
     max-width: 180px;
     align-self: center;
     margin-bottom: 30px;
+}
+.planImg{ 
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: auto;
 }

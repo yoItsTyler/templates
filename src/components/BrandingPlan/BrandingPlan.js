@@ -4,9 +4,6 @@ import { useParams } from 'react-router-dom';
 import { NavbarWeb } from '../NavbarWeb/NavbarWeb';
 import { NavBarWebSubWht } from '../NavBarWebSubWht/NavBarWebSubWht';
 import styles from './styles.module.css';
-import proPlan from '../../images/proPlan.png';
-import bixPlan from '../../images/bizPlan.png';
-import enterprisePlan from '../../images/enterprisePlan.png';
 import aA from '../../images/aA.png'
 import aA2 from '../../images/aA2.png'
 import aA3 from '../../images/aA3.png'
@@ -26,6 +23,14 @@ export const BrandingPlan = () => {
     const [img, setImg] = useState();
 
     const [windowDH, setWindowDH] = useState(null);
+
+    const learnMore = () => {
+       // history.push('/branding-plan/logo-design');
+    //    console.log('after hist push onclick')
+        //window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+        console.log('after scroll')
+        console.log('scroll Y',window.scroll(0));
+    };
 
     useLayoutEffect(() => {
 
@@ -129,7 +134,7 @@ export const BrandingPlan = () => {
                     {planType}
                 </div>
                 <div className={styles.txtP}
-                >Popular for portfolios or basic web pages for personal use and growing your brand getting it off the ground. Get on the internet with your own custom project designed and developed by the Spectiv Web team. After implementation, choose to have your project managed by Spectiv as well. Request now for a free consultation so we can learn more about your needs and create a custom plan just for you.
+                >Popular for businesses or professionals that are just starting out with a limited budget and just need somewhere to start. A logo is where your brand begins and how you are remembered. Request now for a free consultation so we can learn more about your needs and create a custom plan just for you.
                 </div>
                 <div className={styles.txt}
                 >  Custom Logo
@@ -161,7 +166,7 @@ export const BrandingPlan = () => {
                     {planType}
                 </div>
                 <div className={styles.txtP}
-                >Geared more towards projects in need of advanced web features like online payments, booking, and events. Get a customized plan designed and developed by the Spectiv Web team using advanced Application Program Interfaces. After implementation, choose to have your project managed by Spectiv as well. Request now for a free consultation for us to learn more about your exact needs.
+                >Geared more towards projects in need of advanced design features like logo, font, patterns, and other design-based assets. Get a customized identity design plan curated by the Lune Vista creative team. Get exactly what you are looking for by sitting down and expressing exactly the feel you want your brand representing and we will deliver that to you. Request now for a free consultation with us to learn more about your exact needs.
                 </div>
                 <div className={styles.txt}
                 >  Custom Domain
@@ -203,7 +208,7 @@ export const BrandingPlan = () => {
                   {planType} 
                 </div>
                 <div className={styles.txtP}
-                >For large scale projects requiring a tailored solution with advanced web applications. Get your customized web plan designed and developed by the Spectiv Web team with continued management by Spectiv after implementation. Request now for a free consultation for us to learn more about your exact needs.
+                >For large scale projects requiring a tailored solution with design. Get your customized logo and identity along with 1:1 support and a guide on how to use your design assets through your day to day operations. Request now for a free consultation with us to learn more about your exact needs.
                 </div>
                 <div className={styles.txt}
                 >  Custom Domain
@@ -260,7 +265,7 @@ export const BrandingPlan = () => {
                 <div className={styles.colCont}>
                     <div className={styles.start}>Starting at</div>
                     <div className={styles.price}>$50.00 - $300.00</div>
-                    <div className={styles.rBtn3} onClick={() => {history.push('/branding-plan/logo-design')}}
+                    <div className={styles.rBtn3} onClick={() => {history.push('/branding-plan/logo-design') }}
                     >Learn More</div>
                 </div>
 
@@ -346,7 +351,7 @@ export const BrandingPlan = () => {
 
                     <div className={styles.splitRow2}>
                         <div className={styles.column}>
-                            <img src={img} />
+                            <img className={styles.planImg} src={img} />
                             <div className={styles.subTxt}
                                 onClick={() => { history.push('/web-plans') }}
                             >
@@ -392,7 +397,7 @@ export const BrandingPlan = () => {
                                 <div className={styles.price}>{curPrice}</div>
                             </div>
 
-                            <div className={styles.rBtn2} onClick={() => {history.push(`/request/branding/${id}`)}}>Request Free Consultation Now</div>
+                            <div className={styles.rBtn2} onClick={() => {history.push(`/request/branding/${id}`)}}>Request Now</div>
                         </div>
 
                     </div>
