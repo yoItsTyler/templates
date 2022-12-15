@@ -123,7 +123,7 @@ export const Plan = () => {
                     Website {planType} Plan
                 </div>
                 <div className={styles.txtP}
-                >Popular for portfolios or basic web pages for personal use and growing your brand getting it off the ground. Get on the internet with your own custom project designed and developed by the Spectiv Web team. After implementation, choose to have your project managed by Spectiv as well. Request now for a free consultation so we can learn more about your needs and create a custom plan just for you.
+                >Popular for portfolios or basic web pages for personal use and growing your brand getting it off the ground. Get on the internet with your own custom project designed and developed by the Lune Vista Web team with continued management by Lune Vista after implementation. Request now for a free consultation so we can learn more about your needs and create a custom plan just for you.
                 </div>
                 <div className={styles.txt}
                 >  Custom Domain
@@ -163,7 +163,7 @@ export const Plan = () => {
                     Website {planType} Plan
                 </div>
                 <div className={styles.txtP}
-                >Geared more towards projects in need of advanced web features like online payments, booking, and events. Get a customized plan designed and developed by the Spectiv Web team using advanced Application Program Interfaces. After implementation, choose to have your project managed by Spectiv as well. Request now for a free consultation for us to learn more about your exact needs.
+                >Geared more towards projects in need of advanced web features like online payments, booking, and events. Get a customized plan designed and developed by the Lune Vista Web team using advanced Application Program Interfaces(API). Request now for a free consultation for us to learn more about your exact needs.
                 </div>
                 <div className={styles.txt}
                 >  Custom Domain
@@ -205,7 +205,7 @@ export const Plan = () => {
                     Website {planType} Plan
                 </div>
                 <div className={styles.txtP}
-                >For large scale projects requiring a tailored solution with advanced web applications. Get your customized web plan designed and developed by the Spectiv Web team with continued management by Spectiv after implementation. Request now for a free consultation for us to learn more about your exact needs.
+                >For large scale projects requiring a tailored solution with advanced web applications. Get your customized web plan designed and developed by the Lune Vista Web team with continued management by Lune Vista after implementation. Request now for a free consultation for us to learn more about your exact needs.
                 </div>
                 <div className={styles.txt}
                 >  Custom Domain
@@ -404,7 +404,7 @@ export const Plan = () => {
                                 <div className={styles.price}>{curPrice}</div>
                             </div>
 
-                            <div className={styles.rBtn2} onClick={() => {history.push(`/request/${id}/web`)}}>Request Free Consultation Now</div>
+                            <div className={styles.rBtn2} onClick={() => {history.push(`/request/${id}/web`)}}>Request Now</div>
                         </div>
 
                     </div>
