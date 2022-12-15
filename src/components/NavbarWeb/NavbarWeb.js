@@ -128,8 +128,10 @@ export const NavbarWeb = () => {
                         >About</div>
                         <div className={styles.page2} onClick={() => history.push('/contact')}
                         >Contact</div>
+                        <div className={styles.page2} onClick={() => history.push('/')}
+                        >Home</div>
 
-                        <img src={logo} className={styles.logo2}/>
+                        <img src={logo} className={styles.logo2} onClick={() => history.push('/')}/>
                     </div>
             </div>
         )
@@ -149,7 +151,7 @@ export const NavbarWeb = () => {
                 <div className={styles.logo}
                     onClick={() => history.push('/')}
                 >
-                    <img src={logo2} style={{ width: '100%', height: '' }} />
+                    <img src={logo2} style={{ width: '100%', height: '' }}/>
 
                 </div>
 

@@ -125,6 +125,8 @@ export const NavBarHome = () => {
                         >Branding</div>
                         <div className={styles.page2} onClick={() => history.push('/marketing')}
                         >Marketing</div>
+                        <div className={styles.page2} onClick={() => history.push('/')}
+                        >Home</div>
                         <div className={styles.page2} onClick={() => history.push('/about')}
                         >About</div>
                         <div className={styles.page2} onClick={() => history.push('/contact')}
