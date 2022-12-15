@@ -23,7 +23,21 @@ import styles from './styles.module.css';
 
 
 export const App = () => {
-    
+    function ScrollToTop({history, children}) {
+        useEffect(() => {
+            const unlisten = history.listen(() => {
+                window.scrollTo(0,0);
+                
+            });
+            return () => {
+                unlisten();
+            }           
+
+        }, []);
+        return<Fragment>{children}</Fragment>;
+
+    }
+    //export default withRouter(ScrollToTop);
 
 
 

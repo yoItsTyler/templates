@@ -17,7 +17,7 @@ import { useLayoutEffect } from 'react';
 export const BrandingPlan = () => {
     const { id } = useParams();
     const {pathname} = useLocation();
-    //const hist = createBrowserHistory();
+    const hist = createBrowserHistory();
     const [planType, setPlanType] = useState();
     const history = useHistory();
     const imgArray = { aA, aA2, aA3 };

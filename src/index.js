@@ -7,7 +7,7 @@ import { App } from './components/App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
+    <Router >
      <App/>    
     </Router>
   </React.StrictMode>,

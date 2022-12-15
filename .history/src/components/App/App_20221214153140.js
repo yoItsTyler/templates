@@ -23,14 +23,29 @@ import styles from './styles.module.css';
 
 
 export const App = () => {
-    
+    function ScrollToTop({history, children}) {
+        useEffect(() => {
+            const unlisten = history.listen(() => {
+                window.scrollTo(0,0);
+                
+            });
+            return () => {
+                unlisten();
+            }           
+
+        }, []);
+        return<Fragment>{children}</Fragment>;
+
+    }
+    //export default withRouter(ScrollToTop);
 
 
 
 
     return (
         <div className={styles.main}>
-           
+
+            <ScrollToTop>
             <Switch>                
                 <Route exact path='/branding-plans' component={BrandingPlans}/>
                 <Route exact path='/branding-plan/:id' component={BrandingPlan}/>
@@ -47,7 +62,7 @@ export const App = () => {
                 <Route path={['/']} component={Home}/>
             </Switch>
 
-         
+            </ScrollToTop>
             
         </div>
     )

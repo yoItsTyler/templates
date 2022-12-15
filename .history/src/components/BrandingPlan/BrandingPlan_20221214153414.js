@@ -11,13 +11,11 @@ import aA from '../../images/aA.png'
 import aA2 from '../../images/aA2.png'
 import aA3 from '../../images/aA3.png'
 import { useLocation } from 'react-router-dom';
-import { useLayoutEffect } from 'react';
 
 
 export const BrandingPlan = () => {
     const { id } = useParams();
     const {pathname} = useLocation();
-    //const hist = createBrowserHistory();
     const [planType, setPlanType] = useState();
     const history = useHistory();
     const imgArray = { aA, aA2, aA3 };
@@ -27,13 +25,9 @@ export const BrandingPlan = () => {
 
     const [windowDH, setWindowDH] = useState(null);
 
-    useLayoutEffect(() => {
-
+    useEffect(() => {
         window.scrollTo(0, 0);
         console.log('id', id, 'pathname', pathname );
-        if('scrollRestoration' in history){
-            history.scrollRestoration = 'manual';
-        }
       }, [pathname]);
 
 

@@ -17,7 +17,7 @@ import { useLayoutEffect } from 'react';
 export const BrandingPlan = () => {
     const { id } = useParams();
     const {pathname} = useLocation();
-    //const hist = createBrowserHistory();
+    const hist = createBrowserHistory();
     const [planType, setPlanType] = useState();
     const history = useHistory();
     const imgArray = { aA, aA2, aA3 };
@@ -28,12 +28,8 @@ export const BrandingPlan = () => {
     const [windowDH, setWindowDH] = useState(null);
 
     useLayoutEffect(() => {
-
         window.scrollTo(0, 0);
         console.log('id', id, 'pathname', pathname );
-        if('scrollRestoration' in history){
-            history.scrollRestoration = 'manual';
-        }
       }, [pathname]);
 
 
