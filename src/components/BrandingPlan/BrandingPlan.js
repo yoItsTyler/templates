@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { NavbarWeb } from '../NavbarWeb/NavbarWeb';
-import { NavBarWebSubWht } from '../NavBarWebSubWht/NavBarWebSubWht';
+import { NavBarBrandingSub } from '../NavBarBrandingSub/NavBarBrandingSub';
 import styles from './styles.module.css';
 import aA from '../../images/aA.png'
 import aA2 from '../../images/aA2.png'
@@ -344,7 +344,7 @@ export const BrandingPlan = () => {
     return (
         <div className={styles.main}>
             <NavbarWeb />
-            <NavBarWebSubWht />
+            <NavBarBrandingSub />
             <div className={styles.page}>
 
                 <div className={styles.tOne}>
