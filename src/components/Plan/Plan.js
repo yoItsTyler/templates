@@ -15,7 +15,7 @@ export const Plan = () => {
     const [planType, setPlanType] = useState();
     const history = useHistory();
     const imgArray = { proPlan, bixPlan, enterprisePlan };
-    const prices = { pro: '$800.00', biz: '$1,500.00', ent: '$3,000.00' };
+    const prices = { pro: '$1,000.00', biz: '$3,000.00', ent: '$10,000.00' };
     const [curPrice, setCurPrice] = useState();
     const [img, setImg] = useState();
 
@@ -271,7 +271,7 @@ export const Plan = () => {
 
                 <div className={styles.colCont}>
                     <div className={styles.start}>Starting at</div>
-                    <div className={styles.price}>$800.00</div>
+                    <div className={styles.price}>$1,000.00</div>
                     <div className={styles.rBtn3} onClick={() => {history.push('/plan/professional')}}
                     >Learn More</div>
                 </div>
@@ -289,7 +289,7 @@ export const Plan = () => {
 
                 <div className={styles.colCont}>
                     <div className={styles.start}>Starting at</div>
-                    <div className={styles.price}>$1,200.00</div>
+                    <div className={styles.price}>$3,000.00</div>
                     <div className={styles.rBtn3} onClick={() => {history.push('/plan/business')}}
                     >Learn More</div>
                 </div>
@@ -306,7 +306,7 @@ export const Plan = () => {
 
                 <div className={styles.colCont}>
                     <div className={styles.start}>Starting at</div>
-                    <div className={styles.price}>$3,000.00</div>
+                    <div className={styles.price}>$10,000.00</div>
                     <div className={styles.rBtn3} onClick={() => {history.push('/plan/enterprise')}}
                     >Learn More</div>
                 </div>
