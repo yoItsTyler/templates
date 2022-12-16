@@ -200,7 +200,7 @@ export const Web = () => {
 
                             <div className ={styles.subCont}>
                             <div className={styles.start}>Starting at</div>
-                            <div className={styles.price}>$800.00</div>
+                            <div className={styles.price}>$1,000.00</div>
                             <div className={styles.rBtn} onClick={() => {history.push('/request/professional/web')}}>Request Now</div>
                             <div className={styles.lBtn} onClick={() => {history.push('/plan/professional')}}
                             >Learn More</div>
@@ -239,7 +239,7 @@ export const Web = () => {
 
                             <div className ={styles.subCont}>
                             <div className={styles.start}>Starting at</div>
-                            <div className={styles.price}>$1,200.00</div>
+                            <div className={styles.price}>$3,000.00</div>
                             <div className={styles.rBtn} onClick={() => {history.push('/request/business/web')}}>Request Now</div>
                             <div className={styles.lBtn} onClick={() => {history.push('/plan/business')}}
                             >Learn More</div>
@@ -278,7 +278,7 @@ export const Web = () => {
 
                             <div className ={styles.subCont}>
                             <div className={styles.start}>Starting at</div>
-                            <div className={styles.price}>$3,000.00</div>
+                            <div className={styles.price}>$10,000.00</div>
                             <div className={styles.rBtn} onClick={() => {history.push('/request/enterprise/web')}}>Request Now</div>
                             <div className={styles.lBtn} onClick={() => {history.push('/plan/enterprise')}}
                             >Learn More</div>
