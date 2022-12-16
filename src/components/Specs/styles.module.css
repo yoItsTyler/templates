@@ -79,13 +79,20 @@ background-clip: text;
 }
 .txtCont{
     margin-top: 200px;
+    width: 100vw;
 
 }
 
 .txt{
-    font-weight: 400;
     font-size: 42px;
     text-align: center;
+    margin-left: 6%;
+    margin-right: 6%;
+}
+@media only screen and (max-width: 460px) {
+    .txt{
+        font-size: 30px;
+}
 }
 .subTxt{
     font-size: 12px;

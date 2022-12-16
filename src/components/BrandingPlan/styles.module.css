@@ -107,7 +107,6 @@
     font-size: 42px;
     margin-top: 12px;
 }
-
 .txtP{
     font-weight: 400;
     font-size: 16px;
@@ -288,6 +287,14 @@
     font-weight: 400;
     font-size: 42px;
     text-align: center;
+    margin-left: 6%;
+    margin-right: 6%;
+}
+@media only screen and (max-width: 460px) {
+    .txt2{
+        font-size: 30px;
+  
+}
 }
 .subTxt2{
     font-size: 12px;
