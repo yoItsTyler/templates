@@ -1,0 +1,193 @@
+.main{
+    display: flex;
+    flex-direction: column;
+}
+.scheduleCont {
+    justify-self: center;
+    align-self: center;
+    width: 100vw;
+    max-width: 500px;
+    box-shadow: 0px 0px 3px;
+
+}
+
+.scheduleNav {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    height: 40px;
+    padding-top: 0px;
+
+
+}
+
+.currentDay {
+    cursor: default;
+    font-size: 20px;
+    font-weight: 500;
+    min-width: fit-content;
+    width: 100px;
+    text-align: center;
+    color: #1565c0;;
+}
+
+.prevDay {
+    width: 30px !important; 
+    height: 30px !important;
+    cursor: pointer;
+    background-color: #1565c0;
+    color: whitesmoke;
+    border-radius: 3px;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nextDay {
+    width: 30px !important; 
+    height: 30px !important;
+    cursor: pointer;
+    background-color: #1565c0;
+    color: whitesmoke;
+    border-radius: 3px;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.popBackground{
+    align-self: center;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.333);
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.popCont{
+    position: fixed;
+    
+    align-self: center;
+    background-color: white;
+    z-index: 11 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9px;
+    padding: 3px;
+}
+.closeCont {
+    width: 100%;
+    height: 33px;
+}
+
+.closeSocialPop {
+    margin-top: 6px;
+    margin-left: 90%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.timePickerDay{
+    font-size: 23px;
+    color:  #1565c0;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+.timeCont{
+    margin-top: 9px;
+    color: #1565c0;
+    border-radius: 12px;
+    border-width: .5px;
+    border: solid;
+    padding: 6px;
+    padding-bottom: 9px;
+    margin-bottom: 6px;
+}
+.timeTitle{
+    margin-top: 9px;
+    
+  
+    color:  #1565c0;
+   
+    font-size: 18px;
+    font-weight: 500;
+    padding: 6px;
+    border-radius: 3px;
+
+    border-bottom: solid;
+}
+.clockPicker{
+    width: 180px;
+}
+.saveBtn{
+    all: unset;
+    cursor: pointer;
+    background-color: #1565c0;
+    color: whitesmoke;
+    border-radius: 3px;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 6px;
+    
+    margin-top: 9px;
+    margin-bottom: 9px;
+}
+.saveBtn:disabled{
+    background-color: red;
+    cursor: not-allowed;
+}
+.popBackground {
+    align-self: center;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.333);
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+}
+.pop {
+    position: fixed;
+    top: 23vh;
+    left: 50vw;
+    margin-left: -150px;
+    width: 300px;
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-self: center;
+    align-self: center;
+    align-content: center;
+    background-color: white;
+    max-width: 100%;
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.192);
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+}
+.addStudentForm{
+    width: 80%;
+}
+.closeCont {
+    width: 100%;
+}
+.closePop {
+    margin-top: 12px;
+    margin-left: 86%;
+    right: 0;
+    cursor: pointer;
+}
+.title2{
+   
+    font-size: larger;
+    font-weight: 500;
+  
+}
