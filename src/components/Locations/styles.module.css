@@ -1,0 +1,80 @@
+.main {
+   display: flex;
+   width: 100%;
+   justify-content: center;
+   align-content: center;
+}
+
+.locationContainer {
+   position: relative;
+   min-height: 64px;
+   height: fit-content;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   justify-self: center;
+   align-self: center;
+   margin-left: 0px;
+
+   top: 0;
+
+   border-radius: 3px;
+   background-color: #8fb9e98a;
+   color: white;
+   cursor: pointer;
+}
+
+.currentLocationPin {
+   height: 100%;
+}
+
+.cityListContainer {
+   position: absolute;
+   top: 64px;
+
+   width: 100%;
+
+
+
+}
+
+.cityNameContainer {
+   height: 33px;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   align-content: center;
+   justify-content: center;
+   justify-items: center;
+   border-radius: 3px;
+   margin-top: 3px;
+   padding-top: 6px;
+   padding-bottom: 6px;
+   cursor: pointer;
+   transition: ease-in 1s;
+   background-color: #8fb9e98a;
+   backdrop-filter: blur(8px);
+   transition: background-color 0.9s ease
+}
+
+.cityNameContainer:hover {
+   /**background-color: #5173e28a;**/
+}
+
+
+.searchContainer {
+   margin-left: auto;
+   margin-right: 12px;
+   height: 64px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   justify-self: center;
+   align-self: center;
+   color: white;
+}
+
+.slideFromRight {}
+
+.searchBtn {}

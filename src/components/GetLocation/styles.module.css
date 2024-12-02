@@ -1,0 +1,18 @@
+.inputCont{
+   
+    height: 64px;
+    display: flex;
+    justify-content: center;   
+    align-items: center;
+
+}
+.locationInput{
+  
+    all: unset;
+    background-color: whitesmoke;
+    height: 33px;
+    min-width: 66px;
+    border-radius: 9px;
+    padding: 6px;
+    color: #000;
+}

@@ -1,0 +1,20 @@
+[
+      {
+        "origin": ["https://localhost:3000"],
+        "method": ["POST"],
+        "maxAgeSeconds": 5000
+      },
+      {
+          "origin": ["https://localhost:3000"],
+          "method": ["GET"],
+          "maxAgeSeconds": 5000
+        },
+        {
+          "origin": ["https://localhost:3000"],
+          "method": ["RESPONSE"],
+          "maxAgeSeconds": 5000
+        }
+  ]
+
+
+  

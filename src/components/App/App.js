@@ -8,11 +8,9 @@ import styles from './styles.module.css';
 
 
 export const App = () => {
-
-
+//SNyq2IywKFoGGV3d6VTDd7i36AV7TxIT 
     return(
-        <div className={styles.main}>
-            <Navbar/>
+        <div className={styles.main}>            
             <Switch>
                 <Route path={['/']} component={Home}/>
             </Switch>
