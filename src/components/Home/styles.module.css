@@ -1,19 +1,456 @@
-.main{
-    width: 100%;
-    height: 100%;
-}
-.tOne{
-    height: 100%;
-    
-}
-.navBar{
+.main {
+    min-height: 100vh;
+    width: 100vw;
+    max-width: 100vw !important;
+    position: absolute;
+    scrollbar-width: 0;
+    overflow-x: hidden;
+    font-family: "Crimson Text", serif;
+    margin: 0;
 
 }
-.lSCont{
-    width: 200px;
+::root {
+    --vh:1vh;
+}
+.tOne {
+    margin-top: 60px;
+    height: calc((var(--vh, 1vh) * 100) - 60px); /* Use 100% of the parent's height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.tTwo {
+    background-color: #f1f1f1;
+    color: #2C2C2E;
+    min-height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.logo {
+    height: 120px;
+    margin-top: 6rem;
+}
+
+.lSCont {
+    width: 160px;
     margin-top: 9px;
     margin-left: auto;
-    margin-right: 3vw;
+    margin-right: 1vw;
     display: flex;
     justify-content: space-evenly;
+}
+
+.whiteBtn {
+    all: unset;
+    background-color: #F0F0F0;
+    color: #2C2C2E;
+    box-shadow: -1px -2px 3px 2px rgba(0, 0, 0, 0.25) inset;
+    filter: drop-shadow(3px 6px 6px rgba(0, 0, 0, 0.25));
+    min-height: 33px;
+    height: 33px !important;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 3px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: 1000;
+    margin-top: auto;
+    margin-bottom: auto;
+    cursor: pointer;
+}
+
+.whiteBtn:hover {
+    background-color: #ffffff;
+    box-shadow: -1px -2px 3px 2px rgba(0, 0, 0, 0.25) inset;
+}
+
+.title {
+
+    font-size: 44px;
+    margin-top: 10vh !important;
+    margin-bottom: 3vh !important;
+    text-align: center;
+    margin-top: 9px;
+    font-weight: 1000;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Julius Sans One', sans-serif;
+}
+.main h2 {
+    max-width: 80vw;
+}
+
+.heroContainer {
+    margin-top: 33px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+
+
+    color: #F0F0F0;
+    width: 100%;
+
+    max-width: 800px;
+    border-radius: 12px;
+
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 9px;
+
+    padding-top: 9px;
+    padding-bottom: 9px;
+
+
+    font-weight: 800;
+
+}
+
+.profileBorder {
+
+    border-radius: 50%;
+
+    aspect-ratio: 1;
+
+    width: 200px !important;
+    max-height: 200px;
+
+
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    flex-shrink: 0;
+
+}
+
+.profileName {
+    text-align: center;
+    margin-top: 6px;
+    font-size: 22px;
+    background-color: #1c1c1d;
+    border-radius: 3px;
+    box-shadow: -2px -1px 3px 2px rgba(253, 253, 253, 0.158) inset;
+    filter: drop-shadow(3px 6px 6px rgba(0, 0, 0, 0.25));
+}
+
+.headshot {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.heroTextContainer {
+    border-radius: 3px;
+    background-color: #1c1c1dc9;
+    /* Semi-transparent background for fallback */
+    backdrop-filter: blur(10px);
+    /* Apply blur effect */
+    -webkit-backdrop-filter: blur(10px);
+    /* For Safari compatibility */
+}
+
+.heroList {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.heroBullet {}
+
+.tOneBottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+}
+.scrollDown {
+    margin-top: 23px;
+    font-size: 46px;
+   
+    color: #000000;
+}
+
+.aboutRow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+    max-width: 933px;
+    margin-top: 66px;
+    margin-bottom: 66px;
+    gap: 33px;
+    align-self: center;
+    justify-self: center;
+}
+
+.aboutLeft {}
+
+.aboutRight {
+    display: flex;
+    flex-direction: column;
+    max-width: 425px !important;
+}
+
+.studentPlayingPiano {
+    height: 400px;
+}
+
+.tTwo h1 {
+    margin-top: 9px;
+    margin-bottom: 9px;
+}
+
+.tTwo h3 {
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.tThree {
+    background-color: #ffffff;
+    /* White background */
+    color: #000000;
+    /* Black text */
+    padding: 2rem 1rem;
+    /* Padding for content spacing */
+    text-align: center;
+    /* Center-align text */
+}
+
+.tThree h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.tThree h3 {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: #555555;
+    /* Slightly lighter shade for the subheading */
+}
+
+.benefitsContainer {
+    display: flex;
+    flex-direction: column;
+    /* Stacks items vertically */
+    gap: 1.5rem;
+    /* Spacing between benefit items */
+}
+
+.benefitItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: #f1f1f1;
+    color: #2C2C2E;
+    border: 1px solid #e0e0e0;
+    /* Light gray border */
+    border-radius: 0.5rem;
+    /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Hover effect */
+}
+
+.benefitItem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    /* Enhanced shadow on hover */
+}
+
+.benefitItem h4 {
+    font-size: 1.2rem;
+    margin: 1rem 0 0.5rem;
+    font-weight: bold;
+}
+
+.benefitItem p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333333;
+    /* Darker gray for readability */
+    text-align: center;
+}
+
+.icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #ff5722;
+    /* Highlighted color for icons */
+}
+
+
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .tThree h1 {
+        font-size: 1.75rem;
+    }
+
+    .tThree h3 {
+        font-size: 1.1rem;
+    }
+
+    .benefitItem {
+        padding: 1rem;
+    }
+
+    .benefitItem h4 {
+        font-size: 1rem;
+    }
+
+    .benefitItem p {
+        font-size: 0.9rem;
+    }
+}
+
+.tFour {
+    min-height: 600px;
+    background-color: #f9f9f9;
+    /* Light gray background */
+    color: #000000;
+    /* Black text */
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.tFour h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.reviewBox {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin: 1rem auto;
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #333333;
+}
+
+.reviewBox h4 {
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #555555;
+}
+
+.stars {
+    margin: 1rem 0;
+}
+
+.starIcon {
+    color: #f0e68c;
+    /* Gold color for stars */
+    font-size: 2rem;
+}
+
+.carouselButtons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.carouselButtons .MuiButton-root {
+    border-radius: 1rem;
+    text-transform: none;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .tFour h1 {
+        font-size: 1.75rem;
+    }
+
+    .reviewBox {
+        padding: 1rem;
+    }
+
+    .reviewBox p {
+        font-size: 1rem;
+    }
+
+    .reviewBox h4 {
+        font-size: 0.9rem;
+    }
+
+    .starIcon {
+        font-size: 1.5rem;
+    }
+
+    .carouselButtons {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+
+
+@media (max-width: 800px) {
+
+    .logo {
+        margin-top: 1rem;
+    }
+
+    .title {
+        font-size: 42px;
+        max-width: 322px;
+    }
+
+    .whiteBtn {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .heroContainer {
+        margin-top: 0;
+        width: 600px;
+        max-width: 90%;
+        flex-direction: column;
+        /* Switches to column layout for smaller screens */
+        align-items: center;
+        padding-left: 9px;
+        padding-right: 9px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+
+
+    .profileBorder {
+        margin-top: 9px;
+
+
+    }
+
+    .heroTextContainer {
+        text-align: left;
+    }
+
+    .scrollDown {
+       
+      
+    }
 }

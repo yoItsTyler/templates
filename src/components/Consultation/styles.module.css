@@ -1,0 +1,12 @@
+.main{
+    margin-top: 0;
+    top: 0;
+    height: 100vh;
+    min-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    font-family: "Crimson Text", serif;
+    color: black;
+}

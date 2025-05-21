@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Poppins&display=swap');
+
+.title {
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 44px;
+    text-align: center;
+    margin-top: 33px;
+    font-weight: 800;
+}
+.signinT{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Julius Sans One', sans-serif;
+    margin-top: 9px;
+    font-weight: 500;
+}

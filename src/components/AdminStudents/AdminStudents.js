@@ -1,23 +1,22 @@
 import { MenuItem, Select, TextField } from '@mui/material';
-import { Icon } from '@material-ui/core';
+import { Checkbox, Icon } from '@material-ui/core';
 import { httpsCallable, getFunctions } from 'firebase/functions';
 import { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 import { useAuth } from '../../hooks/useAuth';
 import { fb } from '../../service/firebase';
 import { uuid4 } from '../../shared/helpers';
 import styles from './styles.module.css';
-import { Close, Send } from '@mui/icons-material';
+import { ArrowBackIos, Close, Send } from '@mui/icons-material';
 
 
 export const AdminStudents = () => {
     const location = useLocation();
+    const history = useHistory();
     const authUser = useAuth();
     const [students, setStudents] = useState({});
     const schedule = location.state?.schedule;
     const functions = getFunctions();
-
-
 
     useEffect(() => {
         const fetchStudents = async () => {
@@ -28,15 +27,12 @@ export const AdminStudents = () => {
                     const studentsData = membersDoc.data().students;
                     //  const studentsArray = Object.values(studentsData);
                     setStudents(studentsData);
-
                 }
             } catch (error) {
                 console.error('error:', error)
             }
         }
-
-        fetchStudents()
-
+        fetchStudents();
     }, [])
 
 
@@ -52,12 +48,7 @@ export const AdminStudents = () => {
     }, [students])
 
 
-    async function sendSigninEmail() {
-        if (schedule) {
 
-
-        }
-    }
     const AddStudentAccount = () => {
 
         const uid = uuid4();
@@ -175,8 +166,6 @@ export const AdminStudents = () => {
             };
             // Call the onAddStudent function with the new student data
             onAddStudent(newStudent);
-
-
         };
 
         const StudentForm = () => {
@@ -195,7 +184,6 @@ export const AdminStudents = () => {
                                         type="text"
                                         value={studentName}
                                         onBlur={(e) => setStudentName(e.target.value)}
-
                                         required
                                     />
                                 </label>
@@ -236,8 +224,10 @@ export const AdminStudents = () => {
 
 
         return (
-            <div>
-                <button onClick={() => { setStudentFormOpen(!studentFormOpen) }}
+            <div className={styles.btnCenter}>
+                <button
+                    className={styles.whiteBtn}
+                    onClick={() => { setStudentFormOpen(!studentFormOpen) }}
                 >
                     Add New Student
                 </button>
@@ -249,11 +239,35 @@ export const AdminStudents = () => {
 
     async function sendSigninEmail(id, l) {
         console.log('send email to', l, 'id', id)
-        /*  if(l) {
-              fb?.auth?.sendSignInLinkToEmail(l.email, {
-                  url: `https://scheduler-25721.web.app/${id}/`
-              })
-          }*/
+        if (l) {
+            fb?.auth?.sendSignInLinkToEmail(l.parentEmail, {
+                url: `https://scheduler-25721.web.app/parent-signin`,
+                //url: `https://localhost:3000/parent-signin/`,
+                handleCodeInApp: true,
+            }).then(() => {
+                // The link was successfully sent. Inform the user.
+                console.log('send employee runing p2')
+            })
+        }
+
+    }
+
+    const [selectedStudents, setSelectedStudents] = useState([]);
+
+    useEffect(() => {
+        console.log('Selected Students', selectedStudents)
+    }, [selectedStudents])
+
+    const handleCheckboxChange = (event) => {
+        const studentId = event.target.value;
+
+        if (event.target.checked) {
+            setSelectedStudents((prevSelected) => [...prevSelected, studentId]);
+        } else {
+            setSelectedStudents((prevSelected) =>
+                prevSelected.filter((id) => id !== studentId)
+            );
+        }
 
     }
 
@@ -261,17 +275,26 @@ export const AdminStudents = () => {
 
     return (
         <div>
-            <AddStudentAccount />
+            <div onClick={() => { history.push('/') }}> <Icon className={styles.backBtn}><ArrowBackIos style={{ marginLeft: '8px' }} /></Icon>  </div>
+
             <div>Students</div>
+            <AddStudentAccount />
             {Object.keys(students)?.length > 0 ? (
                 <div className={styles.studentCollumn}>
                     {Object.entries(students).map(([id, l]) => (
                         <div key={id} className={styles.studentRow} >
-                            <div> {l.studentName} </div>
-                            <div>{l.parentEmail}</div>
-                            <Icon
-                            ><Send onClick={() => { sendSigninEmail(id, l) }} /> </Icon>
-
+                            <div>
+                                <Checkbox key={id}
+                                    value={id}
+                                    checked={selectedStudents.includes(id)} // Check if the student is already selected
+                                    onChange={handleCheckboxChange}
+                                />
+                            </div>
+                            <div className={styles.txt}> {l.studentName} </div>
+                            <div className={styles.txt}>{l.parentEmail}</div>
+                            <div className={styles.logoBox}>
+                                <Icon><Send onClick={() => { sendSigninEmail(id, l) }} /> </Icon>
+                            </div>
                         </div>
 
                     ))}

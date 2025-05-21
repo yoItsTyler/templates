@@ -1,14 +1,33 @@
-.main{
+.main {
     display: flex;
     flex-direction: column;
+    align-items: center;
+
 }
+
+.DailySchedule{
+   
+   
+}
+
 .scheduleCont {
+    margin-top: 16px;
     justify-self: center;
     align-self: center;
     width: 100vw;
-    max-width: 500px;
-    box-shadow: 0px 0px 3px;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+   
+    
+}
+.contWidth{
+    box-shadow: 0px 0px 3px rgb(255, 255, 255);
+    border-radius: 9px;
+    padding-bottom: 1px;
 }
 
 .scheduleNav {
@@ -18,26 +37,24 @@
     align-items: center;
     height: 40px;
     padding-top: 0px;
-
-
 }
 
 .currentDay {
     cursor: default;
-    font-size: 20px;
-    font-weight: 500;
-    min-width: fit-content;
-    width: 100px;
+    font-size: 23px;
+    font-weight: 600;
+    min-width: 140px;
+    width: 120px;
     text-align: center;
-    color: #1565c0;;
+    color: #F0F0F0;
 }
 
 .prevDay {
-    width: 30px !important; 
+    width: 30px !important;
     height: 30px !important;
     cursor: pointer;
-    background-color: #1565c0;
-    color: whitesmoke;
+    background-color: #F0F0F0;
+    color: #2C2C2E;
     border-radius: 3px;
     font-size: 18px;
     font-weight: 500;
@@ -47,11 +64,11 @@
 }
 
 .nextDay {
-    width: 30px !important; 
+    width: 30px !important;
     height: 30px !important;
     cursor: pointer;
-    background-color: #1565c0;
-    color: whitesmoke;
+    background-color: #F0F0F0;
+    color: #2C2C2E;
     border-radius: 3px;
     font-size: 18px;
     font-weight: 500;
@@ -59,33 +76,72 @@
     justify-content: center;
     align-items: center;
 }
-.popBackground{
+
+.popBackground {
+    align-self: center;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.333);
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 10 !important;
+    display: flex;
+    justify-content: center;
+}
+.popBackground2 {
     align-self: center;
     position: fixed;
     background-color: rgba(0, 0, 0, 0.333);
     top: 0;
     height: 100vh;
     width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    z-index: 10 !important;
+
+
 }
-.popCont{
+
+.popCont {
+    margin-top: -33vh;
     position: fixed;
-    
+    min-width: 200px;
+    min-height: 100px;
+
     align-self: center;
     background-color: white;
-    z-index: 11 !important;
+    z-index: 20 !important;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+   
     align-items: center;
     border-radius: 9px;
     padding: 3px;
 }
+
+.popCont2 {
+    margin-top: 33px;
+    position: fixed;
+    min-width: 200px;
+    min-height: 100px;
+    left: 50vw;
+    margin-left: -159px;
+
+    align-self: center;
+    background-color: white;
+    z-index: 20 !important;
+    display: flex;
+    flex-direction: column;
+   
+    align-items: center;
+    border-radius: 9px;
+    padding: 3px;
+}
+
 .closeCont {
     width: 100%;
     height: 33px;
+    color: #2C2C2E;
+    margin-bottom: 6px;
 }
 
 .closeSocialPop {
@@ -96,15 +152,18 @@
     align-items: center;
     justify-content: center;
 }
-.timePickerDay{
+
+.timePickerDay {
     font-size: 23px;
-    color:  #1565c0;
-    font-weight: 500;
+    color: #2C2C2E;
+    ;
+    font-weight: 600;
     margin-bottom: 6px;
 }
-.timeCont{
+
+.timeCont {
     margin-top: 9px;
-    color: #1565c0;
+    color: #2C2C2E;
     border-radius: 12px;
     border-width: .5px;
     border: solid;
@@ -112,23 +171,30 @@
     padding-bottom: 9px;
     margin-bottom: 6px;
 }
-.timeTitle{
+
+.timeTitle {
     margin-top: 9px;
-    
-  
-    color:  #1565c0;
-   
+
+
+    color: #2C2C2E;
+
     font-size: 18px;
     font-weight: 500;
     padding: 6px;
     border-radius: 3px;
 
     border-bottom: solid;
+    display: flex;
+    flex-wrap: ;
 }
-.clockPicker{
+
+.timePicker {}
+
+.clockPicker {
     width: 180px;
 }
-.saveBtn{
+
+.saveBtn {
     all: unset;
     cursor: pointer;
     background-color: #1565c0;
@@ -137,22 +203,18 @@
     font-size: 18px;
     font-weight: 500;
     padding: 6px;
-    
+
     margin-top: 9px;
     margin-bottom: 9px;
 }
-.saveBtn:disabled{
+
+.saveBtn:disabled {
     background-color: red;
     cursor: not-allowed;
 }
-.popBackground {
-    align-self: center;
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.333);
-    top: 0;
-    height: 100vh;
-    width: 100vw;
-}
+
+
+
 .pop {
     position: fixed;
     top: 23vh;
@@ -173,21 +235,148 @@
     display: flex;
     justify-content: center;
 }
-.addStudentForm{
+
+.addStudentForm {
     width: 80%;
 }
+
 .closeCont {
     width: 100%;
 }
+
 .closePop {
     margin-top: 12px;
     margin-left: 86%;
     right: 0;
     cursor: pointer;
 }
-.title2{
-   
+
+.title {
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 44px;
+    text-align: center;
+    margin-top: 50px;
+    font-weight: 800;
+}
+
+.title2 {
+
     font-size: larger;
     font-weight: 500;
-  
+    color: #2C2C2E;
+
+}
+
+.schedContainer {
+    background-color: #f0f0f0f8;
+
+}
+
+.eachLesson {
+
+    color: #2C2C2E;
+
+}
+
+.lesson {
+    height: 40px;
+    box-shadow: 0px 1.5px 3px 0px rgba(0, 0, 0, 0.3), 1.5px 0px 3px 0px rgba(0, 0, 0, 0.3), 0px -0.75px 1.5px 0px rgba(0, 0, 0, 0.3);
+    margin-right: 20px;
+    border-radius: 3px;
+    display: flex;
+
+    background-color: #F0F0F0;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.lessonInfo{
+    margin-right: 20px;
+}
+.uBtn{
+    width: 30px;
+    height: 30px;
+    background-color: #FF2D55;
+    border-radius: 3px;
+    box-shadow: -1px -4px 3px 0px rgba(0, 0, 0, 0.15) inset;
+    filter: drop-shadow(3px 6px 6px rgba(0, 0, 0, 0.219));
+    align-self: flex-end;
+    margin-right: 9px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.aBtn{
+    width: 30px;
+    height: 30px;
+    background-color: #34C759;
+    border-radius: 3px;
+    box-shadow: -1px -4px 3px 0px rgba(0, 0, 0, 0.15) inset;
+    filter: drop-shadow(3px 6px 6px rgba(0, 0, 0, 0.219));
+    align-self: flex-end;
+    margin-right: 9px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.sBtn{
+    width: 30px;
+    height: 30px;
+
+    border-radius: 3px;
+    box-shadow: -1px -4px 3px 0px rgba(0, 0, 0, 0.15) inset;
+    filter: drop-shadow(3px 6px 6px rgba(0, 0, 0, 0.219));
+    align-self: flex-end;
+    margin-right: 9px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.blackKeys {
+    background-color: #2C2C2E;
+    height: 20px;
+    width: 60px;
+}    
+
+.whiteBtn {
+    all: unset;
+    background-color: #F0F0F0;
+    color: #2C2C2E;
+    box-shadow: -1px -4px 3px 0px rgba(0, 0, 0, 0.25) inset;
+    filter: drop-shadow(3px 6px 3px rgba(0, 0, 0, 0.50));
+    height: 33px;
+    width: 120px;
+    border-radius: 3px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: 800;
+    
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+
+    transition: ease-out;
+    transition-duration: .3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    margin-top: 9px;
+    margin-bottom: 9px;
+}
+.popTxt{
+    color: #2C2C2E;
+    text-align: center;
+    width: 90%;
+    margin-bottom: 6px;
 }

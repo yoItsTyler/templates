@@ -21,7 +21,7 @@ function Copyright(props) {
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
       <Link color="inherit" href="https://mui.com/">
-        Your Website
+        Creative Play Piano Studio
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -68,6 +68,18 @@ export default function SignIn() {
     });
   };
 
+  const SignUpInstead = (props) => {
+    return (
+      <Typography variant="body2" color="text.secondary" align="center" {...props}>
+      {'Dont have an account? '}
+      <Link color="inherit" href="/signup">
+        Sign In
+      </Link>
+     
+    </Typography>
+    );
+  }
+
   return (
     <ThemeProvider theme={defaultTheme}>
       <Container component="main" maxWidth="xs">
@@ -107,10 +119,7 @@ export default function SignIn() {
               id="password"
               autoComplete="current-password"
             />
-            <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
-            />
+            
             <Button
               type="submit"
               fullWidth
@@ -119,20 +128,10 @@ export default function SignIn() {
             >
               Sign In
             </Button>
-            <Grid container>
-              <Grid item xs>
-                <Link href="#" variant="body2">
-                  Forgot password?
-                </Link>
-              </Grid>
-              <Grid item>
-                <Link variant="body2" onClick={() => history.push('/signup')}>
-                  {"Don't have an account? Sign Up"}
-                </Link>
-              </Grid>
-            </Grid>
+            
           </Box>
         </Box>
+        <SignUpInstead sx={{ mt: 8, mb: 4 }}/>
         <Copyright sx={{ mt: 8, mb: 4 }} />
       </Container>
     </ThemeProvider>

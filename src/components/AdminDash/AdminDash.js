@@ -19,6 +19,7 @@ import { useAuth } from '../../hooks/useAuth';
 import { fb } from '../../service/firebase';
 import { uuid, uuid4 } from '../../shared/helpers';
 import { useStudents } from '../AdminStudents/useStudents';
+import { NavbarMobile } from '../NavbarMobile/NavbarMobile';
 import { DailySchedule } from './DailySchedule';
 import styles from './styles.module.css';
 //import { DateCalendar } from '@material-ui/pickers';
@@ -69,7 +70,7 @@ export const AdminDash = () => {
         { name: "Annika" },
         { name: "Adalyn" },
     ];
-    const [currentStudent, setCurrentStudent] = useState()
+    const [currentStudent, setCurrentStudent] = useState('')
     const [timePickerOpen, setTimePickerOpen] = useState(false);
     const [timeSelected, setTimeSelected] = useState();
     const [selectedDate, handleDateChange] = useState(new Date());
@@ -80,10 +81,10 @@ export const AdminDash = () => {
     const students = useStudents();
 
     useEffect(() => {
-        if(students){
+        if (students) {
             console.log('admin dash students', students)
         }
-    },[students])
+    }, [students])
 
     useEffect(() => {
 
@@ -148,46 +149,48 @@ export const AdminDash = () => {
 
 
 
-
+    const [studentObj, setStudentObj] = useState();
 
     const AddLesson = () => {
         const [startTime, setStartTime] = useState();
         const [endTime, setEndTime] = useState();
-        const [studentObj, setStudentObj] = useState()
+
 
         useEffect(() => {
             console.log('start time', startTime, 'end time', endTime);
 
         }, [startTime, endTime]);
 
-       const handleStudentChange = (event, newValue) => {
-        setCurrentStudent(newValue)
-        const selectedStudent = Object.entries(students).find(([studentId, student]) => student.studentName === newValue);
-        setStudentObj(selectedStudent);
-        console.log('current student obj', selectedStudent)
-        
+        const handleStudentChange = (event, newValue) => {
+            setCurrentStudent(newValue)
+            const selectedStudent = Object?.entries(students)?.find(([studentId, student]) => student.studentName === newValue);
 
-       } 
+            console.log('current student obj', selectedStudent)
+            console.log('current student obj', selectedStudent)
+            if (selectedStudent) {
+                setStudentObj(selectedStudent);
+            }
+
+
+
+
+        }
+
+
 
         const handleSaveLesson = () => {
-
-            //setSchedule({sTime: startTime, eTime: endTime, dOW: currentDayOfWeek, student: currentStudent})
-            /*  setSchedule((prevSchedule) => ({
-                  ...prevSchedule,
-                        [ currentDayOfWeek + " " + parseTime(startTime)]: {sTime: parseTime(startTime), eTime: parseTime(endTime), dOW: currentDayOfWeek, student: currentStudent
-                      },
-                  }));*/
-           
-
+            console.log('logstudentOBJ =>', studentObj);
             const newLesson = {
                 startTime: parseTime(startTime),
                 endTime: parseTime(endTime),
                 dayOfWeek: currentDayOfWeek,
                 studentName: currentStudent,
-                parentId: studentObj.parentId,
-                studentId: studentObj.studentId,
-            }
+                notGoing: false,
+                // ...(studentObj && {parentId: studentObj[1]?.parentId}),                
+                //...(studentObj && {studentId: studentObj[0]}),
+                ...(studentObj ? { parentId: studentObj[1]?.parentId, studentId: studentObj[0] } : { parentId: '', studentId: '' }),
 
+            }
             const addLessonToSchedule = (newLesson) => {
                 setSchedule((prevSchedule) => ({
                     ...prevSchedule,
@@ -197,26 +200,25 @@ export const AdminDash = () => {
             };
 
             addLessonToSchedule(newLesson);
-
-
-            setCurrentStudent();
+            setCurrentStudent('');
+            setStudentObj('');
             setStartTime(undefined);
             setEndTime(undefined);
-            setTimePickerOpen(false)
+            setTimePickerOpen(false);
 
 
         }
 
         useEffect(() => {
             console.log('current Student', currentStudent)
-        },[currentStudent])
+        }, [currentStudent])
 
 
 
 
         return (
-            <div className={styles.popBackground}>
-                <div className={styles.popCont}>
+            <div className={styles.popBackground2}>
+                <div className={styles.popCont2}>
                     <div className={styles.closeCont}>  <Icon  ><Close onClick={() => { setTimePickerOpen(false) }} className={styles.closeSocialPop} /></Icon>  </div>
                     <div className={styles.timePickerDay}>{currentDayOfWeek}</div>
                     <Stack sx={{ width: 300, margin: '6px' }}>
@@ -241,7 +243,7 @@ export const AdminDash = () => {
                     <div className={styles.timeCont}>
                         <LocalizationProvider dateAdapter={AdapterDayjs}>
                             <div className={styles.timeTitle}>Lesson Start Time</div>
-                            <MultiSectionDigitalClock className={styles.clockPicker}
+                            <MultiSectionDigitalClock className={styles.timePicker}
                                 // value={}
                                 onChange={(newValue) => { setStartTime(newValue) }}
                             />
@@ -251,7 +253,7 @@ export const AdminDash = () => {
                     <div className={styles.timeCont}>
                         <LocalizationProvider dateAdapter={AdapterDayjs}>
                             <div className={styles.timeTitle}>Lesson End Time</div>
-                            <MultiSectionDigitalClock className={styles.clockPicker}
+                            <MultiSectionDigitalClock className={styles.timePicker}
                                 // value={}
                                 onChange={(newValue) => { setEndTime(newValue) }}
                             />
@@ -261,7 +263,7 @@ export const AdminDash = () => {
                     <button
                         onClick={handleSaveLesson}
                         className={styles.saveBtn}
-                        disabled={!currentStudent || !startTime || !endTime}
+                        disabled={!startTime || !endTime}
                     >
                         Save Lesson
                     </button>
@@ -276,7 +278,7 @@ export const AdminDash = () => {
     const saveSchedule = () => {//saving schedule changes to firestore fired by onClick
         if (authUser) {
 
-            
+
 
 
             fb.firestore.collection('schedules').doc(authUser?.uid)
@@ -288,14 +290,14 @@ export const AdminDash = () => {
                 })
                 .catch((error) => {
                     console.error('Error adding schedule to Firestore: ', error.code);
-                    if(error.code === 'not-found'){
+                    if (error.code === 'not-found') {
                         fb.firestore.collection('schedules').doc(authUser?.uid)
-                        .set(
-                            schedule
-                        )
-                        .then((docRef) => {
-                            console.log('Schedule added to Firestore');
-                        })
+                            .set(
+                                schedule
+                            )
+                            .then((docRef) => {
+                                console.log('Schedule added to Firestore');
+                            })
 
                     }
                 });
@@ -303,7 +305,7 @@ export const AdminDash = () => {
         }
 
     }
-    
+
     const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     const currentDayOfWeek = daysOfWeek[currentDate.getDay()];
 
@@ -316,28 +318,22 @@ export const AdminDash = () => {
 
     return (
         <div className={styles.main}>
+
+            <NavbarMobile/>
             {timePickerOpen &&
 
                 <AddLesson />
 
             }
 
-            <div>Admin Dash</div>
-           
-            <button onClick={() => {
-                history.push(
-                    {
-                        pathname: '/students',
-                        state: { schedule: schedule }
-                    }
-                )
-            }}>View Students</button>
-            <button onClick={Logout}>Logout</button>
-            <button onClick={saveSchedule}>Save Schedule</button>
+            <div className={styles.title}>Admin Dash</div>
+
+            <div onClick={saveSchedule} className={styles.whiteBtn}>Save Schedule</div>
 
 
 
             <div className={styles.scheduleCont}>
+            <div className={styles.contWidth}>
                 <div className={styles.scheduleNav}>
                     <div onClick={handlePreviousDay}> <Icon className={styles.prevDay}><ArrowBackIos style={{ marginLeft: '8px' }} /></Icon>  </div>
                     <div className={styles.currentDay}>{currentDayOfWeek}</div>
@@ -346,7 +342,8 @@ export const AdminDash = () => {
 
                 </div>
                 <DailySchedule schedule={schedule} currentDay={currentDayOfWeek} />
-                <button onClick={() => setTimePickerOpen(true)} className={styles.bottomCont}>Add Lesson</button>
+                <div className={styles.whiteBtn} onClick={() => setTimePickerOpen(true)} >Add Lesson</div>
+            </div>
             </div>
 
         </div>

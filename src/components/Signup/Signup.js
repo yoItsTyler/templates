@@ -73,6 +73,18 @@ export default function SignUp() {
 
     };
 
+    const Login = (props) => {
+        return (
+          <Typography variant="body2" color="text.secondary" align="center" {...props}>
+          {'Already have an account? '}
+          <Link color="inherit" href="/login">
+            Login
+          </Link>
+         
+        </Typography>
+        );
+      }
+
     return (
         <ThemeProvider theme={defaultTheme}>
             <Container component="main" maxWidth="xs">
@@ -150,13 +162,9 @@ export default function SignUp() {
                         >
                             Sign Up
                         </Button>
-                        <Grid container justifyContent="flex-end">
-                            <Grid item>
-                                <Link  variant="body2" onClick={() => history.push('/login')}>
-                                    Already have an account? Sign in
-                                </Link>
-                            </Grid>
-                        </Grid>
+                        
+                        <Login sx={{ mt: 8, mb: 4 }}/>
+
                     </Box>
                 </Box>
                 <Copyright sx={{ mt: 5 }} />

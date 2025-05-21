@@ -27,6 +27,7 @@ exports.createUser = functions.https.onCall(function(data, context) {
       role: data.role,
     }).then(function(userRecord) {
       console.log("Successfully created new user:", userRecord.uid);
+      response.set('Access-Control-Allow-Methods', 'GET, POST');
       return {
         response: userRecord,
       };

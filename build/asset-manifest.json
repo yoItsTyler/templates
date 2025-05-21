@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6b6d2c12.css",
+    "main.js": "/static/js/main.6587ec1f.js",
+    "static/js/787.55111012.chunk.js": "/static/js/787.55111012.chunk.js",
+    "static/media/studentPlayingPiano.png": "/static/media/studentPlayingPiano.b01046c4429935e7a7dd.png",
+    "static/media/sharieWithStudent.png": "/static/media/sharieWithStudent.f538b58add7a3320403c.png",
+    "static/media/darkPianoKeys.jpg": "/static/media/darkPianoKeys.8d61be612a6f562c8f0f.jpg",
+    "static/media/darkPianoKeys60.webp": "/static/media/darkPianoKeys60.e8cc57d2ff9ea9e3f775.webp",
+    "static/media/PianoLogoClear.png": "/static/media/PianoLogoClear.24892dde09fa09f63300.png",
+    "static/media/headShotLinkd.png": "/static/media/headShotLinkd.076b51238156a5fd0e77.png",
+    "index.html": "/index.html",
+    "main.6b6d2c12.css.map": "/static/css/main.6b6d2c12.css.map",
+    "main.6587ec1f.js.map": "/static/js/main.6587ec1f.js.map",
+    "787.55111012.chunk.js.map": "/static/js/787.55111012.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6b6d2c12.css",
+    "static/js/main.6587ec1f.js"
+  ]
+}
