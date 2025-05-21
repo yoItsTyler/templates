@@ -4,8 +4,12 @@
 <head>
   <!-- Basic Metadata -->
   <meta charset="utf-8" />
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
-  <meta name="theme-color" content="#000000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+  <meta name="theme-color" content="#f5f5f5" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- DNS Prefetch -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="//fonts.gstatic.com" />
 
   <!-- Title and Description -->
   <title>Creative Play Piano Studio | Online Piano Lessons with Sharie Samuelson</title>
@@ -13,7 +17,8 @@
     content="Learn piano online with Sharie Samuelson, an experienced instructor with over 33 years of teaching expertise. Suitable for beginners to advanced pianists of all ages." />
 
   <!-- Favicon -->
-  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" type="image/x-icon" />
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
 
   <!-- Open Graph / Social Media Metadata -->
@@ -30,12 +35,12 @@
   <meta name="twitter:description" content="Experience high-quality piano lessons online with Sharie Samuelson." />
   <meta name="twitter:image" content="%PUBLIC_URL%/social-preview.png" />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Julius+Sans+One&family=Poppins&display=swap"
-    rel="stylesheet">
+  <!-- Preconnect for external resources -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+  <!-- Fonts with display=swap for better performance -->
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Julius+Sans+One&family=Poppins:wght@400;700&display=swap&display=swap" rel="stylesheet" />
 
   <!-- Additional Metadata -->
   <meta name="author" content="Sharie Samuelson" />
@@ -44,17 +49,12 @@
 
   <!-- Web App Metadata -->
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-
-  <!-- Font and Styling -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 
 <body>
-  <script src="https://www.google.com/recaptcha/api.js?render=reCAPTCHA_6LcFFTIrAAAAAAG1TvD9z1_HTCX1pVLZ5Ghr-xja"></script>
-
-
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
+  <script src="https://www.google.com/recaptcha/api.js?render=reCAPTCHA_6LcFFTIrAAAAAAG1TvD9z1_HTCX1pVLZ5Ghr-xja" async defer></script>
 </body>
 
 </html>

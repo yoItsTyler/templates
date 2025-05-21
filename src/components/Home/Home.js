@@ -1,110 +1,195 @@
 import { Button } from '@mui/material';
 import { useHistory } from 'react-router-dom';
 import styles from './styles.module.css';
-import keys from '../../images/darkPianoKeys60.webp';
-import logo from '../../images/PianoLogoClear.png';
-import headShot from '../../images/headShotLinkd.png';
+import keys from '../../images/darkPianoKeys.jpg';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Navbar } from '../Navbar/Navbar';
-import pianoStudent from '../../images/studentPlayingPiano.png';
-import sharieWithStudent from '../../images/sharieWithStudent.png';
-import { useEffect, useState } from 'react';
-import { ArrowBack, ArrowForward, ArrowRight, Star } from '@mui/icons-material';
+import sharieWithStudent from '../../images/sharieWithStudent.webp';
+import { useState, useCallback, useMemo, memo, useEffect, useRef } from 'react';
+import { ArrowBack, ArrowForward, Star } from '@mui/icons-material';
 import { FAQSection } from '../FAQSection';
 import Footer from '../Footer/Footer';
+import { useIntersectionObserver } from '../../hooks/useIntersectionObserver';
+
+// Memoize static components
+const MemoizedNavbar = memo(Navbar);
+const MemoizedFooter = memo(Footer);
+const MemoizedFAQSection = memo(FAQSection);
+
+const ResponsiveImage = memo(({ src, alt, className, sizes, width, height }) => (
+    <picture>
+        <img
+            src={src} 
+            alt={alt}
+            className={className}
+            loading="lazy"
+            decoding="async"
+            width={width}
+            height={height}
+            sizes={sizes}
+            style={{ objectFit: 'cover', maxWidth: '100%', height: 'auto' }}
+        />
+    </picture>
+));
+
+const AnimatedSection = memo(({ children, className, style }) => {
+    const { targetRef, hasIntersected } = useIntersectionObserver({
+        threshold: 0.2
+    });
+
+    return (
+        <div
+            ref={targetRef}
+            className={className}
+            style={{
+                ...style,
+                opacity: hasIntersected ? 1 : 0,
+                transform: `translateY(${hasIntersected ? 0 : '20px'})`,
+                transition: 'opacity 0.6s ease-out, transform 0.6s ease-out',
+            }}
+        >
+            {children}
+        </div>
+    );
+});
+
+// Move reviews data outside component to prevent recreation
+const REVIEWS = [
+    {
+        text: `As an older student (70+), with some previous piano experience in her youth, I wanted to relearn/refresh my ability to play the piano. Sharie has been wonderful in helping me along this journey. She has been incredibly supportive and encouraging of my efforts. And when I went away for the 3 months in the winter, we were able to continue lessons with the use of technology. She's also has been teaching my young granddaughter.
+
+She clearly loves the piano, giving lessons and her students.She makes it fun to learn!`,
+        author: "Susan Kirkham"
+    },
+    { text: "I've learned so much in just a few months. Highly recommend!", author: "James L." },
+    { text: "Sharie's patience and expertise are unmatched. A true professional.", author: "Laura K." },
+];
+
+// Background image preloader component
+const BackgroundImage = memo(({ className, children }) => {
+    const [bgImage, setBgImage] = useState(keys);
+    const [imageError, setImageError] = useState(false);
+
+    useEffect(() => {
+        const img = new Image();
+        img.src = keys;
+        img.onload = () => {
+            setBgImage(keys);
+        };
+        img.onerror = () => {
+            setImageError(true);
+            console.error('Failed to load background image');
+        };
+    }, []);
+
+    return (
+        <div className={className} style={{ 
+            backgroundImage: imageError ? 'none' : `url(${bgImage})`,
+            backgroundColor: imageError ? '#f5f5f5' : 'transparent',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            width: '100%',
+            height: '100%',
+            position: 'relative',
+            transition: 'background-image 0.5s ease-in-out'
+        }}>
+            {children}
+        </div>
+    );
+});
+
 export const Home = () => {
     const history = useHistory();
+    const [currentReview, setCurrentReview] = useState(0);
+    const tTwoRef = useRef(null);
 
-
-    //Reviews
-    const reviews = [
+    // Memoize reviews data
+    const reviews = useMemo(() => [
         {
-            text: `As an older student (70+), with some previous piano experience in her youth, I wanted to relearn/refresh my ability to play the piano. Sharie has been wonderful in helping me along this journey. She has been incredibly supportive and encouraging of my efforts. And when I went away for the 3 months in the winter, we were able to continue lessons with the use of technology. She’s also has been teaching my young granddaughter.
+            text: `As an older student (70+), with some previous piano experience in her youth, I wanted to relearn/refresh my ability to play the piano. Sharie has been wonderful in helping me along this journey. She has been incredibly supportive and encouraging of my efforts. And when I went away for the 3 months in the winter, we were able to continue lessons with the use of technology. She's also has been teaching my young granddaughter.
 
-She clearly loves the piano, giving lessons and her students.She makes it fun to learn!`, author: "Susan Kirkham"
+She clearly loves the piano, giving lessons and her students.She makes it fun to learn!`,
+            author: "Susan Kirkham"
         },
-
         { text: "I've learned so much in just a few months. Highly recommend!", author: "James L." },
         { text: "Sharie's patience and expertise are unmatched. A true professional.", author: "Laura K." },
-    ];
+    ], []);
 
-    const [currentReview, setCurrentReview] = useState(0);
+    // Memoize handlers
+    const handleNextReview = useCallback(() => {
+        setCurrentReview((prev) => (prev + 1) % REVIEWS.length);
+    }, []);
 
-    const handleNextReview = () => {
-        setCurrentReview((prev) => (prev + 1) % reviews.length);
-    };
+    const handlePreviousReview = useCallback(() => {
+        setCurrentReview((prev) => (prev - 1 + REVIEWS.length) % REVIEWS.length);
+    }, []);
 
-    const handlePreviousReview = () => {
-        setCurrentReview((prev) => (prev - 1 + reviews.length) % reviews.length);
-    };
-    /* 
-      <div className={styles.navBar}>
-                <div className={styles.lSCont}>
+    const handleConsultationClick = useCallback(() => {
+        history.push('/consultation');
+    }, [history]);
 
-                   
-                </div>
-            </div>
-    
-    
-    <button onClick={() => history.push('/signup')}
-                > Sign Up </button>*/
-    //
+    // Memoize button style
+    const consultationButtonStyle = useMemo(() => ({
+        marginTop: '20px',
+        backgroundColor: '#ffffff',
+        color: '#000',
+        padding: '12px 24px',
+        borderRadius: '25px',
+        fontWeight: 'bold',
+        fontSize: '1.1rem',
+        transition: 'transform 0.2s, background-color 0.2s',
+        boxShadow: '0 4px 10px rgba(0,0,0,0.25)',
+    }), []);
 
-    /* Example Bullets
-      <ul>
-               <li className={styles.heroBullet}>🎹 Over 33 years of piano teaching experience for all ages and skill levels.</li>
-                                <li className={styles.heroBullet}>🌍 Virtual piano lessons tailored to your goals, accessible from anywhere.</li>
-                                <li className={styles.heroBullet}>🎼 Specializing in classical, contemporary, and personalized music instruction.</li>
-                                <li className={styles.heroBullet}>🏆 Proven track record of helping students master technique and performance.</li>
-                                <li className={styles.heroBullet}>🎵 Beginner to advanced lessons with a focus on creativity and confidence.</li>
-                                <li className={styles.heroBullet}>📆 Flexible scheduling to fit your busy lifestyle.</li>
-                            </ul>
+    // Scroll handler for the down arrow
+    const handleScrollDown = useCallback(() => {
+        if (tTwoRef.current) {
+            tTwoRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    }, []);
 
-                            ///////////////////////////////
+    // Add effect to prevent mobile viewport height issues
+    useEffect(() => {
+        const setHeight = () => {
+            // Set a CSS variable for the actual viewport height
+            const vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--real-vh', `${vh}px`);
+        };
 
-                             <ul className={styles.heroList}>
-                            <li className={styles.heroBullet}>🎹 Over 30 years of piano teaching experience</li>
-                            <li className={styles.heroBullet}>🌍 Virtual piano lessons tailored to your goals</li>
-                            <li className={styles.heroBullet}>🎼 Specializing in classical, and contemporary, music instruction</li>
-                            <li className={styles.heroBullet}>🏆 Proven track record of helping students master technique and performance</li>
-                            <li className={styles.heroBullet}>🎵 Beginner to advanced lessons with a focus on creativity and confidence</li>
-                            <li className={styles.heroBullet}>📆 Flexible scheduling</li>
-                        </ul>
-     *///   // <img className={styles.logo} src={logo} />
+        // Initial setup
+        setHeight();
 
-    //Old Hero container
-    /*     <div className={styles.heroContainer}>
-                   <div className={styles.left}>
-                       <div className={styles.profileBorder} >
-                           <img className={styles.headShot} src={headShot} />
-                       </div>
-                       <div className={styles.profileName}>Sharie Samuelson</div>
-                   </div>
+        // Add event listeners
+        window.addEventListener('resize', setHeight);
+        window.addEventListener('orientationchange', setHeight);
 
-                   <div className={styles.heroTextContainer}>
-                       <ul className={styles.heroList}>
-                           <li className={styles.heroBullet}> Over 30 years of piano teaching experience</li>
-                           <li className={styles.heroBullet}> Virtual piano lessons tailored to your goals</li>
-                           <li className={styles.heroBullet}> Specializing in classical, and contemporary, music instruction</li>
-                           <li className={styles.heroBullet}> Proven track record of helping students master technique and performance</li>
-                           <li className={styles.heroBullet}> Beginner to advanced lessons with a focus on creativity and confidence</li>
-                           <li className={styles.heroBullet}> Flexible scheduling</li>
-                       </ul>
-                   </div>
-
-               </div>
-
-               <button className={styles.whiteBtn} onClick={() => history.push('/consultation')}
-               > Book A Free Consultation
-               </button>*/
+        return () => {
+            window.removeEventListener('resize', setHeight);
+            window.removeEventListener('orientationchange', setHeight);
+        };
+    }, []);
 
     return (
         <div className={styles.main}>
-            <Navbar />
-            <div className={styles.tOne} style={{ backgroundImage: 'url(' + keys + ')', backgroundSize: 'cover', backgroundPosition: 'center', width: '100vw' }}>
-
+            <MemoizedNavbar />
+            <div className={styles.tOne} style={{ 
+                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${keys})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                width: '100%',
+                position: 'relative'
+            }}>
                 <div className={styles.title}>Creative Play Piano Studio</div>
-                <h2 className={styles.subtitle} style={{ fontSize: '1.5rem', color: 'white', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.7)', fontFamily: 'Poppins, sansSerif', fontFamily: 'Julius Sans One, sans-serif' }}>
+                <h2 className={styles.subtitle} style={{ 
+                    fontSize: '1.5rem', 
+                    color: 'white', 
+                    textShadow: '2px 2px 4px rgba(0, 0, 0, 0.7)', 
+                    fontFamily: 'Julius Sans One, sans-serif',
+                    textAlign: 'center',
+                    maxWidth: '800px',
+                    margin: '0 auto 20px auto',
+                    padding: '0 20px'
+                }}>
                     Unlock Your Musical Potential – Learn Piano Online with Sharie Samuelson.
                 </h2>
 
@@ -112,49 +197,42 @@ She clearly loves the piano, giving lessons and her students.She makes it fun to
                     <Button
                         aria-label="Book a free consultation"
                         variant="contained"
-                        onClick={() => history.push('/consultation')}
-                        style={{
-                            marginTop: '20px',
-                            backgroundColor: '#ffffff',
-                            color: '#000',
-                            padding: '10px 20px',
-                            borderRadius: '25px',
-                            fontWeight: 'bold',
-                            transition: 'transform 0.2s, background-color 0.2s',
-
-                        }}
+                        onClick={handleConsultationClick}
+                        style={consultationButtonStyle}
                         onMouseOver={(e) => (e.target.style.backgroundColor = '#f0e68c')}
                         onMouseOut={(e) => (e.target.style.backgroundColor = '#ffffff')}
                     >
                         Book a Free Consultation
                     </Button>
-                    <ExpandMoreIcon className={styles.scrollDown} fontSize='40px' />
+                    <ExpandMoreIcon 
+                        className={styles.scrollDown} 
+                        fontSize='large'
+                        onClick={handleScrollDown}
+                    />
                 </div>
             </div>
 
-            <div className={styles.tTwo}//About Section
-            >
+            <AnimatedSection className={styles.tTwo} ref={tTwoRef}>
                 <div className={styles.aboutRow}>
                     <div className={styles.aboutLeft}>
-                        <img className={styles.studentPlayingPiano} src={sharieWithStudent} loading='lazy' alt='Private Piano Teacher, Sharie Samuelson' />
+                        <ResponsiveImage
+                            src={sharieWithStudent}
+                            alt="Sharie Samuelson teaching piano"
+                            className={styles.studentPlayingPiano}
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                            width={400}
+                            height={400}
+                        />
                     </div>
-
-
                     <div className={styles.aboutRight}>
                         <h1>About Sharie Samuelson</h1>
                         <h3>Inspiring a Love for Music Through Piano Education</h3>
-                        <p styles="">Sharie Samuelson is a passionate piano instructor with over 30 years of experience teaching students of all ages and skill levels. Her journey began at the age of six in Cannon Falls, Minnesota, and led to a Bachelor’s Degree in Music Education from Lawrence University. Over her career, Sharie has taught hundreds of students, sharing her love for piano through personalized lessons and with a patient, encouraging approach.
-
-                            Ready to embark on your musical journey?
-                            Learn more about Sharie.</p>
-
+                        <p>Sharie Samuelson is a passionate piano instructor with over 30 years of experience teaching students of all ages and skill levels. Her journey began at the age of six in Cannon Falls, Minnesota, and led to a Bachelor's Degree in Music Education from Lawrence University. Over her career, Sharie has taught hundreds of students, sharing her love for piano through personalized lessons and with a patient, encouraging approach.</p>
                     </div>
-
                 </div>
-            </div>{/* End of About Section */}
+            </AnimatedSection>
 
-            {/* Why Choose Virtual Piano Lessons Section */}
-            <div className={styles.tThree}>
+            <AnimatedSection className={styles.tThree}>
                 <h1>Why Choose Virtual Piano Lessons?</h1>
                 <h3>The Benefits of Learning Piano Online</h3>
                 <div className={styles.benefitsContainer}>
@@ -174,15 +252,17 @@ She clearly loves the piano, giving lessons and her students.She makes it fun to
                         <p>Whether you're balancing a busy schedule or living in a remote area, virtual lessons make quality piano education available wherever you are.</p>
                     </div>
                 </div>
-            </div>
-            {/* End Lesson Section */}
-            <FAQSection/>
-            {/* Reviews Section */}
-            <div className={styles.tFour}>
+            </AnimatedSection>
+
+            <AnimatedSection>
+                <MemoizedFAQSection />
+            </AnimatedSection>
+
+            <AnimatedSection className={styles.tFour}>
                 <h1>Reviews</h1>
                 <div className={styles.reviewBox}>
-                    <p>"{reviews[currentReview].text}"</p>
-                    <h4>- {reviews[currentReview].author}</h4>
+                    <p>"{REVIEWS[currentReview].text}"</p>
+                    <h4>- {REVIEWS[currentReview].author}</h4>
                 </div>
                 <div className={styles.stars}>
                     {[...Array(5)].map((_, index) => (
@@ -223,9 +303,9 @@ She clearly loves the piano, giving lessons and her students.She makes it fun to
                         <ArrowForward />
                     </Button>
                 </div>
-            </div>
+            </AnimatedSection>
 
-                        <Footer/>
+            <MemoizedFooter />
         </div>
     );
 };

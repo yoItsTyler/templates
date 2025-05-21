@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Piano Studio",
+  "name": "Creative Play Piano Studio",
   "icons": [
     {
       "src": "favicon.ico",
@@ -21,5 +21,8 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#ffffff",
+  "description": "Learn piano online with Sharie Samuelson",
+  "orientation": "portrait-primary",
+  "categories": ["education", "music"]
 }

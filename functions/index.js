@@ -15,28 +15,41 @@ admin.initializeApp();
 //   logger.info("Hello logs!", {structuredData: true});
 //   response.send("Hello from Firebase!");
 // });
-exports.createUser = functions.https.onCall(function(data, context) {
+exports.createUser = functions.https.onCall(async (data, context) => {
+  // Check if the request is from an admin
+  if (!context.auth || !context.auth.token.admin) {
+    throw new functions.https.HttpsError(
+        "permission-denied",
+        "Only admins can create new users.",
+    );
+  }
+
   try {
-    admin.auth().createUser({
+    const userRecord = await admin.auth().createUser({
       uid: data.uid,
       email: data.email,
       password: data.password,
-      displayName: data.fullName,
+      displayName: data.displayName,
       emailVerified: false,
-      disabled: false,
-      role: data.role,
-    }).then(function(userRecord) {
-      console.log("Successfully created new user:", userRecord.uid);
-      response.set('Access-Control-Allow-Methods', 'GET, POST');
-      return {
-        response: userRecord,
-      };
-    }).catch(function(error) {
-      console.error("Error creating new user:", error);
-      throw new functions.https.HttpsError("unknown", error.message, error);
+      disabled: data.disabled || false,
     });
+
+    // Set custom claims for role
+    await admin.auth().setCustomUserClaims(userRecord.uid, {
+      role: data.role || "member",
+    });
+
+    console.log("Successfully created new user:", userRecord.uid);
+    return {
+      success: true,
+      user: userRecord,
+    };
   } catch (error) {
     console.error("Error creating new user:", error);
-    throw new functions.https.HttpsError("unknown", error.message, error);
+    throw new functions.https.HttpsError(
+        "internal",
+        "Error creating new user",
+        error,
+    );
   }
 });

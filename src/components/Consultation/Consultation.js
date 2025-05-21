@@ -1,18 +1,13 @@
 import React, { useState } from "react";
-import { Container, TextField, Button, Grid, Typography, Box } from "@mui/material";
+import { Container, TextField, Button, Grid, Typography } from "@mui/material";
 import { LocalizationProvider, DatePicker } from "@mui/x-date-pickers";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { TimePicker } from "@mui/x-date-pickers/TimePicker";
 import styles from './styles.module.css';
-//import { styles } from "@material-ui/pickers/views/Calendar/Calendar";
 import keys from '../../images/darkPianoKeys.jpg';
-
 import { fb } from "../../service/firebase";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
-import Footer from "../Footer/Footer";
-
-
 
 export const Consultation = () => {
     const history = useHistory();

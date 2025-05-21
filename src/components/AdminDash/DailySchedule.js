@@ -1,7 +1,6 @@
-
 //import { Appointments, Scheduler, ViewState, WeekView } from "@devexpress/dx-react-scheduler";
 import { Icon } from "@material-ui/core";
-import { Cancel, Check, CheckBoxOutlineBlank, Close, Undo } from "@mui/icons-material";
+import { Cancel, Check, CheckBoxOutlineBlank, Close, Undo, SwapHoriz } from "@mui/icons-material";
 //import { DateCalendar, LocalizationProvider } from "@mui/x-date-pickers";
 //import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { useEffect, useState } from "react";
@@ -116,6 +115,9 @@ export const DailySchedule = ({ schedule, currentDay, setSchedule }) => {
     const [unavailableOpen, setUnavailableOpen] = useState(false);
     const [availableOpen, setAvailableOpen] = useState(false)
     const [currentSelection, setCurrentSelection] = useState()
+    const [swapRequestOpen, setSwapRequestOpen] = useState(false);
+    const [selectedLesson, setSelectedLesson] = useState(null);
+    const [availableSlots, setAvailableSlots] = useState([]);
 
     const confirmUnavailable = () => {
         const lessonId = currentSelection.id;
@@ -197,6 +199,128 @@ export const DailySchedule = ({ schedule, currentDay, setSchedule }) => {
         )
     }
 
+    // Function to handle initiating a swap request
+    const handleSwapRequest = (lesson) => {
+        // Find available slots for swapping (empty slots or other students' slots)
+        const availableSlots = Object.entries(schedule)
+            .filter(([id, slot]) => {
+                // Include empty slots and other students' slots on any day
+                return !slot.studentName || 
+                       (slot.studentName && slot.studentName !== lesson.studentName);
+            })
+            .map(([id, slot]) => ({
+                id,
+                ...slot
+            }));
+        
+        setAvailableSlots(availableSlots);
+        setSelectedLesson(lesson);
+        setSwapRequestOpen(true);
+    };
+
+    // Function to handle confirming a swap
+    const handleSwapConfirm = async (targetSlot) => {
+        if (!selectedLesson || !targetSlot) return;
+
+        const updatedSchedule = { ...schedule };
+        const selectedId = selectedLesson.id;
+        const targetId = targetSlot.id;
+
+        // Store the swap in history
+        const swapRecord = {
+            date: new Date().toISOString(),
+            originalSlot: {
+                time: selectedLesson.startTime,
+                day: selectedLesson.dayOfWeek
+            },
+            newSlot: {
+                time: targetSlot.startTime,
+                day: targetSlot.dayOfWeek
+            }
+        };
+
+        // If target slot is empty
+        if (!targetSlot.studentName) {
+            updatedSchedule[targetId] = {
+                ...targetSlot,
+                studentName: selectedLesson.studentName,
+                studentId: selectedLesson.studentId,
+                parentId: selectedLesson.parentId,
+                swapHistory: [...(targetSlot.swapHistory || []), swapRecord]
+            };
+
+            updatedSchedule[selectedId] = {
+                ...selectedLesson,
+                studentName: '',
+                studentId: '',
+                parentId: '',
+                swapHistory: [...(selectedLesson.swapHistory || []), swapRecord]
+            };
+        } else {
+            // If swapping with another student
+            const tempStudent = {
+                name: targetSlot.studentName,
+                id: targetSlot.studentId,
+                parentId: targetSlot.parentId
+            };
+
+            updatedSchedule[targetId] = {
+                ...targetSlot,
+                studentName: selectedLesson.studentName,
+                studentId: selectedLesson.studentId,
+                parentId: selectedLesson.parentId,
+                swapHistory: [...(targetSlot.swapHistory || []), swapRecord]
+            };
+
+            updatedSchedule[selectedId] = {
+                ...selectedLesson,
+                studentName: tempStudent.name,
+                studentId: tempStudent.id,
+                parentId: tempStudent.parentId,
+                swapHistory: [...(selectedLesson.swapHistory || []), swapRecord]
+            };
+        }
+
+        // Update Firestore
+        try {
+            await fb.firestore.collection('schedules').doc(authUser.uid)
+                .update(updatedSchedule);
+            setSchedule(updatedSchedule);
+            setSwapRequestOpen(false);
+            setSelectedLesson(null);
+        } catch (error) {
+            console.error('Error updating schedule:', error);
+        }
+    };
+
+    // Component to display swap options
+    const SwapRequestModal = () => {
+        return (
+            <div className={styles.popBackground}>
+                <div className={styles.popCont}>
+                    <div className={styles.closeCont}>
+                        <Icon><Close onClick={() => setSwapRequestOpen(false)} className={styles.closeSocialPop} /></Icon>
+                    </div>
+                    <div className={styles.popTxt}>
+                        Select a time slot to swap with:
+                    </div>
+                    <div className={styles.swapSlotsList}>
+                        {availableSlots.map((slot) => (
+                            <div 
+                                key={slot.id}
+                                className={styles.swapSlotItem}
+                                onClick={() => handleSwapConfirm(slot)}
+                            >
+                                {slot.dayOfWeek} {slot.startTime} - {slot.endTime}
+                                {slot.studentName ? ` (${slot.studentName})` : ' (Empty Slot)'}
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        );
+    };
+
     return (
         <div className={styles.DailySchedule}>
 
@@ -216,26 +340,36 @@ export const DailySchedule = ({ schedule, currentDay, setSchedule }) => {
                                     </div>
                                     <div>
                                         {authUser.uid === lesson.parentId &&
-                                            <div>
+                                            <div className={styles.lessonControls}>
                                                 {!isAdmin && authUser.uid === lesson.parentId && lesson.notGoing === false ? (
-                                                    <div
-                                                        className={styles.uBtn}
-                                                        onClick={() => {
-                                                            setUnavailableOpen(true);
-                                                            setCurrentSelection(lesson); // Pass an object with both lesson and id
-                                                        }}
-                                                    >
-                                                        <Icon>
-                                                            <Cancel style={{ color: "#2C2C2E" }} />
-                                                        </Icon>
-                                                    </div>
+                                                    <>
+                                                        <div
+                                                            className={styles.uBtn}
+                                                            onClick={() => {
+                                                                setUnavailableOpen(true);
+                                                                setCurrentSelection(lesson);
+                                                            }}
+                                                        >
+                                                            <Icon>
+                                                                <Cancel style={{ color: "#2C2C2E" }} />
+                                                            </Icon>
+                                                        </div>
+                                                        <div
+                                                            className={styles.swapBtn}
+                                                            onClick={() => handleSwapRequest(lesson)}
+                                                        >
+                                                            <Icon>
+                                                                <SwapHoriz style={{ color: "#2C2C2E" }} />
+                                                            </Icon>
+                                                        </div>
+                                                    </>
                                                 ) : (
                                                     <div 
-                                                    className={styles.aBtn}
-                                                    onClick={()=> {
-                                                        setAvailableOpen(true)
-                                                        setCurrentSelection(lesson)
-                                                    }}
+                                                        className={styles.aBtn}
+                                                        onClick={() => {
+                                                            setAvailableOpen(true);
+                                                            setCurrentSelection(lesson);
+                                                        }}
                                                     >
                                                         <Icon color="#F0F0F0">
                                                             <Undo style={{ color: "#F0F0F0" }} />
@@ -268,6 +402,7 @@ export const DailySchedule = ({ schedule, currentDay, setSchedule }) => {
             )}
             {unavailableOpen && <SetUnavailable />}
             {availableOpen && <SetAvailable/>}
+            {swapRequestOpen && <SwapRequestModal />}
         </div>
     )
 }
